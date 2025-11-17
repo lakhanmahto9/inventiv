@@ -1,0 +1,23 @@
+@import "tailwindcss";
+.carousel .slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: auto !important;
+}
+
+.carousel .slide img {
+  width: 100%;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+.carousel .slider-wrapper {
+  height: auto !important;
+}
+
+.carousel .carousel-status {
+  display: none !important;
+}
+
+
