@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="w-full bg-[#1d1e5d] border-t border-t-slate-400 p-4 lg:p-40 flex justify-between flex-col lg:flex-row">
       <div className="flex gap-4 justify-between items-center bg-white p-4">
         <div className="p-4">
-          <img src="logo.png" alt="" className="w-60" />
+          <img src="/logo.png" alt="logo" className="w-60" />
         </div>
       </div>
       <div className="flex flex-col">

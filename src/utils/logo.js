@@ -27,11 +27,11 @@ export const logos = {
   ],
 
   organizer: [
-    { id: 1, name: "IIT(ISM) DHANBAD", logo: "/iitism-logo.png" },
-    { id: 2, name: "IIT KHARAGPUR", logo: "/imgi_19_IIT_Kharagpur_Logo.svg.png" },
-    { id: 3, name: "IIT (BHU) VARANASI", logo: "/bhu.png" },
-    { id: 4, name: "IIT BHUBANESWAR", logo: "/imgi_6_iitb_bhubaneswar_logo .png" },
-    { id: 5, name: "IIT PATNA", logo: "/imgi_23_IIT-Patna.svg.png" },
+    { id: 1, name: "IIT KHARAGPUR", logo: "/imgi_19_IIT_Kharagpur_Logo.svg.png" },
+    { id: 2, name: "IIT(BHU) VARANASI", logo: "/bhu.png" },
+    { id: 3, name: "IIT(ISM) DHANBAD", logo: "/iitism-logo.png" },
+    { id: 4, name: "IIT PATNA", logo: "/imgi_23_IIT-Patna.svg.png" },
+    { id: 5, name: "IIT BHUBANESWAR", logo: "/imgi_6_iitb_bhubaneswar_logo .png" },
   ],
 
 
@@ -138,11 +138,12 @@ export const logos = {
     { id: 55, name: "Sri Krishna College of Engineering and Technology, Tamil Nadu" },
   ],
   theme: [
-    { id: 1, name: "IIT KHARAGPUR", themes: "Health Care", logo: "/health.jpeg" },
-    { id: 2, name: "IIT (ISM) DHANBAD", themes: "Earth Sciences", logo: "/earth.jpeg" },
-    { id: 3, name: "IIT BHUBANESWAR", themes: "Semiconductor Technology & Chip Design", logo: "/semiconductor.jpeg" },
-    { id: 4, name: "IIT PATNA", themes: "Artificial Intelligence", logo: "/artificial.jpeg" },
-    { id: 5, name: "IIT (BHU) VARANASI", themes: "Materials Science", logo: "/material.jpeg" },
-    { id: 6, name: "Others", themes: "Others (Host Institute)", logo:"/others.jpg" }
+    { id: 1, name: "IIT KHARAGPUR", themes: "Health Care", logo: "/health.jpeg", link: "/hosts/kharagpur/1" },
+    { id: 2, name: "IIT(BHU) VARANASI", themes: "Materials Science", logo: "/material.jpeg", link: "/hosts/varanasi/2" },
+    { id: 3, name: "IIT(ISM) DHANBAD", themes: "Earth Sciences", logo: "/earth.jpeg", link: "/hosts/dhanbad/3" },
+    { id: 4, name: "IIT PATNA", themes: "Artificial Intelligence", logo: "/artificial.jpeg", link: "/hosts/patna/4" },
+    { id: 5, name: "IIT BHUBANESWAR", themes: "Semiconductor Technology & Chip Design", logo: "/semiconductor.jpeg", link: "/hosts/bhubaneswar/5" },
+
+
   ]
 }

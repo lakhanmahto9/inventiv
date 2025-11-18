@@ -5,9 +5,11 @@ import { Carousel } from "react-responsive-carousel";
 import image1 from "../../assets/image1.jpeg";
 import image2 from "../../assets/image2.jpeg";
 import { logos } from "../../utils/logo";
+import { motion } from "framer-motion";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Home = () => {
-  console.log(logos)
+  const navigate = useNavigate();
   const [active, setActive] = useState("iit");
   const handleTab = (tab) => {
     setActive(tab);
@@ -21,6 +23,7 @@ const Home = () => {
       setTimeout(() => setActiveIndex(null), 2000);
     }
   };
+
   return (
     <Layout>
       <div className="w-full flex flex-col">
@@ -35,15 +38,33 @@ const Home = () => {
           swipeable={true}
           emulateTouch={true}
         >
-
-
           <img
             src="/imgi_5_iitism_banner_new.gif"
             alt="Banner"
             className="w-full h-auto object-contain"
           />
           <img
-            src="/DIYA2.jpg"
+            src="/benner02.JPG"
+            alt="Banner"
+            className="w-full object-contain "
+          />
+          <img
+            src="/benner03.jpg"
+            alt="Banner"
+            className="w-full object-contain "
+          />
+           <img
+            src="/benner04.JPG"
+            alt="Banner"
+            className="w-full object-contain "
+          />
+           <img
+            src="/benner05.JPG"
+            alt="Banner"
+            className="w-full object-contain "
+          />
+           <img
+            src="/benner06.jpg"
             alt="Banner"
             className="w-full object-contain "
           />
@@ -54,12 +75,14 @@ const Home = () => {
           <div className="w-full border border-slate-400 my-4 p-4 lg:p-8 px-4 md:px-20 rounded-2xl flex flex-wrap justify-between gap-4 font-semibold">
             {logos.organizer.map((item, index) => (<div className="flex flex-col justify-center items-center">
               <img src={item.logo} key={index} alt={item.name} className="w-28 h-28 sm:w-48 sm:h-48 lg:w-60 lg:h-60 bg-[#eeeeee] rounded-2xl shadow-amber-50 p-4 
-                 transition-transform duration-300 ease-in-out hover:scale-110" />
+                 transition-transform duration-300 ease-in-out hover:scale-90" />
               <div className="text-white text-xs sm:text-base lg:text-lg">{item.name}</div>
             </div>
             ))}
           </div>
         </div>
+
+
         <div className="p-4 lg:p-16 bg-[#1d1e5d]">
           <p className="text-3xl lg:text-5xl font-bold text-[#ffa343]">Thematic Areas & Coordinating Institutes</p>
 
@@ -67,7 +90,7 @@ const Home = () => {
                 flex flex-wrap justify-center lg:justify-between gap-6 font-semibold text-center">
 
             {logos.theme.map((item, index) => (
-              <div key={index} className="flex flex-col items-center">
+              <div key={index} className="flex flex-col items-center" onClick={()=>navigate(item.link)}>
                 <div className="relative w-28 h-28 sm:w-48 sm:h-48 lg:w-60 lg:h-60 rounded-2xl overflow-hidden group">
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-80 object-cover group-hover:opacity-100 transition-opacity duration-300"
@@ -75,7 +98,7 @@ const Home = () => {
                   ></div>
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300"></div>
                   <div className="absolute top-2 left-0 right-0 text-center">
-                    <span className="text-white text-xs sm:text-sm lg:text-lg font-semibold drop-shadow-md bg-black/40 px-2 py-1 rounded-md">
+                    <span className="text-white text-xs sm:text-sm lg:text-lg flex items-center justify-center font-semibold drop-shadow-md bg-black/40 px-2 py-1 rounded-md">
                       {item.themes}
                     </span>
                   </div>
