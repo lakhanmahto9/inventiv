@@ -97,7 +97,7 @@ const Home = () => {
           </div>
         </div>
 
-
+{/* testing */}
         <div className="p-4 lg:p-16 bg-[#1d1e5d]">
           <motion.p
             className="text-3xl lg:text-5xl font-bold text-[#ffa343]"
