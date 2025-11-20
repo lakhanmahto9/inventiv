@@ -226,7 +226,6 @@ const Home = () => {
             className={`w-full border border-slate-400 rounded-2xl flex flex-wrap justify-center md:justify-start items-center gap-2 p-1 sm:p-4 font-semibold text-2xl`}
           >
             {sortedItems.map((item, index) =>
-              // active !== "top" ? (
               <div
                 key={index}
                 className="relative group flex justify-center sm:justify-normal"
@@ -238,7 +237,7 @@ const Home = () => {
                   className="w-32 h-32 sm:w-40 sm:h-40 lg:w-52 lg:h-52 bg-[#eeeeee] rounded-2xl shadow-amber-50 p-4 
                     transition-transform duration-300 ease-in-out hover:scale-90"
                 />
-                <div
+                {/* <div
                   className={`
                       absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2
                       bg-white text-black text-sm px-3 py-1 rounded-md whitespace-nowrap shadow-md
@@ -249,13 +248,24 @@ const Home = () => {
                    `}
                 >
                   {item.name}
+                </div> */}
+
+                <div
+                  className={`
+                            absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2
+                            bg-white text-black text-sm px-3 py-1 rounded-md shadow-md
+                            transition-all duration-300
+                            opacity-0 pointer-events-none
+                            max-w-[150px]      /* Allow wrapping */
+                            text-center        /* Optional: align center */
+                            ${activeIndex === index ? "opacity-100 pointer-events-auto" : ""}
+                            lg:group-hover:opacity-100 lg:pointer-events-auto
+                          `}
+                >
+                  {item.name}
                 </div>
+
               </div>
-              // ) : (
-              //   <div key={index} className="w-full lg:w-1/4 text-sm">
-              //     <p>{index+1}. {item.name}</p>
-              //   </div>
-              // )
             )}
           </div>
 
