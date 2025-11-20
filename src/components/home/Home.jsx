@@ -358,7 +358,7 @@ const Home = () => {
             viewport={{ amount: 0.5 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            Organizing Institutes
+            Participating Institutes
           </motion.p>
           <div className="w-full flex items-center gap-3 my-4 overflow-x-auto lg:overflow-x-visible scrollbar-hide">
             <button
