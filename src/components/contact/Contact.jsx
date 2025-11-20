@@ -48,7 +48,7 @@ const Contact = () => {
                       <p>iit@gmail.com</p>
                     </div>
                   </div>
-                  <div className='px-20 py-4 border border-blue-500 rounded-2xl bg-blue-800/40 flex gap-8'>
+                  <div className='px-8 sm:px-20 py-4 border border-blue-500 rounded-2xl bg-blue-800/40 flex gap-8'>
                     <div className='bg-slate-50 rounded-full p-2'><Twitter color={"#000000"} width={20} height={20} /></div>
                     <div className='bg-slate-50 rounded-full p-2'><Facebook color={"#1A73E8"} width={20} height={20} /></div>
                     <div className='bg-slate-50 rounded-full p-2'><LinkedIn color={"#1A73E8"} width={20} height={20} /></div>

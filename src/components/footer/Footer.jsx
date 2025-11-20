@@ -1,39 +1,4 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import { Facebook, LinkedIn, Twitter } from "../../icons/Icons";
 
-// const Footer = () => {
-//   return (
-//     <div className="w-full bg-[#1d1e5d] border-t border-t-slate-400 p-4 lg:p-40 flex justify-between flex-col lg:flex-row">
-//       <div className="flex gap-4 justify-between items-center bg-white p-4">
-//         <div className="p-4">
-//           <img src="/logo.png" alt="logo" className="w-60" />
-//         </div>
-//       </div>
-//       <div className="flex flex-col">
-//         <p className="text-2xl text-[#ffa343] font-semibold">Important Links</p>
-//         <Link className="text-white text-sm lg:text-lg">Home</Link>
-//         <Link className="text-white text-sm lg:text-lg">R&D Showcase</Link>
-//         <Link className="text-white text-sm lg:text-lg">Program Summary</Link>
-//       </div>
-//       <div className="flex flex-col">
-//         <p className="text-2xl text-[#ffa343] font-semibold">Important Links</p>
-//         <Link className="text-white text-sm lg:text-lg">Collaboration</Link>
-//         <Link className="text-white text-sm lg:text-lg">Events & Workshop</Link>
-//       </div>
-//       <div className="flex flex-col gap-2">
-//         <p className="text-2xl text-[#ffa343] font-semibold">Social Links</p>
-//         <div className="flex gap-4">
-//           <Twitter color="#fff" width="20" height="20" />
-//           <Facebook color="#fff" width="20" height="20" />
-//           <LinkedIn color="#fff" width="20" height="20" />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Footer;
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -67,7 +32,7 @@ const iconHover = {
 const Footer = () => {
   return (
     <motion.div
-  className="relative w-full bg-[#1d1e5d] p-4 lg:p-40 flex justify-between flex-col lg:flex-row"
+  className="relative w-full bg-[#1d1e5d] p-8 lg:p-20 xl:p-40 flex justify-between flex-col lg:flex-row"
   variants={footerParent}
   initial="hidden"
   whileInView="visible"
@@ -79,7 +44,7 @@ const Footer = () => {
 
       {/* Logo */}
       <motion.div
-        className="flex gap-4 justify-between items-center bg-white p-4"
+        className="flex gap-4 justify-between items-center bg-white p-4 my-4"
         variants={footerItem}
       >
         <div className="p-4">
@@ -88,7 +53,7 @@ const Footer = () => {
       </motion.div>
 
       {/* Column 1 */}
-      <motion.div className="flex flex-col" variants={footerItem}>
+      <motion.div className="flex flex-col my-4" variants={footerItem}>
         <p className="text-2xl text-[#ffa343] font-semibold">Important Links</p>
         <Link className="text-white text-sm lg:text-lg">Home</Link>
         <Link className="text-white text-sm lg:text-lg">R&D Showcase</Link>
@@ -96,14 +61,14 @@ const Footer = () => {
       </motion.div>
 
       {/* Column 2 */}
-      <motion.div className="flex flex-col" variants={footerItem}>
+      <motion.div className="flex flex-col my-4" variants={footerItem}>
         <p className="text-2xl text-[#ffa343] font-semibold">Important Links</p>
         <Link className="text-white text-sm lg:text-lg">Collaboration</Link>
         <Link className="text-white text-sm lg:text-lg">Events & Workshop</Link>
       </motion.div>
 
       {/* Social Icons */}
-      <motion.div className="flex flex-col gap-2" variants={footerItem}>
+      <motion.div className="flex flex-col gap-2 my-4" variants={footerItem}>
         <p className="text-2xl text-[#ffa343] font-semibold">Social Links</p>
         <div className="flex gap-4">
           <motion.div variants={iconHover} whileHover="hover">
