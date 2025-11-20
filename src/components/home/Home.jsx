@@ -5,8 +5,9 @@ import { Carousel } from "react-responsive-carousel";
 import image1 from "../../assets/image1.jpeg";
 import image2 from "../../assets/image2.jpeg";
 import { logos } from "../../utils/logo";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Navigate, useNavigate } from "react-router-dom";
+import { useRef } from "react";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -24,11 +25,42 @@ const Home = () => {
     }
   };
 
-
   const sortedItems =
     active === "top"
       ? [...logos[active]].sort((a, b) => a.name.localeCompare(b.name))
       : logos[active];
+
+  const floatVariants = {
+    hidden: {
+      opacity: 0,
+      y: 40,
+      scale: 0.9,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.25, 0.1, 0.25, 1], // smooth Apple-like curve
+        bounce: 0.3,
+      },
+    },
+  };
+
+  const waveVariants = {
+    initial: { y: 0 },
+    animate: (index) => ({
+      y: [0, -10, 0], // up → down → back to normal
+      transition: {
+        duration: 2.5,
+        delay: index * 0.15, // creates wave ripple effect
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut",
+      },
+    }),
+  };
 
   return (
     <Layout>
@@ -76,9 +108,9 @@ const Home = () => {
           />
         </Carousel>
 
-        <div className="p-4 lg:p-16 bg-[#1d1e5d]">
+        {/* <div className="p-4 lg:p-16 bg-[#1d1e5d]">
           <motion.p
-            className="text-3xl lg:text-5xl font-bold text-[#ffa343]"
+            className="text-2xl lg:text-5xl font-bold text-[#ffa343]"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -95,12 +127,87 @@ const Home = () => {
             </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
-{/* testing */}
         <div className="p-4 lg:p-16 bg-[#1d1e5d]">
           <motion.p
-            className="text-3xl lg:text-5xl font-bold text-[#ffa343]"
+            className="text-2xl lg:text-5xl font-bold text-[#ffa343]"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            Organizing Institutes
+          </motion.p>
+
+          {/* 🔥 GRADIENT BORDER WRAPPER */}
+          <div className="relative w-full my-4 rounded-2xl p-px">
+            {/* Gradient border layer */}
+            <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500"></div>
+
+            {/* Your original content box */}
+            <div
+              className="relative w-full p-4 lg:p-8 px-4 md:px-20 rounded-2xl 
+             flex flex-wrap justify-between gap-4 font-semibold bg-[#1d1e5d]"
+            >
+              {logos.organizer.map((item, index) => {
+                const animations = [
+                  {
+                    hidden: { x: -80, opacity: 0 },
+                    visible: { x: 0, opacity: 1 },
+                  },
+                  {
+                    hidden: { x: -80, opacity: 0 },
+                    visible: { x: 0, opacity: 1 },
+                  },
+                  {
+                    hidden: { scale: 0.3, opacity: 0 },
+                    visible: { scale: 1, opacity: 1 },
+                  },
+                  {
+                    hidden: { x: 80, opacity: 0 },
+                    visible: { x: 0, opacity: 1 },
+                  },
+                  {
+                    hidden: { x: 80, opacity: 0 },
+                    visible: { x: 0, opacity: 1 },
+                  },
+                ];
+
+                const ref = useRef(null);
+                const inView = useInView(ref, { amount: 0.4 });
+
+                return (
+                  <motion.div
+                    key={index}
+                    ref={ref}
+                    variants={animations[index]}
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="flex flex-col justify-center items-center"
+                  >
+                    <img
+                      src={item.logo}
+                      alt={item.name}
+                      className="w-28 h-28 sm:w-48 sm:h-48 lg:w-60 lg:h-60 
+                bg-[#eeeeee] rounded-2xl shadow-amber-50 p-4 
+                transition-transform duration-300 ease-in-out hover:scale-90"
+                    />
+
+                    <div className="text-white text-xs sm:text-base lg:text-lg">
+                      {item.name}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="p-4 lg:p-16 bg-[#1d1e5d]">
+          <motion.p
+            className="text-2xl lg:text-5xl font-bold text-[#ffa343]"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -109,19 +216,24 @@ const Home = () => {
             Thematic Areas & Coordinating Institutes
           </motion.p>
 
-          <div className="w-full border border-slate-400 my-4 p-4 rounded-2xl 
-                flex flex-wrap justify-center lg:justify-between gap-6 font-semibold text-center">
-
+          <div
+            className="w-full border border-slate-400 my-4 p-4 rounded-2xl 
+                flex flex-wrap justify-center lg:justify-between gap-6 font-semibold text-center"
+          >
             {logos.theme.map((item, index) => (
-              <div key={index} className="flex flex-col items-center" onClick={() => navigate(item.link)}>
+              <div
+                key={index}
+                className="flex flex-col items-center"
+                onClick={() => navigate(item.link)}
+              >
                 <div className="relative w-28 h-28 sm:w-48 sm:h-48 lg:w-60 lg:h-60 rounded-2xl overflow-hidden group">
                   <div
-                    className="absolute inset-0 bg-cover bg-center opacity-80 object-cover group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute inset-0 bg-cover bg-center  md:opacity-80 object-cover group-hover:opacity-100 transition-opacity duration-300"
                     style={{ backgroundImage: `url(${item.logo})` }}
                   ></div>
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300"></div>
                   <div className="absolute top-2 left-0 right-0 text-center">
-                    <span className="text-white text-xs sm:text-sm lg:text-lg flex items-center justify-center font-semibold drop-shadow-md bg-black/40 px-2 py-1 rounded-md">
+                    <span className="text-white text-[8px] sm:text-sm lg:text-lg flex items-center justify-center font-semibold drop-shadow-md bg-black/40 px-2 py-1 rounded-md">
                       {item.themes}
                     </span>
                   </div>
@@ -131,29 +243,132 @@ const Home = () => {
                 </div>
               </div>
             ))}
-
-
           </div>
+        </div> */}
 
-        </div>
-        <div className="text-white bg-[#1d1e5d] p-4 lg:p-16">
+        {/* <div className="p-4 lg:p-16 bg-[#1d1e5d]">
           <motion.p
-            className="text-3xl lg:text-5xl font-bold text-[#ffa343]"
+            className="text-2xl lg:text-5xl font-bold text-[#ffa343]"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ amount: 0.5 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            Thematic Areas & Coordinating Institutes
+          </motion.p>
+
+          <div
+            className="w-full border border-slate-400 my-4 p-4 rounded-2xl 
+          flex flex-wrap justify-center lg:justify-between gap-6 font-semibold text-center"
+          >
+            {logos.theme.map((item, index) => (
+              <motion.div
+                key={index}
+                variants={floatVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.4 }}
+                className="flex flex-col items-center"
+                onClick={() => navigate(item.link)}
+              >
+                <div className="relative w-28 h-28 sm:w-48 sm:h-48 lg:w-60 lg:h-60 rounded-2xl overflow-hidden group">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center md:opacity-80 object-cover group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ backgroundImage: `url(${item.logo})` }}
+                  ></div>
+
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300"></div>
+
+                  <div className="absolute top-2 left-0 right-0 text-center">
+                    <span className="text-white text-[8px] sm:text-sm lg:text-lg flex items-center justify-center font-semibold drop-shadow-md bg-black/40 px-2 py-1 rounded-md">
+                      {item.themes}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="text-white text-xs sm:text-base lg:text-lg mt-3 font-medium">
+                  {item.name}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div> */}
+
+        <div className="p-4 lg:p-16 bg-[#1d1e5d]">
+          <motion.p
+            className="text-2xl lg:text-5xl font-bold text-[#ffa343]"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ amount: 0.5 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            Thematic Areas & Coordinating Institutes
+          </motion.p>
+
+          <div className="relative w-full my-4 rounded-2xl p-px overflow-hidden">
+            <div
+              className="absolute inset-0 rounded-2xl 
+        bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500
+        "
+            ></div>
+
+            <div
+              className="relative w-full p-4 rounded-2xl 
+      flex flex-wrap justify-center lg:justify-between gap-6 font-semibold text-center bg-[#1d1e5d]"
+            >
+              {logos.theme.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={floatVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ amount: 0.4 }}
+                  className="flex flex-col items-center"
+                  onClick={() => navigate(item.link)}
+                >
+                  <div className="relative w-28 h-28 sm:w-48 sm:h-48 lg:w-60 lg:h-60 rounded-2xl overflow-hidden group">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center md:opacity-80 object-cover group-hover:opacity-100 transition-opacity duration-300"
+                      style={{ backgroundImage: `url(${item.logo})` }}
+                    ></div>
+
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300"></div>
+
+                    <div className="absolute top-2 left-0 right-0 text-center">
+                      <span className="text-white text-[8px] sm:text-sm lg:text-lg flex items-center justify-center font-semibold drop-shadow-md bg-black/40 px-2 py-1 rounded-md">
+                        {item.themes}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="text-white text-xs sm:text-base lg:text-lg mt-3 font-medium">
+                    {item.name}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="text-white bg-[#1d1e5d] p-4 lg:p-16">
+          <motion.p
+            className="text-2xl lg:text-5xl font-bold text-[#ffa343]"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ amount: 0.5 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             Organizing Institutes
           </motion.p>
-          <div
-            className="w-full flex items-center gap-3 my-4 overflow-x-auto lg:overflow-x-visible scrollbar-hide"
-          >
+          <div className="w-full flex items-center gap-3 my-4 overflow-x-auto lg:overflow-x-visible scrollbar-hide">
             <button
               onClick={() => handleTab("iit")}
               type="button"
-              className={`${active === "iit" ? "bg-amber-500 text-white" : "hover:text-amber-500"
-                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
+              className={`${
+                active === "iit"
+                  ? "bg-amber-500 text-white"
+                  : "hover:text-amber-500"
+              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
             >
               IISc + 23 IITs
             </button>
@@ -161,106 +376,137 @@ const Home = () => {
             <button
               onClick={() => handleTab("nit")}
               type="button"
-              className={`${active === "nit" ? "bg-amber-500 text-white" : "hover:text-amber-500"
-                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
+              className={`${
+                active === "nit"
+                  ? "bg-amber-500 text-white"
+                  : "hover:text-amber-500"
+              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
             >
               IIEST + 31 NITs
             </button>
             <button
               onClick={() => handleTab("iiser")}
               type="button"
-              className={`${active === "iiser" ? "bg-amber-500 text-white" : "hover:text-amber-500"
-                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
+              className={`${
+                active === "iiser"
+                  ? "bg-amber-500 text-white"
+                  : "hover:text-amber-500"
+              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
             >
               7 IISERs
             </button>
             <button
               onClick={() => handleTab("top")}
               type="button"
-              className={`${active === "top" ? "bg-amber-500 text-white" : "hover:text-amber-500"
-                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
+              className={`${
+                active === "top"
+                  ? "bg-amber-500 text-white"
+                  : "hover:text-amber-500"
+              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
             >
               TOP 100 NIRF-Ranked Institutes
             </button>
           </div>
 
-
-          {/* <div className={`w-full border border-slate-400 rounded-2xl flex flex-wrap justify-center md:justify-start items-center gap-2 p-1 sm:p-4 font-semibold text-2xl`}>
-            {logos[active].map((item, index) =>
-              active !== "top" ? (
-                <div key={index} className="relative group flex justify-center sm:justify-normal" onClick={() => handleClick(index)}>
+          {/* <div
+            className={`w-full border border-slate-400 rounded-2xl flex flex-wrap justify-center md:justify-start items-center gap-2 p-1 sm:p-4 font-semibold text-2xl`}
+          >
+            {sortedItems.map(
+              (item, index) => (
+                // active !== "top" ? (
+                <motion.div
+                  key={index}
+                  custom={index}
+                  variants={waveVariants}
+                  initial="initial"
+                  animate="animate"
+                  className="relative group flex justify-center sm:justify-normal"
+                  onClick={() => handleClick(index)}
+                >
                   <img
                     src={item.logo}
                     alt={item.name}
                     className="w-32 h-32 sm:w-40 sm:h-40 lg:w-52 lg:h-52 bg-[#eeeeee] rounded-2xl shadow-amber-50 p-4 
-                              transition-transform duration-300 ease-in-out hover:scale-90"
+                 transition-transform duration-300 ease-in-out hover:scale-90"
                   />
-               
                   <div
-
-
                     className={`
-                      absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2
-                     bg-white text-black text-sm px-3 py-1 rounded-md whitespace-nowrap shadow-md
-                       transition-all duration-300
-                      opacity-0 pointer-events-none
-                      ${activeIndex === index ? "opacity-100 pointer-events-auto" : ""}
-                      lg:group-hover:opacity-100 lg:pointer-events-auto
-                    `}
-                  >
-                    {item.name}
-                  </div>
-                </div>
-              ) : (
-                <div key={index} className="w-full lg:w-1/4 text-sm">
-                  <p>{item.id}. {item.name}</p>
-                </div>
-              )
-            )}
-          </div> */}
-
-
-
-
-          <div
-            className={`w-full border border-slate-400 rounded-2xl flex flex-wrap justify-center md:justify-start items-center gap-2 p-1 sm:p-4 font-semibold text-2xl`}
-          >
-            {sortedItems.map((item, index) =>
-              // active !== "top" ? (
-              <div
-                key={index}
-                className="relative group flex justify-center sm:justify-normal"
-                onClick={() => handleClick(index)}
-              >
-                <img
-                  src={item.logo}
-                  alt={item.name}
-                  className="w-32 h-32 sm:w-40 sm:h-40 lg:w-52 lg:h-52 bg-[#eeeeee] rounded-2xl shadow-amber-50 p-4 
-                    transition-transform duration-300 ease-in-out hover:scale-90"
-                />
-                <div
-                  className={`
                       absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2
                       bg-white text-black text-sm px-3 py-1 rounded-md whitespace-nowrap shadow-md
                       transition-all duration-300
                       opacity-0 pointer-events-none
-                      ${activeIndex === index ? "opacity-100 pointer-events-auto" : ""}
+                      ${
+                        activeIndex === index
+                          ? "opacity-100 pointer-events-auto"
+                          : ""
+                      }
                       lg:group-hover:opacity-100 lg:pointer-events-auto
                    `}
-                >
-                  {item.name}
-                </div>
-              </div>
+                  >
+                    {item.name}
+                  </div>
+                </motion.div>
+              )
               // ) : (
               //   <div key={index} className="w-full lg:w-1/4 text-sm">
               //     <p>{index+1}. {item.name}</p>
               //   </div>
               // )
             )}
+          </div> */}
+
+          {/* 🔥 Animated Gradient Border Wrapper */}
+          <div className="relative w-full rounded-2xl p-px my-4 overflow-hidden">
+            {/* Animated Gradient Border */}
+            <div
+              className="absolute inset-0 rounded-2xl 
+      bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500
+"
+            ></div>
+
+            {/* ORIGINAL CONTENT */}
+            <div
+              className="relative rounded-2xl w-full flex flex-wrap justify-center md:justify-start items-center 
+      gap-2 p-1 sm:p-4 font-semibold text-2xl bg-[#1d1e5d]"
+            >
+              {sortedItems.map((item, index) => (
+                <motion.div
+                  key={index}
+                  custom={index}
+                  variants={waveVariants}
+                  initial="initial"
+                  animate="animate"
+                  className="relative group flex justify-center sm:justify-normal"
+                  onClick={() => handleClick(index)}
+                >
+                  <img
+                    src={item.logo}
+                    alt={item.name}
+                    className="w-32 h-32 sm:w-40 sm:h-40 lg:w-52 lg:h-52 
+            bg-[#eeeeee] rounded-2xl shadow-amber-50 p-4 
+            transition-transform duration-300 ease-in-out hover:scale-90"
+                  />
+
+                  <div
+                    className={`
+            absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2
+            bg-white text-black text-sm px-3 py-1 rounded-md whitespace-nowrap shadow-md
+            transition-all duration-300
+            ${
+              activeIndex === index
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }
+            lg:group-hover:opacity-100 lg:pointer-events-auto
+          `}
+                  >
+                    {item.name}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-
         </div>
-
       </div>
     </Layout>
   );
