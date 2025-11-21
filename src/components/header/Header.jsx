@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setDark } from "../../store/darkSlice";
 
 const Header = () => {
-  const dark = useSelector((state) => state.dark.dark);
+  // const dark = useSelector((state) => state.dark.dark);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,18 +30,18 @@ const Header = () => {
   return (
     <div
       className={`sticky top-0 z-50 w-full transition-all duration-500 
-    ${isScrolled ? "bg-[#f0ddab] opacity-100 border-b border-b-amber-50" : "bg-[#f0ddab] opacity-90"}
+    ${isScrolled ? "bg-[#f0ddab] dark:bg-red-600 opacity-100 border-b border-b-amber-50" : "bg-[#f0ddab] dark:bg-red-500 opacity-90"}
   `}
     >
       <div className="flex items-center justify-between w-full px-4">
 
-        <div className="p-4">
+        <div className="p-4 dark:bg-white">
           <img src="/logo.png" alt="Logo" className="w-40 sm:w-60" />
         </div>
 
         <div className="text-white hidden lg:flex gap-8 font-semibold items-center">
           <div className="cursor-pointer" onClick={() => dispatch(setDark())}>
-            {dark ? <MoonIcon color={"#000000"} width={18} height={18} /> : <SunIcon color={"#000000"} width={18} height={18} />}
+            {/* {dark ? <MoonIcon color={"#000000"} width={18} height={18} /> : <SunIcon color={"#000000"} width={18} height={18} />} */}
           </div>
           <Link className="text-black" to={"/"}>Home</Link>
           <Link className="text-black" to={"/showcase"}>R&D Showcase</Link>
