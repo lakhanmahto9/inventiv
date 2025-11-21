@@ -8,6 +8,7 @@ import { logos } from "../../utils/logo";
 import { motion, useInView } from "framer-motion";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useRef } from "react";
+import { useSelector } from "react-redux";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -15,6 +16,8 @@ const Home = () => {
   const [active, setActive] = useState("iit");
   const [error, setError] = useState(null);
   const [isOnline, setIsOnline] = useState(navigator.onLine);
+
+  //  const dark = useSelector((state) => state.dark.dark);
 
   // const handleTab = (tab) => {
   //   setActive(tab);
