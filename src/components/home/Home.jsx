@@ -326,7 +326,7 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="relative w-full rounded-2xl p-px my-4 overflow-hidden">
+          {!error && (<div className="relative w-full rounded-2xl p-px my-4 overflow-hidden">
             <div
               className="absolute inset-0 rounded-2xl 
                bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500"
@@ -370,7 +370,7 @@ const Home = () => {
                 </motion.div>
               ))}
             </div>
-          </div>
+          </div>)}
           {error && (
             <div className="w-full bg-red-600 text-white p-3 rounded-md text-center font-semibold mb-4">
               {error}
