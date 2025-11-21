@@ -8,12 +8,12 @@ const darkSlice = createSlice({
   name: "dark",
   initialState,
   reducers: {
-    setUser(state) {
+    setDark(state) {
       state.dark = !state.dark;
     }
   },
 });
 
-export const { setUser } = darkSlice.actions;
+export const { setDark } = darkSlice.actions;
 
 export default darkSlice.reducer;

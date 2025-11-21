@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Facebook, LinkedIn, MenuIcon, Twitter } from "../../icons/Icons";
+import { Facebook, LinkedIn, MenuIcon, MoonIcon, SunIcon, Twitter } from "../../icons/Icons";
 import Sidebar from "../drawer/Sidebar";
 import { Navigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setDark } from "../../store/darkSlice";
 
 const Header = () => {
+  const dark = useSelector((state) => state.dark.dark);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -19,6 +23,10 @@ const Header = () => {
     // cleanup
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const darkHandle = () => {
+
+  }
   return (
     <div
       className={`sticky top-0 z-50 w-full transition-all duration-500 
@@ -26,18 +34,17 @@ const Header = () => {
   `}
     >
       <div className="flex items-center justify-between w-full px-4">
-        {/* LEFT: LOGO */}
+
         <div className="p-4">
           <img src="/logo.png" alt="Logo" className="w-40 sm:w-60" />
         </div>
 
-        {/* RIGHT: MENU */}
         <div className="text-white hidden lg:flex gap-8 font-semibold items-center">
+          <div className="cursor-pointer" onClick={() => dispatch(setDark())}>
+            {dark ? <MoonIcon color={"#000000"} width={18} height={18} /> : <SunIcon color={"#000000"} width={18} height={18} />}
+          </div>
           <Link className="text-black" to={"/"}>Home</Link>
-
           <Link className="text-black" to={"/showcase"}>R&D Showcase</Link>
-
-          {/* Hosts dropdown */}
           <div className="relative inline-block text-left">
             <button className="text-black cursor-pointer" onClick={() => setOpen(!open)}>
               Hosts
