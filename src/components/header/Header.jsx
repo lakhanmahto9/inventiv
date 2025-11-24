@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <div
       className={`sticky top-0 z-50 w-full transition-all duration-500 
-    ${isScrolled ? "bg-[#f0ddab] dark:bg-red-600 opacity-100 border-b border-b-amber-50" : "bg-[#f0ddab] dark:bg-red-500 opacity-90"}
+    ${isScrolled ? "bg-[#f0ddab] opacity-100 dark:bg-[#18254f] dark:border-b-gray-500   border-b border-b-amber-50" : "bg-[#f0ddab] dark:bg-[#18254f] "}
   `}
     >
       <div className="flex items-center justify-between w-full px-4">
@@ -43,29 +43,29 @@ const Header = () => {
           <div className="cursor-pointer" onClick={() => dispatch(setDark())}>
             {/* {dark ? <MoonIcon color={"#000000"} width={18} height={18} /> : <SunIcon color={"#000000"} width={18} height={18} />} */}
           </div>
-          <Link className="text-black" to={"/"}>Home</Link>
-          <Link className="text-black" to={"/showcase"}>R&D Showcase</Link>
+          <Link className="text-black dark:text-white" to={"/"}>Home</Link>
+          <Link className="text-black dark:text-white" to={"/showcase"}>R&D Showcase</Link>
           <div className="relative inline-block text-left">
-            <button className="text-black cursor-pointer" onClick={() => setOpen(!open)}>
+            <button className="text-black dark:text-white cursor-pointer" onClick={() => setOpen(!open)}>
               Hosts
             </button>
 
             {open && (
-              <div className="absolute right-0 mt-2 w-60 bg-[#f5ce6d] shadow-lg rounded-lg p-2 z-50">
+              <div className="absolute right-0 mt-2 w-60 bg-[#f5ce6d] dark:bg-[#09153f] shadow-lg rounded-lg p-2 z-50">
                 <ul className="space-y-2">
-                  <li onClick={() => navigate("/hosts/kharagpur/1")} className="hover:bg-gray-100 text-black px-2 py-1 rounded cursor-pointer">
+                  <li onClick={() => navigate("/hosts/kharagpur/1")} className="hover:bg-gray-100 dark:hover:bg-[#18254f] text-black dark:text-white px-2 py-1 rounded cursor-pointer">
                     IIT KHARAGPUR
                   </li>
-                  <li onClick={() => navigate("/hosts/varanasi/2")} className="hover:bg-gray-100 text-black px-2 py-1 rounded cursor-pointer">
+                  <li onClick={() => navigate("/hosts/varanasi/2")} className="hover:bg-gray-100 dark:hover:bg-[#18254f] text-black dark:text-white px-2 py-1 rounded cursor-pointer">
                     IIT(BHU) VARANASI
                   </li>
-                  <li onClick={() => navigate("/hosts/dhanbad/3")} className="hover:bg-gray-100 text-black px-2 py-1 rounded cursor-pointer">
+                  <li onClick={() => navigate("/hosts/dhanbad/3")} className="hover:bg-gray-100 dark:hover:bg-[#18254f] text-black dark:text-white px-2 py-1 rounded cursor-pointer">
                     IIT(ISM) DHANBAD
                   </li>
-                  <li onClick={() => navigate("/hosts/patna/4")} className="hover:bg-gray-100 text-black px-2 py-1 rounded cursor-pointer">
+                  <li onClick={() => navigate("/hosts/patna/4")} className="hover:bg-gray-100 dark:hover:bg-[#18254f] text-black dark:text-white px-2 py-1 rounded cursor-pointer">
                     IIT PATNA
                   </li>
-                  <li onClick={() => navigate("/hosts/bhubaneswar/5")} className="hover:bg-gray-100 text-black px-2 py-1 rounded cursor-pointer">
+                  <li onClick={() => navigate("/hosts/bhubaneswar/5")} className="hover:bg-gray-100 dark:hover:bg-[#18254f] text-black dark:text-white px-2 py-1 rounded cursor-pointer">
                     IIT BHUBANESWAR
                   </li>
                 </ul>
@@ -73,7 +73,7 @@ const Header = () => {
             )}
           </div>
 
-          <Link className="text-black" to={"/contact"}>Contact</Link>
+          <Link className="text-black dark:text-white" to={"/contact"}>Contact</Link>
         </div>
 
         {/* Sidebar for mobile */}

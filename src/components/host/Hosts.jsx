@@ -84,20 +84,20 @@ const Hosts = () => {
             </div>
 
 
-            <div className='bg-[#E2F5FC] px-8 lg:px-20 xl:px-60 py-10'>
-              <p className='text-xl md:text-2xl font-bold'>{host.heading}</p>
+            <div className='bg-[#E2F5FC] dark:bg-[#18254f]  px-8 lg:px-20 xl:px-60 py-10'>
+              <p className='text-xl dark:text-white md:text-2xl font-bold'>{host.heading}</p>
               <div className='w-full flex gap-10 mt-4 flex-col lg:flex-row'>
-                <div className='bg-[#E2F5FC] shadow-2xl p-4 border border-amber-50 rounded-2xl w-full lg:w-1/2'>
-                  <p className='text-sm font-semibold'>{host.about}</p>
+                <div className='bg-[#E2F5FC] dark:bg-[#09153f] dark:border-gray-600 shadow-2xl p-4 border border-amber-50 rounded-2xl w-full lg:w-1/2'>
+                  <p className='text-sm font-semibold dark:text-white'>{host.about}</p>
                 </div>
-                <div className='bg-[#E2F5FC] shadow-2xl w-full lg:w-1/2 flex flex-row gap-4 p-4
+                <div className='bg-[#E2F5FC] dark:bg-[#09153f] dark:border-gray-600 shadow-2xl w-full lg:w-1/2 flex flex-row gap-4 p-4
                 rounded-2xl border border-amber-50 justify-center items-center overflow-hidden'>
                   {host.images.map((item, index) => (
                     <motion.img
                       key={index}
                       src={item}
                       alt=""
-                      className="w-28 h-28 rounded-2xl"
+                      className="w-28 h-28 rounded-2xl dark:bg-white"
                       initial={{ x: "100%" }}
                       animate={{ x: "-100%" }}
                       transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
