@@ -326,14 +326,14 @@ const Home = () => {
             </button>
           </div>
 
-          {!error && (<div className="relative w-full rounded-2xl p-px my-4 overflow-hidden">
+          {!error && (<div className="relative w-full rounded-2xl p-px overflow-hidden">
             <div
               className="absolute inset-0 rounded-2xl 
                bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500"
             ></div>
             <div
               className="relative rounded-2xl w-full flex flex-wrap justify-center md:justify-start items-center 
-              gap-2 p-1 sm:p-4 font-semibold text-2xl bg-[#1d1e5d]"
+              gap-2 p-1 sm:px-4 py-8 font-semibold text-2xl bg-[#1d1e5d]"
             >
               {sortedItems.map((item, index) => (
                 <motion.div
@@ -355,7 +355,7 @@ const Home = () => {
 
                   <div
                     className={`
-                     absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2
+                     absolute bottom-full left-1/2 transform -translate-x-1/2
                     bg-white text-black text-sm px-3 py-1 rounded-md whitespace-nowrap shadow-md
                    transition-all duration-300
                     ${activeIndex === index
