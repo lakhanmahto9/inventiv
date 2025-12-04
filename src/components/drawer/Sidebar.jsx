@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import { DownIcon, HomeIcon, HostIcon, MenuIcon, PhoneIcon, UpIcon } from "../../icons/Icons";
+import { BrochureIcon, DownIcon, HomeIcon, HostIcon, MenuIcon, PhoneIcon, UpIcon } from "../../icons/Icons";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
@@ -114,6 +114,16 @@ export default function Sidebar() {
           >
             <PhoneIcon color={isActive("/contact") ? "#fff" : "#000"} width={24} height={24} />
             <p className="text-lg font-semibold">Contact</p>
+          </div>
+
+          <div
+            onClick={() => navigate("/brochure")}
+            className={`flex gap-4 items-center p-4 rounded-2xl cursor-pointer
+              ${isActive("/brochure") ? "bg-amber-900 text-white" : "text-black"}
+            `}
+          >
+            <BrochureIcon color={isActive("/brochure") ? "#fff" : "#000"} width={24} height={24} />
+            <p className="text-lg font-semibold">Brochure</p>
           </div>
         </div>
       </List>

@@ -72,8 +72,8 @@ const Header = () => {
               </div>
             )}
           </div>
-
           <Link className="text-black dark:text-white" to={"/contact"}>Contact</Link>
+          <Link className="text-black dark:text-white" to={"/brochure"}>Brochure</Link>
         </div>
 
         {/* Sidebar for mobile */}

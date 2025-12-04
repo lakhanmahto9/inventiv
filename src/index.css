@@ -20,4 +20,14 @@
   display: none !important;
 }
 
+@page {
+  size: A3 landscape;
+  margin: 0;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+}
 

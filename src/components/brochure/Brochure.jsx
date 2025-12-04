@@ -1,0 +1,350 @@
+import React from "react";
+import Layout from "../layout/Layout";
+import { CalenderIcon, LocationIcon } from "../../icons/Icons";
+import { logos } from "../../utils/logo";
+
+const Brochure = () => {
+  return (
+    <Layout>
+      <div className="w-full flex flex-col justify-center items-center gap-3 bg-gray-100 py-10">
+        <div
+          className="bg-white shadow-xl flex"
+          style={{
+            width: "420mm",
+            height: "297mm",
+          }}
+        >
+          <div
+            className="p-4 border-r border-gray-300 flex flex-col bg-blue-900"
+            style={{ width: "140mm" }}
+          >
+            <h1 className="text-4xl font-bold text-white text-center">Participating Institutes</h1>
+            <div className="border border-white my-2"></div>
+            <div className="w-full flex flex-row gap-4">
+              <div className="w-1/3">
+                <div className="w-full flex-col">
+                  <div className="bg-red-900 mb-1 p-1 text-center rounded-2xl">
+                    <p className="text-white font-semibold">IISc + 23 IITs</p>
+                  </div>
+                  <div className="w-full flex flex-wrap justify-center items-center gap-2">
+                    {logos.iit.map((item, index) => (
+                      <div className="w-10 h-10 rounded-sm bg-white gap-1 flex justify-center items-center p-2 ">
+                        <img src={item.logo} alt="" className="w-8" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="w-full flex-col">
+                  <div className="bg-red-900 my-4 p-1 text-center rounded-2xl">
+                    <p className="text-white font-semibold">IIEST + 31 NITs</p>
+                  </div>
+                  <div className="w-full flex flex-wrap justify-center items-center gap-2">
+                    {logos.nit.map((item, index) => (
+                      <div className="w-10 h-10 rounded-sm bg-white gap-1 flex justify-center items-center p-2 ">
+                        <img src={item.logo} alt="" className="w-8" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="w-2/3">
+                <div className="w-full flex-col">
+                  <div className="bg-red-900 mb-1 p-1 text-center rounded-2xl">
+                    <p className="text-white font-semibold">7 IISERs</p>
+                  </div>
+                  <div className="w-full flex flex-wrap justify-center items-center gap-2">
+                    {logos.iiser.map((item, index) => (
+                      <div className="w-10 h-10 rounded-sm bg-white gap-1 flex justify-center items-center p-2 ">
+                        <img src={item.logo} alt="" className="w-8" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="w-full flex-col">
+                  <div className="bg-red-900 my-4 p-1 text-center rounded-2xl">
+                    <p className="text-white font-semibold">TOP 100 NIRF-Ranked Institutes</p>
+                  </div>
+                  <div className="w-full flex flex-wrap justify-center items-center gap-2">
+                    {logos.top.map((item, index) => (
+                      <div className="w-10 h-10 rounded-sm bg-white gap-1 flex justify-center items-center p-2 ">
+                        <img src={item.logo} alt="" className="w-8" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="relative w-full overflow-hidden bg-[#F0DDAB] border border-l-blue-50 border-r-blue-50" style={{ width: "140mm" }}>
+            <div className="relative w-full text-center py-10 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-40">
+                <svg
+                  viewBox="0 0 1440 300"
+                  className="w-full h-full"
+                  preserveAspectRatio="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="
+                      M0,0
+                      L1440,0
+                      L1440,200
+                      C1100,140 350,140 0,200
+                      Z
+                    "
+                    fill="#1e3a8a"
+                  />
+                </svg>
+              </div>
+              <h2 className="relative z-10 text-3xl font-semibold text-white">
+                Organizing Institutes
+              </h2>
+            </div>
+            <div className="w-full p-8">
+              <div className="bg-red-900 rounded-2xl p-4 flex flex-wrap justify-center gap-8">
+                <div className="bg-white p-4 w-48 rounded-2xl">
+                  <img src="\imgi_19_IIT_Kharagpur_Logo.svg.png" className="h-full object-contain" />
+                </div>
+                <div className="bg-white p-4 w-48 rounded-2xl">
+                  <img src="\bhu.png" className="h-full object-contain" />
+                </div>
+                <div className="bg-white p-4 w-48 rounded-2xl">
+                  <img src="\iitism-logo.png" className="h-full object-contain" />
+                </div>
+                <div className="bg-white p-4 w-48 rounded-2xl">
+                  <img src="/imgi_23_IIT-Patna.svg.png" className="h-full object-contain" />
+                </div>
+                <div className="bg-white p-4 w-48 rounded-2xl">
+                  <img src="\imgi_6_iitb_bhubaneswar_logo .png" className="h-full object-contain" />
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 w-full h-[700px]">
+              <svg
+                viewBox="0 0 1440 300"
+                className="w-full h-full"
+                preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="
+                    M0,250
+                    C200,240 400,200 720,230
+                    C1000,255 1250,260 1440,200
+                    L1440,300
+                    L0,300
+                    Z
+                  "
+                  fill="#9E0024"
+                />
+              </svg>
+            </div>
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2 w-[60%] h-[2px] bg-white opacity-90"></div>
+            <p className="absolute bottom-28 left-1/2 -translate-x-1/2 text-white text-sm font-semibold tracking-wide">
+              Jointly organized by:
+            </p>
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+              <div className="h-14 w-24 bg-white rounded-lg shadow-md p-2 flex items-center justify-center">
+                <img src="\imgi_19_IIT_Kharagpur_Logo.svg.png" className="h-full object-contain" />
+              </div>
+              <div className="h-14 w-24 bg-white rounded-lg shadow-md p-2 flex items-center justify-center">
+                <img src="\bhu.png" className="h-full object-contain" />
+              </div>
+              <div className="h-14 w-24 bg-white rounded-lg shadow-md p-2 flex items-center justify-center">
+                <img src="\iitism-logo.png" className="h-full object-contain" />
+              </div>
+              <div className="h-14 w-24 bg-white rounded-lg shadow-md p-2 flex items-center justify-center">
+                <img src="/imgi_23_IIT-Patna.svg.png" className="h-full object-contain" />
+              </div>
+              <div className="h-14 w-24 bg-white rounded-lg shadow-md p-2 flex items-center justify-center">
+                <img src="\imgi_6_iitb_bhubaneswar_logo .png" className="h-full object-contain" />
+              </div>
+            </div>
+          </div>
+         
+          <div
+            className="p-8 flex flex-col justify-center items-center bg-[#F0DDAB]"
+            style={{ width: "140mm" }}
+          >
+            <div className="">
+              <div className="p-4">
+                <img src="/logo.png" alt="logo" className="w-80" />
+              </div>
+              <div className="bg-white rounded-2xl p-8">
+                <div className="flex gap-2 items-center">
+                  <LocationIcon color="#9E0024" width="18" height="18" />
+                  <p className="text-[#9E0024] text-xl font-semibold">Vanue</p>
+                </div>
+                <p className="ml-6 text-xl font-semibold text-blue-900">IIT(ISM) Dhanbad</p>
+                <div className="flex gap-2 items-center">
+                  <CalenderIcon color="#9E0024" width="18" height="18" />
+                  <p className="text-[#9E0024] text-xl font-semibold">February 21-22, 2026</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div
+          className="bg-white shadow-xl flex"
+          style={{
+            width: "420mm",
+            height: "297mm",
+          }}
+        >
+          {/* ================= PANEL 1 (Front Cover) ================= */}
+
+          <div
+            className="relative p-4 flex flex-col overflow-hidden"
+            style={{ width: "140mm", height: "100%" }}
+          >
+            <div className="absolute inset-0 bg-blue-900 z-0"></div>
+            <svg
+              className="absolute inset-0 w-full h-full z-10"
+              viewBox="0 0 1000 1400"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="
+                  M 0 700
+                  C 250 400, 600 200, 1000 0
+                  L 1000 0
+                  L 1000 1400
+                  L 0 1400
+                  Z
+                "
+                fill="#F0DDAB"
+              />
+            </svg>
+            <div className="relative z-20">
+              <div className="w-full text-center">
+                <p className="text-white text-4xl font-bold">About Us</p>
+                <div className="border border-white my-2"></div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          {/* ================= PANEL 2 (Inside Left with Right Red Curve) ================= */}
+          <div className="bg-[#F0DDAB] border-x border-r-white border-l-white" style={{ width: "140mm" }}>
+            <div className="p-4">
+              <div className="bg-blue-900 text-center p-2 mx-4 rounded-xl">
+                <p className="text-xl text-white font-bold">Thematic Areas & Coordinating Institutes</p>
+              </div>
+              <div className="w-full p-4">
+                <div className="bg-blue-900 rounded-2xl p-4 gap-8">
+                  <div className="flex justify-between gap-2">
+                    <div className="w-full flex flex-col justify-center items-center relative">
+                      <p className="absolute top-2 left-1/2 -translate-x-1/2 
+                        text-white text-xs font-bold drop-shadow-lg">
+                        Health Care
+                      </p>
+                      <img
+                        src="/health.jpeg"
+                        className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
+                      />
+                      <p className="text-white font-bold mt-2">IIT KHARAGPUR</p>
+                    </div>
+
+                    <div className="w-full flex flex-col justify-center items-center relative">
+                      <p className="absolute top-2 left-1/2 -translate-x-1/2 
+                        text-white text-xs font-bold drop-shadow-lg  whitespace-nowrap">
+                        Materials Science
+                      </p>
+                      <img
+                        src="/material.jpeg"
+                        className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
+                      />
+                      <p className="text-white font-bold mt-2">IIT(BHU) VARANASI</p>
+                    </div>
+                  </div>
+
+                  <div className="w-full h-56 flex flex-col justify-center items-center relative my-8">
+                    <p className="absolute top-0 left-1/2 -translate-x-1/2 
+                        text-white text-xs font-bold drop-shadow-lg  whitespace-nowrap">
+                      Earth Sciences
+                    </p>
+                    <img
+                      src="/earth.jpeg"
+                      className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
+                    />
+                    <p className="text-white font-bold mt-2">IIT(ISM) DHANBAD</p>
+                  </div>
+                  <div className="flex justify-between gap-2">
+                    <div className="w-full flex flex-col justify-center items-center relative">
+                      <p className="absolute top-2 left-1/2 -translate-x-1/2 
+                        text-white text-xs font-bold drop-shadow-lg whitespace-nowrap">
+                        Artificial Intelligence
+                      </p>
+                      <img
+                        src="/artificial.jpeg"
+                        className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
+                      />
+                      <p className="text-white font-bold mt-2">IIT PATNA</p>
+                    </div>
+
+                    <div className="w-full flex flex-col justify-center items-center relative">
+                      <p
+                        className="absolute top-2 left-1/2 -translate-x-1/2 
+                          text-white text-xs font-bold drop-shadow-lg
+                          text-center whitespace-normal leading-tight
+                          w-[120px]"
+                      >
+                        Semiconductor Technology & Chip Design
+                      </p>
+
+                      <img
+                        src="/semiconductor.jpeg"
+                        className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
+                      />
+                      <p className="text-white font-bold mt-2">IIT BHUBANESWAR</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 bg-white rounded-2xl">
+                <ul className="list-disc ml-4 text-xl font-bold text-red-900">
+                  <li>IIT KHARAGPUR (Health Care)</li>
+                  <li>IIT(BHU) VARANASI (Materials Science)</li>
+                  <li>IIT(ISM) DHANBAD (Earth Sciences)</li>
+                  <li>IIT PATNA (Artificial Intelligence)</li>
+                  <li>IIT BHUBANESWAR (Semiconductor Technology & Chip Design)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* ================= PANEL 3 (Inside Middle) ================= */}
+          <div
+            className="p-8 flex flex-col justify-center items-center bg-[#F0DDAB]"
+            style={{ width: "140mm" }}
+          >
+            <div className="">
+              <div className="p-4">
+                <img src="/logo.png" alt="logo" className="w-80" />
+              </div>
+              <div className="bg-white rounded-2xl p-8">
+                <div className="flex gap-2 items-center">
+                  <LocationIcon color="#9E0024" width="18" height="18" />
+                  <p className="text-[#9E0024] text-xl font-semibold">Vanue</p>
+                </div>
+                <p className="ml-6 text-xl font-semibold text-blue-900">IIT(ISM) Dhanbad</p>
+                <div className="flex gap-2 items-center">
+                  <CalenderIcon color="#9E0024" width="18" height="18" />
+                  <p className="text-[#9E0024] text-xl font-semibold">February 21-22, 2026</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default Brochure;
