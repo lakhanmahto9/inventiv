@@ -6,7 +6,7 @@ import { logos } from "../../utils/logo";
 const Brochure = () => {
   return (
     <Layout>
-      <div className="w-full flex flex-col justify-center items-center gap-3 bg-gray-100 py-10">
+      <div className="w-full flex flex-col justify-center items-center gap-3 bg-gray-100">
         <div
           className="bg-white shadow-xl flex"
           style={{
@@ -15,7 +15,7 @@ const Brochure = () => {
           }}
         >
           <div
-            className="p-4 border-r border-gray-300 flex flex-col bg-blue-900"
+            className="p-4 border-gray-300 flex flex-col bg-blue-900"
             style={{ width: "140mm" }}
           >
             <h1 className="text-4xl font-bold text-white text-center">Participating Institutes</h1>
@@ -76,8 +76,8 @@ const Brochure = () => {
               </div>
             </div>
           </div>
-          <div className="relative w-full overflow-hidden bg-[#F0DDAB] border border-l-blue-50 border-r-blue-50" style={{ width: "140mm" }}>
-            <div className="relative w-full text-center py-10 overflow-hidden">
+          <div className="relative w-full overflow-hidden bg-[#F0DDAB] border-l-blue-50 border-r-blue-50" style={{ width: "140mm" }}>
+            <div className="relative w-full text-center py-8 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-40">
                 <svg
                   viewBox="0 0 1440 300"
@@ -97,7 +97,7 @@ const Brochure = () => {
                   />
                 </svg>
               </div>
-              <h2 className="relative z-10 text-3xl font-semibold text-white">
+              <h2 className="relative z-10  text-3xl font-bold text-white text-center">
                 Organizing Institutes
               </h2>
             </div>
@@ -136,7 +136,7 @@ const Brochure = () => {
                     L0,300
                     Z
                   "
-                  fill="#9E0024"
+                  fill="#7f1d1d"
                 />
               </svg>
             </div>
@@ -162,7 +162,7 @@ const Brochure = () => {
               </div>
             </div>
           </div>
-         
+
           <div
             className="p-8 flex flex-col justify-center items-center bg-[#F0DDAB]"
             style={{ width: "140mm" }}
@@ -174,7 +174,7 @@ const Brochure = () => {
               <div className="bg-white rounded-2xl p-8">
                 <div className="flex gap-2 items-center">
                   <LocationIcon color="#9E0024" width="18" height="18" />
-                  <p className="text-[#9E0024] text-xl font-semibold">Vanue</p>
+                  <p className="text-[#9E0024] text-xl font-semibold">Venue</p>
                 </div>
                 <p className="ml-6 text-xl font-semibold text-blue-900">IIT(ISM) Dhanbad</p>
                 <div className="flex gap-2 items-center">
@@ -221,7 +221,7 @@ const Brochure = () => {
             <div className="relative z-20">
               <div className="w-full text-center">
                 <p className="text-white text-4xl font-bold">About Us</p>
-                <div className="border border-white my-2"></div>
+
               </div>
             </div>
 
@@ -230,10 +230,34 @@ const Brochure = () => {
 
 
           {/* ================= PANEL 2 (Inside Left with Right Red Curve) ================= */}
-          <div className="bg-[#F0DDAB] border-x border-r-white border-l-white" style={{ width: "140mm" }}>
-            <div className="p-4">
-              <div className="bg-blue-900 text-center p-2 mx-4 rounded-xl">
+          <div className="bg-[#F0DDAB]" style={{ width: "140mm" }}>
+            <div className="">
+              {/* <div className="bg-blue-900 text-center p-2 mx-4 rounded-xl">
                 <p className="text-xl text-white font-bold">Thematic Areas & Coordinating Institutes</p>
+              </div> */}
+              <div className="relative w-full text-center py-8 overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-40">
+                  <svg
+                    viewBox="0 0 1440 300"
+                    className="w-full h-full"
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="
+                      M0,0
+                      L1440,0
+                      L1440,200
+                      C1100,140 350,140 0,200
+                      Z
+                    "
+                      fill="#1e3a8a"
+                    />
+                  </svg>
+                </div>
+                <h2 className="relative z-10  text-4xl font-bold text-white text-center">
+                  Organizing Institutes
+                </h2>
               </div>
               <div className="w-full p-4">
                 <div className="bg-blue-900 rounded-2xl p-4 gap-8">
@@ -307,7 +331,7 @@ const Brochure = () => {
                 </div>
               </div>
               <div className="p-4 bg-white rounded-2xl">
-                <ul className="list-disc ml-4 text-xl font-bold text-red-900">
+                <ul className="list-disc ml-4 text-sm font-bold text-red-900">
                   <li>IIT KHARAGPUR (Health Care)</li>
                   <li>IIT(BHU) VARANASI (Materials Science)</li>
                   <li>IIT(ISM) DHANBAD (Earth Sciences)</li>
@@ -319,27 +343,39 @@ const Brochure = () => {
           </div>
           {/* ================= PANEL 3 (Inside Middle) ================= */}
           <div
-            className="p-8 flex flex-col justify-center items-center bg-[#F0DDAB]"
-            style={{ width: "140mm" }}
+            className="relative p-4 flex flex-col overflow-hidden"
+            style={{ width: "140mm", height: "100%" }}
           >
-            <div className="">
-              <div className="p-4">
-                <img src="/logo.png" alt="logo" className="w-80" />
-              </div>
-              <div className="bg-white rounded-2xl p-8">
-                <div className="flex gap-2 items-center">
-                  <LocationIcon color="#9E0024" width="18" height="18" />
-                  <p className="text-[#9E0024] text-xl font-semibold">Vanue</p>
-                </div>
-                <p className="ml-6 text-xl font-semibold text-blue-900">IIT(ISM) Dhanbad</p>
-                <div className="flex gap-2 items-center">
-                  <CalenderIcon color="#9E0024" width="18" height="18" />
-                  <p className="text-[#9E0024] text-xl font-semibold">February 21-22, 2026</p>
-                </div>
-              </div>
+            {/* Bottom background */}
+            <div className="absolute inset-0 bg-blue-900 z-0"></div>
 
+            {/* Curved top beige area (mirrored version) */}
+            <svg
+              className="absolute inset-0 w-full h-full z-10"
+              viewBox="0 0 1000 1400"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="
+                  M 1000 700
+                  C 750 400, 400 200, 0 0
+                  L 0 0
+                  L 0 1400
+                  L 1000 1400
+                  Z
+                "
+                fill="#F0DDAB"
+              />
+            </svg>
+
+            {/* Content */}
+            <div className="relative z-20">
+              <div className="w-full text-center">
+                <p className="text-white text-4xl font-bold">Spons Tiers</p>
+              </div>
             </div>
           </div>
+
 
         </div>
       </div>
