@@ -187,15 +187,13 @@ const Brochure = () => {
           </div>
 
         </div>
-        <div
+        {/* <div
           className="bg-white shadow-xl flex"
           style={{
             width: "420mm",
             height: "297mm",
           }}
         >
-          {/* ================= PANEL 1 (Front Cover) ================= */}
-
           <div
             className="relative p-4 flex flex-col overflow-hidden"
             style={{ width: "140mm", height: "100%" }}
@@ -227,14 +225,8 @@ const Brochure = () => {
 
           </div>
 
-
-
-          {/* ================= PANEL 2 (Inside Left with Right Red Curve) ================= */}
           <div className="bg-[#F0DDAB]" style={{ width: "140mm" }}>
             <div className="">
-              {/* <div className="bg-blue-900 text-center p-2 mx-4 rounded-xl">
-                <p className="text-xl text-white font-bold">Thematic Areas & Coordinating Institutes</p>
-              </div> */}
               <div className="relative w-full text-center py-8 overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-40">
                   <svg
@@ -341,15 +333,11 @@ const Brochure = () => {
               </div>
             </div>
           </div>
-          {/* ================= PANEL 3 (Inside Middle) ================= */}
           <div
             className="relative p-4 flex flex-col overflow-hidden"
             style={{ width: "140mm", height: "100%" }}
           >
-            {/* Bottom background */}
             <div className="absolute inset-0 bg-blue-900 z-0"></div>
-
-            {/* Curved top beige area (mirrored version) */}
             <svg
               className="absolute inset-0 w-full h-full z-10"
               viewBox="0 0 1000 1400"
@@ -368,7 +356,6 @@ const Brochure = () => {
               />
             </svg>
 
-            {/* Content */}
             <div className="relative z-20">
               <div className="w-full text-center">
                 <p className="text-white text-4xl font-bold">Spons Tiers</p>
@@ -376,8 +363,168 @@ const Brochure = () => {
             </div>
           </div>
 
+        </div> */}
+        <div
+          className="relative bg-white shadow-xl flex"
+          style={{
+            width: "420mm",
+            height: "297mm",
+          }}
+        >
+          {/* ================= CENTER CIRCLE ================= */}
+          <div
+            className="absolute rounded-full z-40 bg-blue-900 flex items-center justify-center"
+            style={{
+              width: "250mm",
+              height: "250mm",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+          </div>
 
+          {/* ================= LEFT PANEL ================= */}
+          <div
+            className="relative p-4 flex flex-col overflow-hidden bg-[#F0DDAB]"
+            style={{ width: "140mm", height: "100%" }}
+          >
+          
+
+        
+
+            <div className="relative z-20">
+              <div className="w-full text-center">
+                <p className="text-white text-4xl font-bold">About Us</p>
+              </div>
+            </div>
+          </div>
+
+          {/* ================= MIDDLE PANEL ================= */}
+          <div className="bg-[#F0DDAB] z-50" style={{ width: "140mm" }}>
+            <div className="relative w-full text-center py-8 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-40">
+                <svg
+                  viewBox="0 0 1440 300"
+                  className="w-full h-full"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="
+                  M0,0
+                  L1440,0
+                  L1440,200
+                  C1100,140 350,140 0,200
+                  Z
+                "
+                    fill="#1e3a8a"
+                  />
+                </svg>
+              </div>
+
+              <h2 className="relative z-10 text-4xl font-bold text-white">
+                Organizing Institutes
+              </h2>
+            </div>
+
+            <div className="w-full p-4">
+              <div className="bg-[#F0DDAB] rounded-2xl p-4 gap-8">
+                <div className="flex justify-between gap-2">
+                  <div className="w-full flex flex-col items-center relative">
+                    <p className="absolute top-2 text-white text-xs font-bold">
+                      Health Care
+                    </p>
+                    <img
+                      src="/health.jpeg"
+                      className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
+                    />
+                    <p className="text-blue-900 font-bold mt-2">IIT KHARAGPUR</p>
+                  </div>
+
+                  <div className="w-full flex flex-col items-center relative">
+                    <p className="absolute top-2 text-white text-xs font-bold">
+                      Materials Science
+                    </p>
+                    <img
+                      src="/material.jpeg"
+                      className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
+                    />
+                    <p className="text-blue-900 font-bold mt-2">
+                      IIT(BHU) VARANASI
+                    </p>
+                  </div>
+                </div>
+
+                <div className="w-full h-56 flex flex-col items-center relative my-8">
+                  <p className="absolute top-0 text-white text-xs font-bold">
+                    Earth Sciences
+                  </p>
+                  <img
+                    src="/earth.jpeg"
+                    className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
+                  />
+                  <p className="text-blue-900 font-bold mt-2">
+                    IIT(ISM) DHANBAD
+                  </p>
+                </div>
+
+                <div className="flex justify-between gap-2">
+                  <div className="w-full flex flex-col items-center relative">
+                    <p className="absolute top-2 text-white text-xs font-bold">
+                      Artificial Intelligence
+                    </p>
+                    <img
+                      src="/artificial.jpeg"
+                      className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
+                    />
+                    <p className="text-blue-900 font-bold mt-2">IIT PATNA</p>
+                  </div>
+
+                  <div className="w-full flex flex-col items-center relative">
+                    <p className="absolute top-2 text-white text-xs font-bold text-center w-[120px]">
+                      Semiconductor Technology & Chip Design
+                    </p>
+                    <img
+                      src="/semiconductor.jpeg"
+                      className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
+                    />
+                    <p className="text-blue-900 font-bold mt-2">
+                      IIT BHUBANESWAR
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-4 bg-white rounded-2xl">
+              <ul className="list-disc ml-4 text-sm font-bold text-red-900">
+                <li>IIT KHARAGPUR (Health Care)</li>
+                <li>IIT(BHU) VARANASI (Materials Science)</li>
+                <li>IIT(ISM) DHANBAD (Earth Sciences)</li>
+                <li>IIT PATNA (Artificial Intelligence)</li>
+                <li>
+                  IIT BHUBANESWAR (Semiconductor Technology & Chip Design)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* ================= RIGHT PANEL ================= */}
+          <div
+            className="relative p-4 flex flex-col overflow-hidden bg-[#F0DDAB]"
+            style={{ width: "140mm", height: "100%" }}
+          >
+          
+            <div className="relative z-20">
+              <div className="w-full text-center">
+                <p className="text-white text-4xl font-bold">
+                  Spons Tiers
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </Layout>
   );
