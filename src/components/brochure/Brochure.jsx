@@ -365,7 +365,7 @@ const Brochure = () => {
 
         </div> */}
         <div
-          className="relative bg-white shadow-xl flex"
+          className="relative bg-[#F0DDAB] shadow-xl flex"
           style={{
             width: "420mm",
             height: "297mm",
@@ -373,10 +373,10 @@ const Brochure = () => {
         >
           {/* ================= CENTER CIRCLE ================= */}
           <div
-            className="absolute rounded-full z-40 bg-blue-900 flex items-center justify-center"
+            className="absolute rounded-full bg-blue-900 flex items-center justify-center"
             style={{
-              width: "250mm",
-              height: "250mm",
+              width: "200mm",
+              height: "200mm",
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
@@ -386,22 +386,64 @@ const Brochure = () => {
 
           {/* ================= LEFT PANEL ================= */}
           <div
-            className="relative p-4 flex flex-col overflow-hidden bg-[#F0DDAB]"
+            className="relative p-4 flex flex-col overflow-hidden"
             style={{ width: "140mm", height: "100%" }}
           >
-          
 
-        
 
-            <div className="relative z-20">
+
+
+            <div className="">
               <div className="w-full text-center">
-                <p className="text-white text-4xl font-bold">About Us</p>
+                <p className="text-blue-900 text-4xl font-bold">About Us</p>
+              </div>
+              <div className="">
+                <p className="text-blue-900 text-lg font-bold">PM Message:-</p>
+                <p className="text-[#9B0225] font-bold">"When science is scaled, innovation become inclusive and technology drives transformation, it lays the foundation for major achievements."</p>
+              </div>
+              <p className="font-bold text-lg text-blue-900 mt-3 mb-2">Message from five organising Directors</p>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
+                  <img src="/director_iitkharagpur.jpg" alt="" className="w-20 h-20 rounded-full" />
+                  <div>
+                    <p className="font-semibold">Director, IIT Kharagpur(Healthcare)</p>
+                    <p className="text-xs text-[#9B0225]">Healthcare innovation is central to improving quality of life and ensuring equitable access to medical solutions. IIT Kharagpur is pleased to contribute to IInvenTiv 2026 by anchoring the Healthcare theme, fostering translational research that bridges engineering, medicine, and industry. We look forward to collaborative innovations that address global health challenges through affordable, scalable technologies.</p>
+                  </div>
+                </div>
+                <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
+                  <img src="/director_iitbhu.jpeg" alt="" className="w-20 h-20 rounded-full" />
+                  <div>
+                    <p className="font-semibold">Director, IIT (BHU) Varanasi (Materials Science)</p>
+                    <p className="text-xs text-[#9B0225]">Advanced materials form the backbone of modern technology and sustainable development. IIT (BHU) Varanasi is proud to lead the Materials Science theme at IInvenTiv 2026, showcasing innovations spanning energy, infrastructure, manufacturing, and advanced functional materials. We anticipate strong collaboration between academia and industry to translate fundamental research into impactful real-world applications.</p>
+                  </div>
+                </div>
+                <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
+                  <img src="/director_iitdhanbad.jpg" alt="" className="w-20 h-20 rounded-full" />
+                  <div>
+                    <p className="font-semibold">Director, IIT (ISM) Dhanbad (Earth Sciences, Host Institute)</p>
+                    <p className="text-xs text-[#9B0225]">Earth Sciences play a vital role in resource sustainability, climate resilience, and energy security. As the host institute, IIT (ISM) Dhanbad is honoured to lead the Earth Sciences theme at IInvenTiv 2026. We aim to highlight innovations in geosciences, mining, and environmental engineering that support responsible development and national priorities..</p>
+                  </div>
+                </div>
+                <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
+                  <img src="/director_iitpatna.jpg" alt="" className="w-20 h-20 rounded-full" />
+                  <div>
+                    <p className="font-semibold">Director, IIT Patna (Artificial Intelligence)</p>
+                    <p className="text-xs text-[#9B0225]">Artificial Intelligence is transforming industries, governance, and society at large. IIT Patna is delighted to anchor the Artificial Intelligence theme at IInvenTiv 2026, promoting responsible, scalable, and impactful AI solutions. We look forward to engaging with industry and global partners to demonstrate how AI-driven innovation can address complex societal and industrial challenges.</p>
+                  </div>
+                </div>
+                <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
+                  <img src="/director_iitbhuneswar.jpg" alt="" className="w-20 h-20 rounded-full" />
+                  <div>
+                    <p className="font-semibold">Director, IIT Bhubaneswar (Semiconductor Technology & Chip Design)</p>
+                    <p className="text-xs text-[#9B0225]">Semiconductor technology is foundational to digital sovereignty and technological leadership. IIT Bhubaneswar is proud to lead the Semiconductor Technology and Chip Design theme at IInvenTiv 2026, aligned with India’s Semiconductor Mission. We seek to foster innovation across design, fabrication, and systems, strengthening India’s position in the global semiconductor ecosystem.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* ================= MIDDLE PANEL ================= */}
-          <div className="bg-[#F0DDAB] z-50" style={{ width: "140mm" }}>
+          <div className="z-50" style={{ width: "140mm" }}>
             <div className="relative w-full text-center py-8 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-40">
                 <svg
@@ -511,14 +553,14 @@ const Brochure = () => {
 
           {/* ================= RIGHT PANEL ================= */}
           <div
-            className="relative p-4 flex flex-col overflow-hidden bg-[#F0DDAB]"
+            className="relative p-4 flex flex-col overflow-hidden"
             style={{ width: "140mm", height: "100%" }}
           >
-          
+
             <div className="relative z-20">
               <div className="w-full text-center">
-                <p className="text-white text-4xl font-bold">
-                  Spons Tiers
+                <p className="text-blue-900 text-4xl font-bold">
+                 Sponsor Tier
                 </p>
               </div>
             </div>
