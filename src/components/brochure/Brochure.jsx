@@ -4,9 +4,10 @@ import { CalenderIcon, LocationIcon } from "../../icons/Icons";
 import { logos } from "../../utils/logo";
 
 const Brochure = () => {
+
   return (
     <Layout>
-      <div className="w-full flex flex-col justify-center items-center gap-3 bg-gray-100">
+      <div className="w-full flex flex-col justify-center items-center bg-gray-100">
         <div
           className="bg-white shadow-xl flex"
           style={{
@@ -76,7 +77,7 @@ const Brochure = () => {
               </div>
             </div>
           </div>
-          <div className="relative w-full overflow-hidden bg-[#F0DDAB] border-l-blue-50 border-r-blue-50" style={{ width: "140mm" }}>
+          <div className="relative w-full overflow-hidden bg-[#F0DDAB]" style={{ width: "140mm" }}>
             <div className="relative w-full text-center py-8 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-40">
                 <svg
@@ -187,183 +188,6 @@ const Brochure = () => {
           </div>
 
         </div>
-        {/* <div
-          className="bg-white shadow-xl flex"
-          style={{
-            width: "420mm",
-            height: "297mm",
-          }}
-        >
-          <div
-            className="relative p-4 flex flex-col overflow-hidden"
-            style={{ width: "140mm", height: "100%" }}
-          >
-            <div className="absolute inset-0 bg-blue-900 z-0"></div>
-            <svg
-              className="absolute inset-0 w-full h-full z-10"
-              viewBox="0 0 1000 1400"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="
-                  M 0 700
-                  C 250 400, 600 200, 1000 0
-                  L 1000 0
-                  L 1000 1400
-                  L 0 1400
-                  Z
-                "
-                fill="#F0DDAB"
-              />
-            </svg>
-            <div className="relative z-20">
-              <div className="w-full text-center">
-                <p className="text-white text-4xl font-bold">About Us</p>
-
-              </div>
-            </div>
-
-          </div>
-
-          <div className="bg-[#F0DDAB]" style={{ width: "140mm" }}>
-            <div className="">
-              <div className="relative w-full text-center py-8 overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-40">
-                  <svg
-                    viewBox="0 0 1440 300"
-                    className="w-full h-full"
-                    preserveAspectRatio="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="
-                      M0,0
-                      L1440,0
-                      L1440,200
-                      C1100,140 350,140 0,200
-                      Z
-                    "
-                      fill="#1e3a8a"
-                    />
-                  </svg>
-                </div>
-                <h2 className="relative z-10  text-4xl font-bold text-white text-center">
-                  Organizing Institutes
-                </h2>
-              </div>
-              <div className="w-full p-4">
-                <div className="bg-blue-900 rounded-2xl p-4 gap-8">
-                  <div className="flex justify-between gap-2">
-                    <div className="w-full flex flex-col justify-center items-center relative">
-                      <p className="absolute top-2 left-1/2 -translate-x-1/2 
-                        text-white text-xs font-bold drop-shadow-lg">
-                        Health Care
-                      </p>
-                      <img
-                        src="/health.jpeg"
-                        className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
-                      />
-                      <p className="text-white font-bold mt-2">IIT KHARAGPUR</p>
-                    </div>
-
-                    <div className="w-full flex flex-col justify-center items-center relative">
-                      <p className="absolute top-2 left-1/2 -translate-x-1/2 
-                        text-white text-xs font-bold drop-shadow-lg  whitespace-nowrap">
-                        Materials Science
-                      </p>
-                      <img
-                        src="/material.jpeg"
-                        className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
-                      />
-                      <p className="text-white font-bold mt-2">IIT(BHU) VARANASI</p>
-                    </div>
-                  </div>
-
-                  <div className="w-full h-56 flex flex-col justify-center items-center relative my-8">
-                    <p className="absolute top-0 left-1/2 -translate-x-1/2 
-                        text-white text-xs font-bold drop-shadow-lg  whitespace-nowrap">
-                      Earth Sciences
-                    </p>
-                    <img
-                      src="/earth.jpeg"
-                      className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
-                    />
-                    <p className="text-white font-bold mt-2">IIT(ISM) DHANBAD</p>
-                  </div>
-                  <div className="flex justify-between gap-2">
-                    <div className="w-full flex flex-col justify-center items-center relative">
-                      <p className="absolute top-2 left-1/2 -translate-x-1/2 
-                        text-white text-xs font-bold drop-shadow-lg whitespace-nowrap">
-                        Artificial Intelligence
-                      </p>
-                      <img
-                        src="/artificial.jpeg"
-                        className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
-                      />
-                      <p className="text-white font-bold mt-2">IIT PATNA</p>
-                    </div>
-
-                    <div className="w-full flex flex-col justify-center items-center relative">
-                      <p
-                        className="absolute top-2 left-1/2 -translate-x-1/2 
-                          text-white text-xs font-bold drop-shadow-lg
-                          text-center whitespace-normal leading-tight
-                          w-[120px]"
-                      >
-                        Semiconductor Technology & Chip Design
-                      </p>
-
-                      <img
-                        src="/semiconductor.jpeg"
-                        className="h-full rounded-tr-4xl rounded-bl-4xl object-cover"
-                      />
-                      <p className="text-white font-bold mt-2">IIT BHUBANESWAR</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="p-4 bg-white rounded-2xl">
-                <ul className="list-disc ml-4 text-sm font-bold text-red-900">
-                  <li>IIT KHARAGPUR (Health Care)</li>
-                  <li>IIT(BHU) VARANASI (Materials Science)</li>
-                  <li>IIT(ISM) DHANBAD (Earth Sciences)</li>
-                  <li>IIT PATNA (Artificial Intelligence)</li>
-                  <li>IIT BHUBANESWAR (Semiconductor Technology & Chip Design)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div
-            className="relative p-4 flex flex-col overflow-hidden"
-            style={{ width: "140mm", height: "100%" }}
-          >
-            <div className="absolute inset-0 bg-blue-900 z-0"></div>
-            <svg
-              className="absolute inset-0 w-full h-full z-10"
-              viewBox="0 0 1000 1400"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="
-                  M 1000 700
-                  C 750 400, 400 200, 0 0
-                  L 0 0
-                  L 0 1400
-                  L 1000 1400
-                  Z
-                "
-                fill="#F0DDAB"
-              />
-            </svg>
-
-            <div className="relative z-20">
-              <div className="w-full text-center">
-                <p className="text-white text-4xl font-bold">Spons Tiers</p>
-              </div>
-            </div>
-          </div>
-
-        </div> */}
         <div
           className="relative bg-[#F0DDAB] shadow-xl flex"
           style={{
@@ -371,27 +195,21 @@ const Brochure = () => {
             height: "297mm",
           }}
         >
-          {/* ================= CENTER CIRCLE ================= */}
           <div
-            className="absolute rounded-full bg-blue-900 flex items-center justify-center"
+            className="absolute bg-blue-900 print-circle"
             style={{
-              width: "200mm",
-              height: "200mm",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
+              width: "250mm",
+              height: "250mm",
+              borderRadius: "50%",
+              inset: 0,
+              margin: "auto",
             }}
-          >
-          </div>
+          />
 
-          {/* ================= LEFT PANEL ================= */}
           <div
             className="relative p-4 flex flex-col overflow-hidden"
             style={{ width: "140mm", height: "100%" }}
           >
-
-
-
 
             <div className="">
               <div className="w-full text-center">
@@ -401,7 +219,7 @@ const Brochure = () => {
                 <p className="text-blue-900 text-lg font-bold">PM Message:-</p>
                 <p className="text-[#9B0225] font-bold">"When science is scaled, innovation become inclusive and technology drives transformation, it lays the foundation for major achievements."</p>
               </div>
-              <p className="font-bold text-lg text-blue-900 mt-3 mb-2">Message from five organising Directors</p>
+              <p className="font-bold text-lg text-blue-900 py-2">Message from five organising Directors</p>
               <div className="flex flex-col gap-4">
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
                   <img src="/director_iitkharagpur.jpg" alt="" className="w-20 h-20 rounded-full" />
@@ -425,7 +243,7 @@ const Brochure = () => {
                   </div>
                 </div>
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
-                  <img src="/director_iitpatna.jpg" alt="" className="w-20 h-20 rounded-full" />
+                  <img src="iit-patna-director.jpg" alt="" className="w-20 h-20 rounded-full" />
                   <div>
                     <p className="font-semibold">Director, IIT Patna (Artificial Intelligence)</p>
                     <p className="text-xs text-[#9B0225]">Artificial Intelligence is transforming industries, governance, and society at large. IIT Patna is delighted to anchor the Artificial Intelligence theme at IInvenTiv 2026, promoting responsible, scalable, and impactful AI solutions. We look forward to engaging with industry and global partners to demonstrate how AI-driven innovation can address complex societal and industrial challenges.</p>
@@ -441,8 +259,6 @@ const Brochure = () => {
               </div>
             </div>
           </div>
-
-          {/* ================= MIDDLE PANEL ================= */}
           <div className="z-50" style={{ width: "140mm" }}>
             <div className="relative w-full text-center py-8 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-40">
@@ -551,7 +367,6 @@ const Brochure = () => {
             </div>
           </div>
 
-          {/* ================= RIGHT PANEL ================= */}
           <div
             className="relative p-4 flex flex-col overflow-hidden"
             style={{ width: "140mm", height: "100%" }}
@@ -560,13 +375,12 @@ const Brochure = () => {
             <div className="relative z-20">
               <div className="w-full text-center">
                 <p className="text-blue-900 text-4xl font-bold">
-                 Sponsor Tier
+                  Sponsor Tier
                 </p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </Layout>
   );

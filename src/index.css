@@ -25,9 +25,23 @@
   margin: 0;
 }
 
+
 @media print {
+  /* Prevent browser from clipping circles */
+  .print-circle {
+    overflow: visible !important;
+    clip-path: none !important;
+  }
+
+  /* Ensure parent allows full render */
+  .page,
   body {
-    margin: 0;
+    overflow: visible !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 }
 
