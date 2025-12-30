@@ -19,6 +19,16 @@ export default function Sidebar() {
 
   const isActive = (path) => location.pathname === path;
 
+  const handleDownload = (e) => {
+    e.preventDefault();
+    const link = document.createElement("a");
+    link.href = "/brochure.pdf";
+    link.download = "IInvenTiv.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const DrawerList = (
     <Box sx={{ width: 250, p: 2 }} role="presentation">
       <List>
@@ -117,7 +127,7 @@ export default function Sidebar() {
           </div>
 
           <div
-            onClick={() => navigate("/brochure")}
+            onClick={handleDownload}
             className={`flex gap-4 items-center p-4 rounded-2xl cursor-pointer
               ${isActive("/brochure") ? "bg-amber-900 text-white" : "text-black"}
             `}
