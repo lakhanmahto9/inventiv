@@ -13,7 +13,7 @@ function App() {
         <Route path="/showcase" element={<RnDShowcase/>}/>
         <Route path="/hosts/:name/:id" element={<Hosts/>}/>
         <Route path="/contact" element={<Contact/>}/>
-        <Route path="/brochure" element={<Brochure/>}/>
+        {/* <Route path="/brochure" element={<Brochure/>}/> */}
       </Routes>
     </Router>
   );

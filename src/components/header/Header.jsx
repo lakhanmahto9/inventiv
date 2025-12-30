@@ -24,9 +24,16 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const darkHandle = () => {
+  const handleDownload = (e) => {
+    e.preventDefault();
+    const link = document.createElement("a");
+    link.href = "/brochure.pdf";
+    link.download = "IInvenTiv.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
-  }
   return (
     <div
       className={`sticky top-0 z-50 w-full transition-all duration-500 
@@ -73,7 +80,13 @@ const Header = () => {
             )}
           </div>
           <Link className="text-black dark:text-white" to={"/contact"}>Contact</Link>
-          <Link className="text-black dark:text-white" to={"/brochure"}>Brochure</Link>
+          <button
+            onClick={handleDownload}
+            className="text-black dark:text-white cursor-pointer"
+          >
+            Brochure
+          </button>
+
         </div>
 
         {/* Sidebar for mobile */}
