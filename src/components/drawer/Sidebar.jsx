@@ -27,6 +27,7 @@ export default function Sidebar() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    setOpen(false);
   };
 
   const DrawerList = (
