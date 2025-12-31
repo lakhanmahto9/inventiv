@@ -69,7 +69,7 @@ const Footer = () => {
 
       {/* Social Icons */}
       <motion.div className="flex flex-col gap-2 my-4" variants={footerItem}>
-        <p className="text-2xl text-[#ffa343] font-semibold">Social Links</p>
+        <p className="text-2xl text-[#ffa343] font-semibold">Social Media</p>
         <div className="flex gap-4">
           <motion.div variants={iconHover} whileHover="hover">
             <Twitter color="#fff" width="20" height="20" />
