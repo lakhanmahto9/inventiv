@@ -19,7 +19,7 @@ const Brochure = () => {
             className="p-4 border-gray-300 flex flex-col bg-blue-900"
             style={{ width: "140mm" }}
           >
-            <h1 className="text-4xl font-bold text-white text-center">Participating Institutes</h1>
+            <h1 className="text-3xl font-bold text-white text-center">Potential Participating Institutes</h1>
             <div className="border border-white my-2"></div>
             <div className="w-full flex flex-row gap-4">
               <div className="w-1/3">
