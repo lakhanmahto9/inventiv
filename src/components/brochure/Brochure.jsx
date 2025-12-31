@@ -19,7 +19,7 @@ const Brochure = () => {
             className="p-4 border-gray-300 flex flex-col bg-blue-900"
             style={{ width: "140mm" }}
           >
-            <h1 className="text-4xl font-bold text-white text-center">Participating Institutes</h1>
+            <h1 className="text-3xl font-bold text-white text-center">Potential Participating Institutes</h1>
             <div className="border border-white my-2"></div>
             <div className="w-full flex flex-row gap-4">
               <div className="w-1/3">
@@ -217,7 +217,11 @@ const Brochure = () => {
               </div>
               <div className="">
                 <p className="text-blue-900 text-lg font-bold">PM Message:-</p>
-                <p className="text-[#9B0225] font-bold">"When science is scaled, innovation become inclusive and technology drives transformation, it lays the foundation for major achievements."</p>
+                <div className="flex gap-2">
+                  <img src="/pm.jpeg" alt="" className="w-20 h-20 rounded-full"/>
+                  <p className="text-[#9B0225] font-bold">"When science is scaled, innovation become inclusive and technology drives transformation, it lays the foundation for major achievements."</p>
+                </div>
+                
               </div>
               <p className="font-bold text-lg text-blue-900 py-2">Message from five organising Directors</p>
               <div className="flex flex-col gap-4">
