@@ -22,7 +22,7 @@ export default function Sidebar() {
   const handleDownload = (e) => {
     e.preventDefault();
     const link = document.createElement("a");
-    link.href = "/brochure.pdf";
+    link.href = "/brochure_iinventiv.pdf";
     link.download = "IInvenTiv.pdf";
     document.body.appendChild(link);
     link.click();

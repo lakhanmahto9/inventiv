@@ -281,7 +281,7 @@ const Brochure = () => {
               </div>
 
               <h2 className="relative z-10 text-4xl font-bold text-white">
-                Organizing Institutes
+                Thematic Areas
               </h2>
             </div>
 

@@ -25,8 +25,8 @@ const Contact = () => {
                         <HomeIcon color={"#000000"} width={20} height={20} />
                       </div>
                       <div>
-                        <p className='text-3xl font-bold text-[#00BCD5]'>Address</p>
-                        <p className='lg:text-base text-sm'>IIT(ISM) Dhanbad</p>
+                        <p className='text-3xl font-bold text-[#00BCD5]'>Venue</p>
+                        <p className='lg:text-base text-sm'>IIT(ISM) Dhanbad, February 21-22, 2026</p>
                       </div>
                     </div>
 
@@ -40,10 +40,9 @@ const Contact = () => {
                       </div>
                       <div className='ml-12'>
                         <p className='lg:text-base text-sm'>
-                          Prof. Parthasarthi Das, Convenor,IInvenTiv(Dearn, R &
-                          D )
+                          Prof. Parthasarathi Das (Dean R &D), Convenor, IInvenTiv 2026
                         </p>
-                        <p className='lg:text-base text-sm'>Prof. Ejaz Ahmad,organizing secretary(PIC SRIC )</p>
+                        <p className='lg:text-base text-sm'>Prof. Ejaz Ahmad (PIC SRIC) Organizing Secretary, IInvenTiv 2026</p>
                       </div>
                     </div>
 
