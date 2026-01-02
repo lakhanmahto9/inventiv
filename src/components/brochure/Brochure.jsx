@@ -29,13 +29,13 @@ const Brochure = () => {
                   </div>
                   <div className="w-full flex flex-wrap justify-center items-center gap-2">
                     {logos.iit.map((item, index) => (
-                      <div className="w-10 h-10 rounded-sm bg-white gap-1 flex justify-center items-center p-2 ">
+                      <div className="w-13 h-13 rounded-sm bg-white gap-1 flex justify-center items-center p-2 ">
                         <img src={item.logo} alt="" className="w-8" />
                       </div>
                     ))}
                   </div>
                 </div>
-                <div className="w-full flex-col">
+                {/* <div className="w-full flex-col">
                   <div className="bg-red-900 my-4 p-1 text-center rounded-2xl">
                     <p className="text-white font-semibold">IIEST + 31 NITs</p>
                   </div>
@@ -46,10 +46,22 @@ const Brochure = () => {
                       </div>
                     ))}
                   </div>
+                </div> */}
+                <div className="w-full flex-col">
+                  <div className="bg-red-900 my-1 p-1 text-center rounded-2xl">
+                    <p className="text-white font-semibold">7 IISERs</p>
+                  </div>
+                  <div className="w-full flex flex-wrap justify-center items-center gap-2">
+                    {logos.iiser.map((item, index) => (
+                      <div className="w-13 h-13 rounded-sm bg-white gap-1 flex justify-center items-center p-2 ">
+                        <img src={item.logo} alt="" className="w-8" />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
               <div className="w-2/3">
-                <div className="w-full flex-col">
+                {/* <div className="w-full flex-col">
                   <div className="bg-red-900 mb-1 p-1 text-center rounded-2xl">
                     <p className="text-white font-semibold">7 IISERs</p>
                   </div>
@@ -60,15 +72,26 @@ const Brochure = () => {
                       </div>
                     ))}
                   </div>
+                </div> */}
+                <div className="w-full flex-col">
+                  <div className="bg-red-900 mb-1 p-1 text-center rounded-2xl">
+                    <p className="text-white font-semibold">IIEST + 31 NITs</p>
+                  </div>
+                  <div className="w-full flex flex-wrap justify-center items-center gap-2">
+                    {logos.nit.map((item, index) => (
+                      <div className="w-12 h-12 rounded-sm bg-white gap-1 flex justify-center items-center p-2 ">
+                        <img src={item.logo} alt="" className="w-8" />
+                      </div>
+                    ))}
+                  </div>
                 </div>
-
                 <div className="w-full flex-col">
                   <div className="bg-red-900 my-4 p-1 text-center rounded-2xl">
                     <p className="text-white font-semibold">TOP 100 NIRF-Ranked Institutes</p>
                   </div>
                   <div className="w-full flex flex-wrap justify-center items-center gap-2">
                     {logos.top.map((item, index) => (
-                      <div className="w-10 h-10 rounded-sm bg-white gap-1 flex justify-center items-center p-2 ">
+                      <div className="w-11 h-11 rounded-sm bg-white gap-1 flex justify-center items-center p-2 ">
                         <img src={item.logo} alt="" className="w-8" />
                       </div>
                     ))}
@@ -126,17 +149,26 @@ const Brochure = () => {
                   <div className="bg-white p-4 w-48 h-48 rounded-2xl">
                     <img src="/imgi_23_IIT-Patna.svg.png" className="h-full object-contain" />
                   </div>
-                       <p className="text-white text-sm font-semibold text-center">IIT PATNA</p>
+                  <p className="text-white text-sm font-semibold text-center">IIT PATNA</p>
                 </div>
                 <div>
                   <div className="bg-white p-4 w-48 h-48 rounded-2xl">
                     <img src="\imgi_6_iitb_bhubaneswar_logo .png" className="h-full object-contain" />
                   </div>
-                       <p className="text-white text-sm font-semibold text-center">IIT BHUBANESWAR</p>
+                  <p className="text-white text-sm font-semibold text-center">IIT BHUBANESWAR</p>
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 w-full h-[700px]">
+
+            <div className="absolute bottom-0 left-0 w-full h-[250px] p-8">
+              <img
+                src="/i2h.jpg"
+                alt=""
+                className="w-full h-full object-fill rounded-xl"
+              />
+            </div>
+
+            {/* <div className="absolute bottom-0 left-0 w-full h-[700px]">
               <svg
                 viewBox="0 0 1440 300"
                 className="w-full h-full"
@@ -155,9 +187,9 @@ const Brochure = () => {
                   fill="#7f1d1d"
                 />
               </svg>
-            </div>
-            <div className="absolute bottom-24 left-1/2 -translate-x-1/2 w-[60%] h-[2px] bg-white opacity-90"></div>
-            <p className="absolute bottom-28 left-1/2 -translate-x-1/2 text-white text-sm font-semibold tracking-wide">
+            </div> */}
+            {/* <div className="absolute bottom-24 left-1/2 -translate-x-1/2 w-[60%] h-[2px] bg-white opacity-90"></div> */}
+            {/* <p className="absolute bottom-28 left-1/2 -translate-x-1/2 text-white text-sm font-semibold tracking-wide">
               Jointly organized by:
             </p>
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
@@ -176,7 +208,7 @@ const Brochure = () => {
               <div className="h-14 w-24 bg-white rounded-lg shadow-md p-2 flex items-center justify-center">
                 <img src="\imgi_6_iitb_bhubaneswar_logo .png" className="h-full object-contain" />
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div
@@ -189,7 +221,7 @@ const Brochure = () => {
               </div>
               <div class="flex justify-between bg-white p-4 rounded-2xl">
                 <div className="w-max-w-[80%]">
-                  <p class="text-sm font-bold text-red-900 text-justify">
+                  <p class="text-sm font-bold text-red-900 leading-tight">
                     "When science is scaled, innovation become inclusive and technology
                     drives transformation, it lays the foundation for major achievements."
                   </p>
@@ -204,7 +236,7 @@ const Brochure = () => {
               </div>
 
               <div className="bg-white text-center w-full rounded-2xl p-4">
-                <p className="font-bold">IInvenTiv India</p>
+                <p className="font-bold">IInvenTiv</p>
                 <p className="font-semibold text-sm italic">Annual National R&amp;D Fair for Innovation &amp; Self-Reliance</p>
                 <p className="text-xs text-justify">IInvenTiv India is a flagship annual R&D fair organized by the Ministry of Education, Government of India, to showcase indigenous innovations and strengthen the research-to-technology ecosystem. Launched in 2022 at IIT Delhi as part of Azadi ka Amrit Mahotsav, it initially brought together all IITs and later expanded to include NITs, IISc, and leading universities. The platform bridges academia and industry by promoting technology transfer, commercialization, and collaborative innovation across priority sectors such as healthcare, energy, manufacturing, digital technologies, mobility, and infrastructure. IInvenTiv India supports national initiatives like Make in India and Atmanirbhar Bharat, advancing India’s vision of self-reliance and innovation-led growth.</p>
               </div>
@@ -238,8 +270,8 @@ const Brochure = () => {
           <div
             className="absolute bg-blue-900 print-circle"
             style={{
-              width: "250mm",
-              height: "250mm",
+              width: "270mm",
+              height: "270mm",
               borderRadius: "50%",
               inset: 0,
               margin: "auto",
@@ -255,57 +287,58 @@ const Brochure = () => {
               <div className="w-full text-center">
                 <p className="text-blue-900 text-4xl font-bold">About Us</p>
               </div>
-              <div className="">
-                <p className="text-blue-900 text-lg font-bold">PM Message:-</p>
-                <div className="flex gap-2">
-                  <img src="/pm.jpeg" alt="" className="w-20 h-20 rounded-full" />
-                  <p className="text-[#9B0225] font-bold">"When science is scaled, innovation become inclusive and technology drives transformation, it lays the foundation for major achievements."</p>
-                </div>
 
-              </div>
-              <p className="font-bold text-lg text-blue-900 py-2">Message from five organising Directors</p>
+              <p className="font-bold text-lg text-blue-900 py-5">Message from five organising Directors</p>
               <div className="flex flex-col gap-4">
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
                   <img src="/director_iitkharagpur.jpg" alt="" className="w-20 h-20 rounded-full" />
                   <div>
-                    <p className="font-semibold">Director, IIT Kharagpur(Healthcare)</p>
-                    <p className="text-xs text-[#9B0225]">Healthcare innovation is central to improving quality of life and ensuring equitable access to medical solutions. IIT Kharagpur is pleased to contribute to IInvenTiv 2026 by anchoring the Healthcare theme, fostering translational research that bridges engineering, medicine, and industry. We look forward to collaborative innovations that address global health challenges through affordable, scalable technologies.</p>
+                    <p className="font-bold">Professor Suman Chakraborty</p>
+                    <p className="text-xs text-[#9B0225] text-justify">Healthcare innovation is central to improving quality of life and ensuring equitable access to medical solutions. IIT Kharagpur is pleased to contribute to IInvenTiv 2026 by anchoring the Healthcare theme, fostering translational research that bridges engineering, medicine, and industry. We look forward to collaborative innovations that address global health challenges through affordable, scalable technologies.</p>
+                    <p className="font-semibold text-end">Director, IIT Kharagpur</p>
                   </div>
                 </div>
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
-                  <img src="/director_iitbhu.jpeg" alt="" className="w-20 h-20 rounded-full" />
+
                   <div>
-                    <p className="font-semibold">Director, IIT (BHU) Varanasi (Materials Science)</p>
-                    <p className="text-xs text-[#9B0225]">Advanced materials form the backbone of modern technology and sustainable development. IIT (BHU) Varanasi is proud to lead the Materials Science theme at IInvenTiv 2026, showcasing innovations spanning energy, infrastructure, manufacturing, and advanced functional materials. We anticipate strong collaboration between academia and industry to translate fundamental research into impactful real-world applications.</p>
+                    <p className="font-bold">Professor Amit Patra</p>
+                    <p className="text-xs text-justify text-[#9B0225]">Advanced materials form the backbone of modern technology and sustainable development. IIT (BHU) Varanasi is proud to lead the Materials Science theme at IInvenTiv 2026, showcasing innovations spanning energy, infrastructure, manufacturing, and advanced functional materials. We anticipate strong collaboration between academia and industry to translate fundamental research into impactful real-world applications.</p>
+                    <p className="font-semibold text-end">Director, IIT (BHU) Varanasi</p>
                   </div>
+                  <img src="/director_iitbhu.jpeg" alt="" className="w-20 h-20 rounded-full" />
                 </div>
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
                   <img src="/director_iitdhanbad.jpg" alt="" className="w-20 h-20 rounded-full" />
                   <div>
-                    <p className="font-semibold">Director, IIT (ISM) Dhanbad (Earth Sciences, Host Institute)</p>
-                    <p className="text-xs text-[#9B0225]">Earth Sciences play a vital role in resource sustainability, climate resilience, and energy security. As the host institute, IIT (ISM) Dhanbad is honoured to lead the Earth Sciences theme at IInvenTiv 2026. We aim to highlight innovations in geosciences, mining, and environmental engineering that support responsible development and national priorities..</p>
+                    <p className="font-bold">Professor Sukumar Mishra</p>
+
+                    <p className="text-xs text-[#9B0225] text-justify">Earth Sciences play a vital role in resource sustainability, climate resilience, and energy security. As the host institute, IIT (ISM) Dhanbad is honoured to lead the Earth Sciences theme at IInvenTiv 2026. We aim to highlight innovations in geosciences, mining, and environmental engineering that support responsible development and national priorities..</p>
+                    <p className="font-semibold text-end">Director, IIT (ISM) Dhanbad</p>
                   </div>
                 </div>
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
-                  <img src="iit-patna-director.jpg" alt="" className="w-20 h-20 rounded-full" />
+
                   <div>
-                    <p className="font-semibold">Director, IIT Patna (Artificial Intelligence)</p>
-                    <p className="text-xs text-[#9B0225]">Artificial Intelligence is transforming industries, governance, and society at large. IIT Patna is delighted to anchor the Artificial Intelligence theme at IInvenTiv 2026, promoting responsible, scalable, and impactful AI solutions. We look forward to engaging with industry and global partners to demonstrate how AI-driven innovation can address complex societal and industrial challenges.</p>
+                    <p className="font-bold">Professor Trilok Nath Singh</p>
+                    <p className="text-xs text-[#9B0225] text-justify">Artificial Intelligence is transforming industries, governance, and society at large. IIT Patna is delighted to anchor the Artificial Intelligence theme at IInvenTiv 2026, promoting responsible, scalable, and impactful AI solutions. We look forward to engaging with industry and global partners to demonstrate how AI-driven innovation can address complex societal and industrial challenges.</p>
+                    <p className="font-semibold text-end">Director, IIT Patna</p>
                   </div>
+                  <img src="iit-patna-director.jpg" alt="" className="w-20 h-20 rounded-full" />
                 </div>
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
                   <img src="/director_iitbhuneswar.jpg" alt="" className="w-20 h-20 rounded-full" />
                   <div>
-                    <p className="font-semibold">Director, IIT Bhubaneswar (Semiconductor Technology & Chip Design)</p>
+                    <p className="font-bold">Professor Shreepad Karmalkar</p>
                     <p className="text-xs text-[#9B0225]">Semiconductor technology is foundational to digital sovereignty and technological leadership. IIT Bhubaneswar is proud to lead the Semiconductor Technology and Chip Design theme at IInvenTiv 2026, aligned with India’s Semiconductor Mission. We seek to foster innovation across design, fabrication, and systems, strengthening India’s position in the global semiconductor ecosystem.</p>
+                    <p className="font-semibold text-end">Director, IIT Bhubaneswar</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="z-50" style={{ width: "140mm" }}>
-            <div className="relative w-full text-center py-8 overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-40">
+            <div className="relative w-full text-center py-4 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-24">
                 <svg
                   viewBox="0 0 1440 300"
                   className="w-full h-full"
@@ -324,12 +357,12 @@ const Brochure = () => {
                 </svg>
               </div>
 
-              <h2 className="relative z-10 text-4xl font-bold text-white">
+              <h2 className="relative z-10 text-2xl font-bold text-white">
                 Thematic Areas
               </h2>
             </div>
 
-            <div className="w-full p-4">
+            <div className="w-full mt-8 p-4">
               <div className="bg-[#F0DDAB] rounded-2xl p-4 gap-8">
                 <div className="flex justify-between gap-2">
                   <div className="w-full flex flex-col items-center relative">
