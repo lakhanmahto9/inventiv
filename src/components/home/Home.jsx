@@ -16,10 +16,6 @@ const Home = () => {
   const [error, setError] = useState(null);
   const [isOnline, setIsOnline] = useState(navigator.onLine);
 
-  // const handleTab = (tab) => {
-  //   setActive(tab);
-  // };
-
   useEffect(() => {
     const goOnline = () => {
       setIsOnline(true);
@@ -141,81 +137,7 @@ const Home = () => {
           />
         </Carousel>
 
-        <div className="p-4 lg:p-16 bg-[#1d1e5d]">
-          <motion.p
-            className="text-2xl lg:text-5xl font-bold text-[#ffa343]"
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            Organizing Institutes
-          </motion.p>
 
-          {/* 🔥 GRADIENT BORDER WRAPPER */}
-          <div className="relative w-full my-4 rounded-2xl p-px">
-            {/* Gradient border layer */}
-            <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500"></div>
-
-            {/* Your original content box */}
-            <div
-              className="relative w-full p-4 lg:p-8 px-4 md:px-20 rounded-2xl 
-             flex flex-wrap justify-between gap-4 font-semibold bg-[#1d1e5d]"
-            >
-              {logos.organizer.map((item, index) => {
-                const animations = [
-                  {
-                    hidden: { x: -80, opacity: 0 },
-                    visible: { x: 0, opacity: 1 },
-                  },
-                  {
-                    hidden: { x: -80, opacity: 0 },
-                    visible: { x: 0, opacity: 1 },
-                  },
-                  {
-                    hidden: { scale: 0.3, opacity: 0 },
-                    visible: { scale: 1, opacity: 1 },
-                  },
-                  {
-                    hidden: { x: 80, opacity: 0 },
-                    visible: { x: 0, opacity: 1 },
-                  },
-                  {
-                    hidden: { x: 80, opacity: 0 },
-                    visible: { x: 0, opacity: 1 },
-                  },
-                ];
-
-                const ref = useRef(null);
-                const inView = useInView(ref, { amount: 0.4 });
-
-                return (
-                  <motion.div
-                    key={index}
-                    ref={ref}
-                    variants={animations[index]}
-                    initial="hidden"
-                    animate={inView ? "visible" : "hidden"}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="flex flex-col justify-center items-center"
-                  >
-                    <img
-                      src={item.logo}
-                      alt={item.name}
-                      className="w-28 h-28 sm:w-48 sm:h-48 lg:w-60 lg:h-60 
-                       bg-[#eeeeee] rounded-2xl shadow-amber-50 p-4 
-                         transition-transform duration-300 ease-in-out hover:scale-90"
-                    />
-
-                    <div className="text-white text-xs sm:text-base lg:text-lg">
-                      {item.name}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
 
         <div className="p-4 lg:p-16 bg-[#1d1e5d]">
           <motion.p
@@ -280,7 +202,7 @@ const Home = () => {
             viewport={{ amount: 0.5 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            Participating Institutes
+           Potential  Participating Institutes
           </motion.p>
           <div className="w-full flex items-center gap-3 my-4 overflow-x-auto lg:overflow-x-visible scrollbar-hide">
             <button
@@ -377,6 +299,78 @@ const Home = () => {
             </div>
           )}
 
+        </div>
+        <div className="p-4 lg:p-16 bg-[#1d1e5d]">
+          <motion.p
+            className="text-2xl lg:text-5xl font-bold text-[#ffa343]"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            Organizing Institutes
+          </motion.p>
+
+          {/* 🔥 GRADIENT BORDER WRAPPER */}
+          <div className="relative w-full my-4 rounded-2xl p-px">
+            <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500"></div>
+            <div
+              className="relative w-full p-4 lg:p-8 px-4 md:px-20 rounded-2xl 
+             flex flex-wrap justify-center items-center gap-4 font-semibold bg-[#1d1e5d]"
+            >
+              {logos.organizer.map((item, index) => {
+                const animations = [
+                  {
+                    hidden: { x: -80, opacity: 0 },
+                    visible: { x: 0, opacity: 1 },
+                  },
+                  {
+                    hidden: { x: -80, opacity: 0 },
+                    visible: { x: 0, opacity: 1 },
+                  },
+                  {
+                    hidden: { scale: 0.3, opacity: 0 },
+                    visible: { scale: 1, opacity: 1 },
+                  },
+                  {
+                    hidden: { x: 80, opacity: 0 },
+                    visible: { x: 0, opacity: 1 },
+                  },
+                  {
+                    hidden: { x: 80, opacity: 0 },
+                    visible: { x: 0, opacity: 1 },
+                  },
+                ];
+
+                const ref = useRef(null);
+                const inView = useInView(ref, { amount: 0.4 });
+
+                return (
+                  <motion.div
+                    key={index}
+                    ref={ref}
+                    variants={animations[index]}
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="flex flex-col justify-center items-center"
+                  >
+                    <img
+                      src={item.logo}
+                      alt={item.name}
+                      className="w-28 h-28 sm:w-48 sm:h-48 lg:w-60 lg:h-60 
+                       bg-[#eeeeee] rounded-2xl shadow-amber-50 p-4 
+                         transition-transform duration-300 ease-in-out hover:scale-90"
+                    />
+
+                    <div className="text-white text-xs sm:text-base lg:text-lg">
+                      {item.name}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

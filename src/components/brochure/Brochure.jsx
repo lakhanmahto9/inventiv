@@ -104,20 +104,35 @@ const Brochure = () => {
             </div>
             <div className="w-full p-8">
               <div className="bg-red-900 rounded-2xl p-4 flex flex-wrap justify-center gap-8">
-                <div className="bg-white p-4 w-48 rounded-2xl">
-                  <img src="\imgi_19_IIT_Kharagpur_Logo.svg.png" className="h-full object-contain" />
+                <div className="">
+                  <div className="bg-white p-4 w-48 h-48 rounded-2xl">
+                    <img src="\imgi_19_IIT_Kharagpur_Logo.svg.png" className="h-full object-contain" />
+                  </div>
+                  <p className="text-white text-sm font-semibold text-center">IIT KHARAGPUR</p>
                 </div>
-                <div className="bg-white p-4 w-48 rounded-2xl">
-                  <img src="\bhu.png" className="h-full object-contain" />
+                <div className="">
+                  <div className="bg-white p-4 w-48 h-48 rounded-2xl">
+                    <img src="\bhu.png" className="h-full object-contain" />
+                  </div>
+                  <p className="text-white text-sm font-semibold text-center">IIT(BHU) VARANASI</p>
                 </div>
-                <div className="bg-white p-4 w-48 rounded-2xl">
-                  <img src="\iitism-logo.png" className="h-full object-contain" />
+                <div>
+                  <div className="bg-white p-4 w-48 h-48 rounded-2xl">
+                    <img src="\iitism-logo.png" className="h-full object-contain" />
+                  </div>
+                  <p className="text-white text-sm font-semibold text-center">IIT(ISM) DHANBAD</p>
                 </div>
-                <div className="bg-white p-4 w-48 rounded-2xl">
-                  <img src="/imgi_23_IIT-Patna.svg.png" className="h-full object-contain" />
+                <div>
+                  <div className="bg-white p-4 w-48 h-48 rounded-2xl">
+                    <img src="/imgi_23_IIT-Patna.svg.png" className="h-full object-contain" />
+                  </div>
+                       <p className="text-white text-sm font-semibold text-center">IIT PATNA</p>
                 </div>
-                <div className="bg-white p-4 w-48 rounded-2xl">
-                  <img src="\imgi_6_iitb_bhubaneswar_logo .png" className="h-full object-contain" />
+                <div>
+                  <div className="bg-white p-4 w-48 h-48 rounded-2xl">
+                    <img src="\imgi_6_iitb_bhubaneswar_logo .png" className="h-full object-contain" />
+                  </div>
+                       <p className="text-white text-sm font-semibold text-center">IIT BHUBANESWAR</p>
                 </div>
               </div>
             </div>
@@ -165,14 +180,39 @@ const Brochure = () => {
           </div>
 
           <div
-            className="p-8 flex flex-col justify-center items-center bg-[#F0DDAB]"
+            className="p-8 bg-[#F0DDAB] flex justify-center items-center"
             style={{ width: "140mm" }}
           >
-            <div className="">
-              <div className="p-4">
+            <div className="flex flex-col items-center gap-4">
+              <div className="p-4 flex justify-center">
                 <img src="/logo.png" alt="logo" className="w-80" />
               </div>
-              <div className="bg-white rounded-2xl p-8">
+              <div class="flex justify-between bg-white p-4 rounded-2xl">
+                <div className="w-max-w-[80%]">
+                  <p class="text-sm font-bold text-red-900 text-justify">
+                    "When science is scaled, innovation become inclusive and technology
+                    drives transformation, it lays the foundation for major achievements."
+                  </p>
+                  <div className="text-end mt-2"> <p className="text-sm font-semibold">Shri Narendra Modi</p>
+                    <p className="text-xs font-semibold">(Hon’ble Prime Minister of India)</p></div>
+                </div>
+                <img
+                  src="/pm.png"
+                  alt="PM"
+                  class="h-28 object-contain"
+                />
+              </div>
+
+              <div className="bg-white text-center w-full rounded-2xl p-4">
+                <p className="font-bold">IInvenTiv India</p>
+                <p className="font-semibold text-sm italic">Annual National R&amp;D Fair for Innovation &amp; Self-Reliance</p>
+                <p className="text-xs text-justify">IInvenTiv India is a flagship annual R&D fair organized by the Ministry of Education, Government of India, to showcase indigenous innovations and strengthen the research-to-technology ecosystem. Launched in 2022 at IIT Delhi as part of Azadi ka Amrit Mahotsav, it initially brought together all IITs and later expanded to include NITs, IISc, and leading universities. The platform bridges academia and industry by promoting technology transfer, commercialization, and collaborative innovation across priority sectors such as healthcare, energy, manufacturing, digital technologies, mobility, and infrastructure. IInvenTiv India supports national initiatives like Make in India and Atmanirbhar Bharat, advancing India’s vision of self-reliance and innovation-led growth.</p>
+              </div>
+              <div>
+                <img src="/imgi_5_iitism_banner_new.gif" alt="" className="rounded-2xl" />
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 w-full">
                 <div className="flex gap-2 items-center">
                   <LocationIcon color="#9E0024" width="18" height="18" />
                   <p className="text-[#9E0024] text-xl font-semibold">Venue</p>
@@ -218,10 +258,10 @@ const Brochure = () => {
               <div className="">
                 <p className="text-blue-900 text-lg font-bold">PM Message:-</p>
                 <div className="flex gap-2">
-                  <img src="/pm.jpeg" alt="" className="w-20 h-20 rounded-full"/>
+                  <img src="/pm.jpeg" alt="" className="w-20 h-20 rounded-full" />
                   <p className="text-[#9B0225] font-bold">"When science is scaled, innovation become inclusive and technology drives transformation, it lays the foundation for major achievements."</p>
                 </div>
-                
+
               </div>
               <p className="font-bold text-lg text-blue-900 py-2">Message from five organising Directors</p>
               <div className="flex flex-col gap-4">

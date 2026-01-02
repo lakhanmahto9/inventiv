@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { Facebook, LinkedIn, Twitter } from "../../icons/Icons";
+import { CalenderIcon, Facebook, LinkedIn, LocationIcon, Twitter } from "../../icons/Icons";
 import { motion } from "framer-motion";
 
 const footerParent = {
@@ -32,19 +32,19 @@ const iconHover = {
 const Footer = () => {
   return (
     <motion.div
-  className="relative w-full bg-[#1d1e5d] p-8 lg:p-20 xl:p-40 flex justify-between flex-col lg:flex-row"
-  variants={footerParent}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ amount: 0.4 }}
->
-  {/* 🔥 Gradient Top Border */}
-  <div className="absolute top-0 left-0 w-full h-px 
+      className="relative w-full bg-[#1d1e5d] p-8 lg:p-20 xl:p-40 flex justify-between flex-col lg:flex-row"
+      variants={footerParent}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.4 }}
+    >
+      {/* 🔥 Gradient Top Border */}
+      <div className="absolute top-0 left-0 w-full h-px 
       bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500"></div>
 
       {/* Logo */}
       <motion.div
-        className="flex gap-4 justify-between items-center bg-white p-4 my-4"
+        className="flex gap-4 justify-between items-center bg-white p-4 my-4 rounded-2xl"
         variants={footerItem}
       >
         <div className="p-4">
@@ -52,19 +52,24 @@ const Footer = () => {
         </div>
       </motion.div>
 
+     
+        <motion.div className="bg-white rounded-2xl p-8 my-4" variants={footerItem}>
+          <motion.div className="flex gap-2 items-center">
+            <LocationIcon color="#9E0024" width="18" height="18" />
+            <p className="text-[#9E0024] text-xl font-semibold">Venue</p>
+          </motion.div>
+          <p className="ml-6 text-xl font-semibold text-blue-900">IIT(ISM) Dhanbad</p>
+          <motion.div className="flex gap-2 items-center">
+            <CalenderIcon color="#9E0024" width="18" height="18" />
+            <p className="text-[#9E0024] text-xl font-semibold">February 21-22, 2026</p>
+          </motion.div>
+        </motion.div>
+
       {/* Column 1 */}
       <motion.div className="flex flex-col my-4" variants={footerItem}>
         <p className="text-2xl text-[#ffa343] font-semibold">Important Links</p>
         <Link className="text-white text-sm lg:text-lg">Home</Link>
         <Link className="text-white text-sm lg:text-lg">R&D Showcase</Link>
-        <Link className="text-white text-sm lg:text-lg">Program Summary</Link>
-      </motion.div>
-
-      {/* Column 2 */}
-      <motion.div className="flex flex-col my-4" variants={footerItem}>
-        <p className="text-2xl text-[#ffa343] font-semibold">Important Links</p>
-        <Link className="text-white text-sm lg:text-lg">Collaboration</Link>
-        <Link className="text-white text-sm lg:text-lg">Events & Workshop</Link>
       </motion.div>
 
       {/* Social Icons */}
