@@ -63,8 +63,8 @@ const Brochure = () => {
                     ))}
                   </div>
                 </div>
-                <div className="w-full flex-col">
-                  <div className="bg-red-900 my-4 p-1 text-center rounded-2xl">
+                <div className="w-full flex-col mt-13">
+                  <div className="bg-red-900 my-1 p-1 text-center rounded-2xl">
                     <p className="text-white font-semibold">
                       TOP 100 NIRF-Ranked Institutes
                     </p>
@@ -254,7 +254,7 @@ const Brochure = () => {
                   Self-Reliance
                 </p>
                 <p className="text-xs text-justify">
-                  IInvenTiv India is a flagship annual R&D fair organized by the
+                  IInvenTiv is a flagship annual R&D fair organized by the
                   Ministry of Education, Government of India, to showcase
                   indigenous innovations and strengthen the
                   research-to-technology ecosystem. Launched in 2022 at IIT
@@ -264,20 +264,12 @@ const Brochure = () => {
                   industry by promoting technology transfer, commercialization,
                   and collaborative innovation across priority sectors such as
                   healthcare, energy, manufacturing, digital technologies,
-                  mobility, and infrastructure. IInvenTiv India supports
+                  mobility, and infrastructure. IInvenTiv supports
                   national initiatives like Make in India and Atmanirbhar
                   Bharat, advancing India’s vision of self-reliance and
                   innovation-led growth.
                 </p>
               </div>
-              <div>
-                <img
-                  src="/imgi_5_iitism_banner_new.gif"
-                  alt=""
-                  className="rounded-2xl"
-                />
-              </div>
-
               <div className="bg-white rounded-2xl p-8 w-full flex flex-col items-center justify-center">
                 <div className="flex gap-2 items-center">
                   <LocationIcon color="#9E0024" width="18" height="18" />
@@ -292,6 +284,14 @@ const Brochure = () => {
                     February 21-22, 2026
                   </p>
                 </div>
+              </div>
+
+                <div>
+                <img
+                  src="/imgi_5_iitism_banner_new.gif"
+                  alt=""
+                  className="rounded-2xl"
+                />
               </div>
             </div>
           </div>
