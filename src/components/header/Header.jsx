@@ -128,7 +128,7 @@ const Header = () => {
             Contact
           </Link>
              <Link className="text-black dark:text-white" to={"/brochure"}>
-            Bruchure
+            Brochure
           </Link>
           {/* <button
             onClick={handleDownload}
