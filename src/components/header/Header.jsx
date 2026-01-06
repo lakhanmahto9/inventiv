@@ -127,15 +127,15 @@ const Header = () => {
           <Link className="text-black dark:text-white" to={"/contact"}>
             Contact
           </Link>
-             <Link className="text-black dark:text-white" to={"/brochure"}>
+          {/* <Link className="text-black dark:text-white" to={"/brochure"}>
             Brochure
-          </Link>
-          {/* <button
+          </Link> */}
+          <button
             onClick={handleDownload}
             className="text-black dark:text-white cursor-pointer"
           >
             Brochure
-          </button> */}
+          </button>
         </div>
 
         {/* Sidebar for mobile */}

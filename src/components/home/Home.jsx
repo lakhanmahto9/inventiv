@@ -300,11 +300,10 @@ const Home = () => {
             <button
               onClick={() => handleTab("iit")}
               type="button"
-              className={`${
-                active === "iit"
+              className={`${active === "iit"
                   ? "bg-amber-500 text-white"
                   : "hover:text-amber-500"
-              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
+                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
             >
               IISc + 23 IITs
             </button>
@@ -312,33 +311,30 @@ const Home = () => {
             <button
               onClick={() => handleTab("nit")}
               type="button"
-              className={`${
-                active === "nit"
+              className={`${active === "nit"
                   ? "bg-amber-500 text-white"
                   : "hover:text-amber-500"
-              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
+                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
             >
               IIEST + 31 NITs
             </button>
             <button
               onClick={() => handleTab("iiser")}
               type="button"
-              className={`${
-                active === "iiser"
+              className={`${active === "iiser"
                   ? "bg-amber-500 text-white"
                   : "hover:text-amber-500"
-              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
+                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
             >
               7 IISERs
             </button>
             <button
               onClick={() => handleTab("top")}
               type="button"
-              className={`${
-                active === "top"
+              className={`${active === "top"
                   ? "bg-amber-500 text-white"
                   : "hover:text-amber-500"
-              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
+                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
             >
               TOP 100 NIRF-Ranked Institutes
             </button>
@@ -377,11 +373,10 @@ const Home = () => {
                      absolute bottom-full left-1/2 transform -translate-x-1/2
                     bg-white text-black text-sm px-3 py-1 rounded-md whitespace-nowrap shadow-md
                    transition-all duration-300
-                    ${
-                      activeIndex === index
-                        ? "opacity-100 pointer-events-auto"
-                        : "opacity-0 pointer-events-none"
-                    }
+                    ${activeIndex === index
+                          ? "opacity-100 pointer-events-auto"
+                          : "opacity-0 pointer-events-none"
+                        }
                     lg:group-hover:opacity-100 lg:pointer-events-auto
                   `}
                     >

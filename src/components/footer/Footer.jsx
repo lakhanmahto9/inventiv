@@ -32,7 +32,7 @@ const iconHover = {
 const Footer = () => {
   return (
     <motion.div
-      className="relative w-full bg-[#1d1e5d] p-8 lg:p-20 xl:p-40 flex justify-between flex-col lg:flex-row"
+      className="relative w-full bg-[#1d1e5d] p-8 flex flex-wrap justify-around flex-col lg:flex-row"
       variants={footerParent}
       initial="hidden"
       whileInView="visible"
@@ -43,17 +43,18 @@ const Footer = () => {
       bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500"></div>
 
       {/* Logo */}
-      <motion.div
-        className="flex gap-4 justify-between items-center bg-white p-4 my-4 rounded-2xl"
-        variants={footerItem}
-      >
-        <div className="p-4">
-          <img src="/logo.png" alt="logo" className="w-60" />
-        </div>
-      </motion.div>
+      <div className="flex flex-col sm:flex-row gap-8 sm:gap-16">
+        <motion.div
+          className="flex gap-4 justify-center items-center bg-white p-4 my-4 rounded-2xl"
+          variants={footerItem}
+        >
+          <div className="p-4">
+            <img src="/logo.png" alt="logo" className="w-60" />
+          </div>
+        </motion.div>
 
-     
-        <motion.div className="bg-white rounded-2xl p-8 my-4" variants={footerItem}>
+
+        <motion.div className="bg-white rounded-2xl p-8 my-4 flex flex-col justify-center items-center" variants={footerItem}>
           <motion.div className="flex gap-2 items-center">
             <LocationIcon color="#9E0024" width="18" height="18" />
             <p className="text-[#9E0024] text-xl font-semibold">Venue</p>
@@ -64,31 +65,34 @@ const Footer = () => {
             <p className="text-[#9E0024] text-xl font-semibold">February 21-22, 2026</p>
           </motion.div>
         </motion.div>
+      </div>
 
       {/* Column 1 */}
-      <motion.div className="flex flex-col my-4" variants={footerItem}>
-        <p className="text-2xl text-[#ffa343] font-semibold">Important Links</p>
-        <Link className="text-white text-sm lg:text-lg">Home</Link>
-        <Link className="text-white text-sm lg:text-lg">R&D Showcase</Link>
-      </motion.div>
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-16">
+        <motion.div className="flex flex-col my-4" variants={footerItem}>
+          <p className="text-2xl text-[#ffa343] font-semibold">Important Links</p>
+          <Link className="text-white text-sm lg:text-lg">Home</Link>
+          <Link className="text-white text-sm lg:text-lg">R&D Showcase</Link>
+        </motion.div>
 
-      {/* Social Icons */}
-      <motion.div className="flex flex-col gap-2 my-4" variants={footerItem}>
-        <p className="text-2xl text-[#ffa343] font-semibold">Social Media</p>
-        <div className="flex gap-4">
-          <motion.div variants={iconHover} whileHover="hover">
-            <Twitter color="#fff" width="20" height="20" />
-          </motion.div>
+        {/* Social Icons */}
+        <motion.div className="flex flex-col gap-2 my-4" variants={footerItem}>
+          <p className="text-2xl text-[#ffa343] font-semibold">Social Media</p>
+          <div className="flex gap-4">
+            <motion.div variants={iconHover} whileHover="hover">
+              <Twitter color="#fff" width="20" height="20" />
+            </motion.div>
 
-          <motion.div variants={iconHover} whileHover="hover">
-            <Facebook color="#fff" width="20" height="20" />
-          </motion.div>
+            <motion.div variants={iconHover} whileHover="hover">
+              <Facebook color="#fff" width="20" height="20" />
+            </motion.div>
 
-          <motion.div variants={iconHover} whileHover="hover">
-            <LinkedIn color="#fff" width="20" height="20" />
-          </motion.div>
-        </div>
-      </motion.div>
+            <motion.div variants={iconHover} whileHover="hover">
+              <LinkedIn color="#fff" width="20" height="20" />
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };
