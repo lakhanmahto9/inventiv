@@ -92,8 +92,8 @@ const Home = () => {
 
   return (
     <Layout>
-      <div className="w-full flex flex-col">
-        <Carousel
+      <div className="w-full flex flex-col bg-[#1d1e5d]">
+        {/* <Carousel
           autoPlay
           infiniteLoop
           interval={3000}
@@ -115,7 +115,7 @@ const Home = () => {
             className="w-full object-contain "
           />
           <img
-            src="/benner03.jpg"
+            src="/benner030.jpg"
             alt="Banner"
             className="w-full object-contain "
           />
@@ -134,7 +134,41 @@ const Home = () => {
             alt="Banner"
             className="w-full object-contain "
           />
+        </Carousel> */}
+
+        <Carousel
+          autoPlay
+          infiniteLoop
+          interval={3000}
+          showThumbs={false}
+          showStatus={false}
+          showIndicators={false}
+          stopOnHover={false}
+          swipeable
+          emulateTouch
+        >
+          {[
+            "/imgi_5_iitism_banner_new.gif",
+            "/benner020.JPG",
+            "/benner030.jpg",
+            "/benner040.JPG",
+            "/benner050.JPG",
+            "/benner06.jpg",
+          ].map((src, i) => (
+            <div
+              key={i}
+              className="h-auto lg:h-[890px] w-full flex items-center justify-center"
+            >
+              <img
+                src={src}
+                alt="Banner"
+                className="h-full w-auto object-contain"
+              />
+            </div>
+          ))}
         </Carousel>
+
+
 
         {/* <div className="p-4 lg:p-16 bg-[#1d1e5d]">
           <motion.p
@@ -301,8 +335,8 @@ const Home = () => {
               onClick={() => handleTab("iit")}
               type="button"
               className={`${active === "iit"
-                  ? "bg-amber-500 text-white"
-                  : "hover:text-amber-500"
+                ? "bg-amber-500 text-white"
+                : "hover:text-amber-500"
                 } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
             >
               IISc + 23 IITs
@@ -312,8 +346,8 @@ const Home = () => {
               onClick={() => handleTab("nit")}
               type="button"
               className={`${active === "nit"
-                  ? "bg-amber-500 text-white"
-                  : "hover:text-amber-500"
+                ? "bg-amber-500 text-white"
+                : "hover:text-amber-500"
                 } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
             >
               IIEST + 31 NITs
@@ -322,8 +356,8 @@ const Home = () => {
               onClick={() => handleTab("iiser")}
               type="button"
               className={`${active === "iiser"
-                  ? "bg-amber-500 text-white"
-                  : "hover:text-amber-500"
+                ? "bg-amber-500 text-white"
+                : "hover:text-amber-500"
                 } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
             >
               7 IISERs
@@ -332,8 +366,8 @@ const Home = () => {
               onClick={() => handleTab("top")}
               type="button"
               className={`${active === "top"
-                  ? "bg-amber-500 text-white"
-                  : "hover:text-amber-500"
+                ? "bg-amber-500 text-white"
+                : "hover:text-amber-500"
                 } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
             >
               TOP 100 NIRF-Ranked Institutes

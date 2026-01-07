@@ -350,11 +350,7 @@ const Brochure = () => {
                   </div>
                 </div>
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
-                  <img
-                    src="/director_iitkharagpur.jpg"
-                    alt=""
-                    className="w-20 h-20 rounded-full"
-                  />
+                  
                   <div>
                     <p className="font-bold">Prof. Suman Chakraborty</p>
                     <p className="text-xs text-[#9B0225] text-justify">
@@ -371,8 +367,18 @@ const Brochure = () => {
                       Director, IIT Kharagpur
                     </p>
                   </div>
+                  <img
+                    src="/director_iitkharagpur.jpg"
+                    alt=""
+                    className="w-20 h-20 rounded-full"
+                  />
                 </div>
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
+                   <img
+                    src="/director_iitbhu.jpeg"
+                    alt=""
+                    className="w-20 h-20 rounded-full"
+                  />
                   <div>
                     <p className="font-bold">Prof. Amit Patra</p>
                     <p className="text-xs text-justify text-[#9B0225]">
@@ -389,11 +395,7 @@ const Brochure = () => {
                       Director, IIT (BHU) Varanasi
                     </p>
                   </div>
-                  <img
-                    src="/director_iitbhu.jpeg"
-                    alt=""
-                    className="w-20 h-20 rounded-full"
-                  />
+                 
                 </div>
                 
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
