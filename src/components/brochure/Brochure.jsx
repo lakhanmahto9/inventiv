@@ -212,13 +212,30 @@ const Brochure = () => {
               </div>
             </div>
 
-            <div className="absolute bottom-0 left-0 w-full h-[250px] p-8">
+            {/* <div className="absolute bottom-0 left-0 w-full h-[250px] p-8">
               <img
                 src="/i2h.jpg"
                 alt=""
                 className="w-full h-full object-fill rounded-xl"
               />
+            </div> */}
+            <div className="absolute bottom-0 left-0 w-full h-[250px] p-8">
+              <div className="relative w-full h-full">
+                <img
+                  src="/i2h.jpg"
+                  alt=""
+                  className="w-full h-full object-fill rounded-xl"
+                />
+
+                {/* Text overlay */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <h1 className="text-white text-5xl font-bold tracking-widest drop-shadow-lg">
+                    I2H
+                  </h1>
+                </div>
+              </div>
             </div>
+
           </div>
 
           <div
@@ -286,7 +303,7 @@ const Brochure = () => {
                 </div>
               </div>
 
-                <div>
+              <div>
                 <img
                   src="/imgi_5_iitism_banner_new.gif"
                   alt=""
@@ -350,7 +367,7 @@ const Brochure = () => {
                   </div>
                 </div>
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
-                  
+
                   <div>
                     <p className="font-bold">Prof. Suman Chakraborty</p>
                     <p className="text-xs text-[#9B0225] text-justify">
@@ -374,7 +391,7 @@ const Brochure = () => {
                   />
                 </div>
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
-                   <img
+                  <img
                     src="/director_iitbhu.jpeg"
                     alt=""
                     className="w-20 h-20 rounded-full"
@@ -395,9 +412,9 @@ const Brochure = () => {
                       Director, IIT (BHU) Varanasi
                     </p>
                   </div>
-                 
+
                 </div>
-                
+
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
                   <div>
                     <p className="font-bold">Prof. Trilok Nath Singh</p>
@@ -471,7 +488,7 @@ const Brochure = () => {
               </h2>
             </div>
 
-            <div className="w-full mt-8 p-4">
+            <div className="w-full mt-16 p-4">
               <div className="bg-[#F0DDAB] rounded-2xl p-4 gap-8">
                 <div className="flex justify-between gap-2">
                   <div className="w-full flex flex-col items-center relative">
@@ -542,7 +559,7 @@ const Brochure = () => {
               </div>
             </div>
 
-            <div className="p-4 bg-white rounded-2xl">
+            {/* <div className="p-4 bg-white rounded-2xl">
               <ul className="list-disc ml-4 text-sm font-bold text-red-900">
                 <li>IIT KHARAGPUR (Health Care)</li>
                 <li>IIT(BHU) VARANASI (Materials Science)</li>
@@ -552,7 +569,7 @@ const Brochure = () => {
                   IIT BHUBANESWAR (Semiconductor Technology & Chip Design)
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
 
           <div
