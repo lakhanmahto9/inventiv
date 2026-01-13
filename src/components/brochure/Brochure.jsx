@@ -340,7 +340,7 @@ const Brochure = () => {
                 <p className="text-blue-900 text-4xl font-bold">About Us</p>
               </div>
 
-              <p className="font-bold text-lg text-blue-900 py-5">
+              <p className="font-bold text-lg text-blue-900 py-4">
                 Message from five organising Directors
               </p>
               <div className="flex flex-col gap-4">
@@ -352,7 +352,7 @@ const Brochure = () => {
                   />
                   <div>
                     <p className="font-bold">Prof. Sukumar Mishra</p>
-                    <p className="text-xs text-[#9B0225] text-justify">
+                    <p className="text-[10px] font-semibold text-[#9B0225] text-justify">
                       Earth Sciences play a vital role in resource
                       sustainability, climate resilience, and energy security.
                       As the host institute, IIT (ISM) Dhanbad is honoured to
@@ -364,28 +364,23 @@ const Brochure = () => {
                     <p className="font-semibold text-end">
                       Director, IIT (ISM) Dhanbad
                     </p>
+                    <small className="text-[10px] font-semibold text-end flex justify-end">(Theme: Earth Science)</small>
                   </div>
                 </div>
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
 
                   <div>
                     <p className="font-bold">Prof. Suman Chakraborty</p>
-                    <p className="text-xs text-[#9B0225] text-justify">
-                      Healthcare innovation is central to improving quality of
-                      life and ensuring equitable access to medical solutions.
-                      IIT Kharagpur is pleased to contribute to IInvenTiv 2026
-                      by anchoring the Healthcare theme, fostering translational
-                      research that bridges engineering, medicine, and industry.
-                      We look forward to collaborative innovations that address
-                      global health challenges through affordable, scalable
-                      technologies.
+                    <p className="text-[10px] font-semibold text-[#9B0225] text-justify">
+                      Healthcare innovation is no longer optional, but rather imperative for human dignity, resilience, and equity. At IIT Kharagpur, we view healthcare as a grand convergence of engineering, medicine, data, and societal need. By anchoring the Healthcare theme at IInvenTiv 2026, we reaffirm our commitment to translational innovation that moves decisively from laboratory insight to bedside impact. We invite partners across academia, industry, and policy to co-create affordable, scalable, and globally relevant healthcare solutions that can redefine access, outcomes, and quality of life for billions.
                     </p>
                     <p className="font-semibold text-end">
                       Director, IIT Kharagpur
                     </p>
+                    <small className="text-[10px] font-semibold text-end flex justify-end">(Theme: Healthcare)</small>
                   </div>
                   <img
-                    src="/director_iitkharagpur.jpg"
+                    src="/director_iitkharagpur.png"
                     alt=""
                     className="w-20 h-20 rounded-full"
                   />
@@ -398,19 +393,18 @@ const Brochure = () => {
                   />
                   <div>
                     <p className="font-bold">Prof. Amit Patra</p>
-                    <p className="text-xs text-justify text-[#9B0225]">
-                      Advanced materials form the backbone of modern technology
-                      and sustainable development. IIT (BHU) Varanasi is proud
-                      to lead the Materials Science theme at IInvenTiv 2026,
-                      showcasing innovations spanning energy, infrastructure,
-                      manufacturing, and advanced functional materials. We
-                      anticipate strong collaboration between academia and
-                      industry to translate fundamental research into impactful
-                      real-world applications.
+                    <p className="text-[10px] font-semibold text-[#9B0225] text-justify">
+                      Advanced materials form the backbone of modern technology and sustainable
+                      development. IIT (BHU) Varanasi is proud to lead the Materials Science theme at
+                      IInvenTiv 2026, showcasing innovations spanning energy, infrastructure,
+                      manufacturing, and advanced functional materials. We anticipate strong
+                      collaboration between academia and industry to translate fundamental research into
+                      impactful real-world applications.
                     </p>
                     <p className="font-semibold text-end">
                       Director, IIT (BHU) Varanasi
                     </p>
+                    <small className="text-[10px] font-semibold text-end flex justify-end">(Theme: Materials Science)</small>
                   </div>
 
                 </div>
@@ -418,7 +412,7 @@ const Brochure = () => {
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
                   <div>
                     <p className="font-bold">Prof. Trilok Nath Singh</p>
-                    <p className="text-xs text-[#9B0225] text-justify">
+                    <p className="text-[10px] font-semibold text-[#9B0225] text-justify">
                       Artificial Intelligence is transforming industries,
                       governance, and society at large. IIT Patna is delighted
                       to anchor the Artificial Intelligence theme at IInvenTiv
@@ -430,6 +424,7 @@ const Brochure = () => {
                     <p className="font-semibold text-end">
                       Director, IIT Patna
                     </p>
+                    <small className="text-[10px] font-semibold text-end flex justify-end">(Theme: Artificial Intelligence)</small>
                   </div>
                   <img
                     src="iit-patna-director.jpg"
@@ -445,18 +440,13 @@ const Brochure = () => {
                   />
                   <div>
                     <p className="font-bold">Prof. Shreepad Karmalkar</p>
-                    <p className="text-xs text-[#9B0225] text-justify">
-                      Semiconductor technology is foundational to digital
-                      sovereignty and technological leadership. IIT Bhubaneswar
-                      is proud to lead the Semiconductor Technology and Chip
-                      Design theme at IInvenTiv 2026, aligned with India’s
-                      Semiconductor Mission. We seek to foster innovation across
-                      design, fabrication, and systems, strengthening India’s
-                      position in the global semiconductor ecosystem.
+                    <p className="text-[10px] font-semibold text-[#9B0225] text-justify">
+                      Semiconductor technology is foundational to digital sovereignty and technological leadership. IIT Bhubaneswar is proud to lead the Semiconductor Technology and Chip Design theme at IInvenTiv 2026, aligned with India’s Semiconductor Mission. We seek to foster innovation across design, fabrication, packaging and systems, strengthening India’s position in the global semiconductor ecosystem.
                     </p>
                     <p className="font-semibold text-end">
                       Director, IIT Bhubaneswar
                     </p>
+                    <small className="text-[10px] font-semibold text-end flex justify-end">(Theme: Semiconductor Technology & Chip Design)</small>
                   </div>
                 </div>
               </div>
