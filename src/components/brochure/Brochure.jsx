@@ -235,7 +235,6 @@ const Brochure = () => {
                 </div>
               </div>
             </div>
-
           </div>
 
           <div
@@ -281,10 +280,10 @@ const Brochure = () => {
                   industry by promoting technology transfer, commercialization,
                   and collaborative innovation across priority sectors such as
                   healthcare, energy, manufacturing, digital technologies,
-                  mobility, and infrastructure. IInvenTiv supports
-                  national initiatives like Make in India and Atmanirbhar
-                  Bharat, advancing India’s vision of self-reliance and
-                  innovation-led growth.
+                  mobility, and infrastructure. IInvenTiv supports national
+                  initiatives like Make in India and Atmanirbhar Bharat,
+                  advancing India’s vision of self-reliance and innovation-led
+                  growth.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 w-full flex flex-col items-center justify-center">
@@ -340,7 +339,7 @@ const Brochure = () => {
                 <p className="text-blue-900 text-4xl font-bold">About Us</p>
               </div>
 
-              <p className="font-bold text-lg text-blue-900 py-4">
+              <p className="font-bold text-lg text-blue-900 py-2">
                 Message from five organising Directors
               </p>
               <div className="flex flex-col gap-4">
@@ -364,20 +363,33 @@ const Brochure = () => {
                     <p className="font-semibold text-end">
                       Director, IIT (ISM) Dhanbad
                     </p>
-                    <small className="text-[10px] font-semibold text-end flex justify-end">(Theme: Earth Science)</small>
+                    <small className="text-[10px] font-semibold text-end flex justify-end">
+                      (Theme: Earth Science)
+                    </small>
                   </div>
                 </div>
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
-
                   <div>
                     <p className="font-bold">Prof. Suman Chakraborty</p>
                     <p className="text-[10px] font-semibold text-[#9B0225] text-justify">
-                      Healthcare innovation is no longer optional, but rather imperative for human dignity, resilience, and equity. At IIT Kharagpur, we view healthcare as a grand convergence of engineering, medicine, data, and societal need. By anchoring the Healthcare theme at IInvenTiv 2026, we reaffirm our commitment to translational innovation that moves decisively from laboratory insight to bedside impact. We invite partners across academia, industry, and policy to co-create affordable, scalable, and globally relevant healthcare solutions that can redefine access, outcomes, and quality of life for billions.
+                      Healthcare innovation is no longer optional, but rather
+                      imperative for human dignity, resilience, and equity. At
+                      IIT Kharagpur, we view healthcare as a grand convergence
+                      of engineering, medicine, data, and societal need. By
+                      anchoring the Healthcare theme at IInvenTiv 2026, we
+                      reaffirm our commitment to translational innovation that
+                      moves decisively from laboratory insight to bedside
+                      impact. We invite partners across academia, industry, and
+                      policy to co-create affordable, scalable, and globally
+                      relevant healthcare solutions that can redefine access,
+                      outcomes, and quality of life for billions.
                     </p>
                     <p className="font-semibold text-end">
                       Director, IIT Kharagpur
                     </p>
-                    <small className="text-[10px] font-semibold text-end flex justify-end">(Theme: Healthcare)</small>
+                    <small className="text-[10px] font-semibold text-end flex justify-end">
+                      (Theme: Healthcare)
+                    </small>
                   </div>
                   <img
                     src="/director_iitkharagpur.png"
@@ -394,19 +406,22 @@ const Brochure = () => {
                   <div>
                     <p className="font-bold">Prof. Amit Patra</p>
                     <p className="text-[10px] font-semibold text-[#9B0225] text-justify">
-                      Advanced materials form the backbone of modern technology and sustainable
-                      development. IIT (BHU) Varanasi is proud to lead the Materials Science theme at
-                      IInvenTiv 2026, showcasing innovations spanning energy, infrastructure,
-                      manufacturing, and advanced functional materials. We anticipate strong
-                      collaboration between academia and industry to translate fundamental research into
-                      impactful real-world applications.
+                      Advanced materials form the backbone of modern technology
+                      and sustainable development. IIT (BHU) Varanasi is proud
+                      to lead the Materials Science theme at IInvenTiv 2026,
+                      showcasing innovations spanning energy, infrastructure,
+                      manufacturing, and advanced functional materials. We
+                      anticipate strong collaboration between academia and
+                      industry to translate fundamental research into impactful
+                      real-world applications.
                     </p>
                     <p className="font-semibold text-end">
                       Director, IIT (BHU) Varanasi
                     </p>
-                    <small className="text-[10px] font-semibold text-end flex justify-end">(Theme: Materials Science)</small>
+                    <small className="text-[10px] font-semibold text-end flex justify-end">
+                      (Theme: Materials Science)
+                    </small>
                   </div>
-
                 </div>
 
                 <div className="flex flex-row gap-4 bg-white p-4 rounded-2xl">
@@ -424,7 +439,9 @@ const Brochure = () => {
                     <p className="font-semibold text-end">
                       Director, IIT Patna
                     </p>
-                    <small className="text-[10px] font-semibold text-end flex justify-end">(Theme: Artificial Intelligence)</small>
+                    <small className="text-[10px] font-semibold text-end flex justify-end">
+                      (Theme: Artificial Intelligence)
+                    </small>
                   </div>
                   <img
                     src="iit-patna-director.jpg"
@@ -441,12 +458,20 @@ const Brochure = () => {
                   <div>
                     <p className="font-bold">Prof. Shreepad Karmalkar</p>
                     <p className="text-[10px] font-semibold text-[#9B0225] text-justify">
-                      Semiconductor technology is foundational to digital sovereignty and technological leadership. IIT Bhubaneswar is proud to lead the Semiconductor Technology and Chip Design theme at IInvenTiv 2026, aligned with India’s Semiconductor Mission. We seek to foster innovation across design, fabrication, packaging and systems, strengthening India’s position in the global semiconductor ecosystem.
+                      Semiconductor technology is foundational to digital
+                      sovereignty and technological leadership. IIT Bhubaneswar
+                      is proud to lead the Semiconductor Technology and Chip
+                      Design theme at IInvenTiv 2026, aligned with India’s
+                      Semiconductor Mission. We seek to foster innovation across
+                      design, fabrication, packaging and systems, strengthening
+                      India’s position in the global semiconductor ecosystem.
                     </p>
                     <p className="font-semibold text-end">
                       Director, IIT Bhubaneswar
                     </p>
-                    <small className="text-[10px] font-semibold text-end flex justify-end">(Theme: Semiconductor Technology & Chip Design)</small>
+                    <small className="text-[10px] font-semibold text-end flex justify-end">
+                      (Theme: Semiconductor Technology & Chip Design)
+                    </small>
                   </div>
                 </div>
               </div>
