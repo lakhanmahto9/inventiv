@@ -46,12 +46,12 @@ const Header = () => {
 
   const handleDownload = (e) => {
     e.preventDefault();
-    const link = document.createElement("a");
-    link.href = "/brochure_iinventiv.pdf";
-    link.download = "IInvenTiv.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // const link = document.createElement("a");
+    // link.href = "/brochure_iinventiv.pdf";
+    // link.download = "IInvenTiv.pdf";
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
   };
 
   return (
