@@ -20,6 +20,24 @@
   display: none !important;
 }
 
+
+
+/* Make slick slides equal height */
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: inherit !important;
+  display: flex !important;
+}
+
+.slick-slide > div {
+  display: flex;
+  height: 100%;
+}
+
+
 @page {
   size: A3 landscape;
   margin: 0;

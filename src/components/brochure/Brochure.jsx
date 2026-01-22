@@ -358,7 +358,7 @@ const Brochure = () => {
                       lead the Earth Sciences theme at IInvenTiv 2026. We aim to
                       highlight innovations in geosciences, mining, and
                       environmental engineering that support responsible
-                      development and national priorities..
+                      development and national priorities.
                     </p>
                     <p className="font-semibold text-end">
                       Director, IIT (ISM) Dhanbad
