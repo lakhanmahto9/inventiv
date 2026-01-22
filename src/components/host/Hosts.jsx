@@ -62,7 +62,7 @@ const Hosts = () => {
   const host = content.find(item => item.id === hostId);
 
   return (
-    <Layout>
+   
       <div>
         {host ? (
           <div className='w-full'>
@@ -111,7 +111,6 @@ const Hosts = () => {
           <p>Host not found</p>
         )}
       </div>
-    </Layout>
   );
 };
 

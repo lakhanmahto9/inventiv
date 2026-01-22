@@ -139,11 +139,11 @@ export const logos = {
     { id: 55, name: "Sri Krishna College of Engineering and Technology, Tamil Nadu", logo: "/sri_krishna_college_of_engineering_and_technology_official_logo.jpg" },
   ],
   theme: [
-    { id: 1, name: "IIT KHARAGPUR", themes: "Health Care", logo: "/health.jpeg", link: "/hosts/kharagpur/1" },
-    { id: 2, name: "IIT(BHU) VARANASI", themes: "Materials Science", logo: "/material.jpeg", link: "/hosts/varanasi/2" },
-    { id: 3, name: "IIT(ISM) DHANBAD", themes: "Earth Sciences", logo: "/earth.jpeg", link: "/hosts/dhanbad/3" },
-    { id: 4, name: "IIT PATNA", themes: "Artificial Intelligence", logo: "/artificial.jpeg", link: "/hosts/patna/4" },
-    { id: 5, name: "IIT BHUBANESWAR", themes: "Semiconductor Technology & Chip Design", logo: "/semiconductor.jpeg", link: "/hosts/bhubaneswar/5" },
+    { id: 1, name: "IIT KHARAGPUR", themes: "Health Care", logo: "/health.jpeg", link: "https://www.iitkgp.ac.in/" },
+    { id: 2, name: "IIT(BHU) VARANASI", themes: "Materials Science", logo: "/material.jpeg", link: "https://www.iitbhu.ac.in/" },
+    { id: 3, name: "IIT(ISM) DHANBAD", themes: "Earth Sciences", logo: "/earth.jpeg", link: "https://www.iitism.ac.in/" },
+    { id: 4, name: "IIT PATNA", themes: "Artificial Intelligence", logo: "/artificial.jpeg", link: "https://www.iitp.ac.in/" },
+    { id: 5, name: "IIT BHUBANESWAR", themes: "Semiconductor Technology & Chip Design", logo: "/semiconductor.jpeg", link: "https://www.iitbbs.ac.in/" },
 
 
   ]

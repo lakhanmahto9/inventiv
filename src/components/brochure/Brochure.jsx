@@ -26,7 +26,7 @@ const Brochure = () => {
               <div className="w-1/3">
                 <div className="w-full flex-col">
                   <div className="bg-red-900 mb-1 p-1 text-center rounded-2xl">
-                    <p className="text-white font-semibold">IISc + 23 IITs</p>
+                    <p className="text-white font-semibold">IISc + IITs</p>
                   </div>
                   <div className="w-full flex flex-wrap justify-center items-center gap-2">
                     {logos.iit.map((item, index) => (
@@ -39,7 +39,7 @@ const Brochure = () => {
 
                 <div className="w-full flex-col">
                   <div className="bg-red-900 my-1 p-1 text-center rounded-2xl">
-                    <p className="text-white font-semibold">7 IISERs</p>
+                    <p className="text-white font-semibold">IISERs</p>
                   </div>
                   <div className="w-full flex flex-wrap justify-center items-center gap-2">
                     {logos.iiser.map((item, index) => (
@@ -53,7 +53,7 @@ const Brochure = () => {
               <div className="w-2/3">
                 <div className="w-full flex-col">
                   <div className="bg-red-900 mb-1 p-1 text-center rounded-2xl">
-                    <p className="text-white font-semibold">IIEST + 31 NITs</p>
+                    <p className="text-white font-semibold">IIEST + NITs</p>
                   </div>
                   <div className="w-full flex flex-wrap justify-center items-center gap-2">
                     {logos.nit.map((item, index) => (

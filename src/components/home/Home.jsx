@@ -11,13 +11,12 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const Home = () => {
-  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(null);
   const [active, setActive] = useState("iit");
   const [error, setError] = useState(null);
   const [isOnline, setIsOnline] = useState(navigator.onLine);
   const sliderRef = useRef(null);
-   const [slides, setSlides] = useState(3);
+  const [slides, setSlides] = useState(3);
 
   useEffect(() => {
     const goOnline = () => {
@@ -125,7 +124,7 @@ const Home = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-    dots: false,
+    dots: true,
     pauseOnHover: true,
     responsive: [
       {
@@ -140,7 +139,7 @@ const Home = () => {
   };
 
   return (
-    <Layout>
+    <section id="home">
       <div className="w-full flex flex-col bg-[#1d1e5d]">
         <Carousel
           autoPlay
@@ -181,7 +180,39 @@ const Home = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            Message from five organising Directors
+            About IInvenTiv
+          </motion.p>
+          <div className="relative rounded-2xl p-px overflow-hidden">
+            <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500">h</div>
+            <div className="relative bg-[#1d1e5d] rounded-2xl p-6 overflow-hidden">
+              <p className="text-justify text-white">
+                IInvenTiv is a flagship annual R&D fair organized by the
+                Ministry of Education, Government of India, to showcase
+                indigenous innovations and strengthen the
+                research-to-technology ecosystem. Launched in 2022 at IIT
+                Delhi as part of Azadi ka Amrit Mahotsav, it initially brought
+                together all IITs and later expanded to include NITs, IISc,
+                and leading universities. The platform bridges academia and
+                industry by promoting technology transfer, commercialization,
+                and collaborative innovation across priority sectors such as
+                healthcare, energy, manufacturing, digital technologies,
+                mobility, and infrastructure. IInvenTiv supports national
+                initiatives like Make in India and Atmanirbhar Bharat,
+                advancing India’s vision of self-reliance and innovation-led
+                growth.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="p-4 lg:p-16 bg-[#1d1e5d]">
+          <motion.p
+            className="text-2xl lg:text-5xl font-bold text-[#ffa343] mb-6"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            Message from organising Directors
           </motion.p>
 
           <div className="relative rounded-2xl p-px overflow-hidden">
@@ -379,7 +410,6 @@ const Home = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ amount: 0.4 }}
-                  onClick={() => navigate(item.link)}
                   className="
             flex flex-col items-center cursor-pointer
 
@@ -393,25 +423,23 @@ const Home = () => {
                 >
                   {/* CARD */}
                   <div
+                    onClick={() => window.open(`${item.link}`, "_blank")}
                     className="
-             relative
+                    relative
+                    /* Tablet */
+                    w-[clamp(9rem,18vw,20rem)]
+                    h-[clamp(9rem,18vw,20rem)]
 
- 
+                    /* Desktop / Large */
+                    lg:w-[clamp(10rem,16vw,22rem)]
+                    lg:h-[clamp(10rem,16vw,22rem)]
 
-    /* Tablet */
-    w-[clamp(9rem,18vw,20rem)]
-    h-[clamp(9rem,18vw,20rem)]
+                    /* Ultra-wide */
+                    2xl:w-[clamp(12rem,14vw,24rem)]
+                    2xl:h-[clamp(12rem,14vw,24rem)]
 
-    /* Desktop / Large */
-    lg:w-[clamp(10rem,16vw,22rem)]
-    lg:h-[clamp(10rem,16vw,22rem)]
-
-    /* Ultra-wide */
-    2xl:w-[clamp(12rem,14vw,24rem)]
-    2xl:h-[clamp(12rem,14vw,24rem)]
-
-    rounded-2xl overflow-hidden group
-            "
+                    rounded-2xl overflow-hidden group
+               "
                   >
                     <div
                       className="absolute inset-0 bg-cover bg-center md:opacity-80 group-hover:opacity-100 transition-opacity duration-300"
@@ -445,51 +473,47 @@ const Home = () => {
             viewport={{ amount: 0.5 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            Potential Participating Institutes
+            Participating Institutes
           </motion.p>
           <div className="w-full flex items-center  gap-3 my-4 overflow-x-auto lg:overflow-x-visible scrollbar-hide">
             <button
               onClick={() => handleTab("iit")}
               type="button"
-              className={`${
-                active === "iit"
-                  ? "bg-amber-500 text-white"
-                  : "hover:text-amber-500"
-              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
+              className={`${active === "iit"
+                ? "bg-amber-500 text-white"
+                : "hover:text-amber-500"
+                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
             >
-              IISc + 23 IITs
+              IISc + IITs
             </button>
 
             <button
               onClick={() => handleTab("nit")}
               type="button"
-              className={`${
-                active === "nit"
-                  ? "bg-amber-500 text-white"
-                  : "hover:text-amber-500"
-              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
+              className={`${active === "nit"
+                ? "bg-amber-500 text-white"
+                : "hover:text-amber-500"
+                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
             >
-              IIEST + 31 NITs
+              IIEST + NITs
             </button>
             <button
               onClick={() => handleTab("iiser")}
               type="button"
-              className={`${
-                active === "iiser"
-                  ? "bg-amber-500 text-white"
-                  : "hover:text-amber-500"
-              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
+              className={`${active === "iiser"
+                ? "bg-amber-500 text-white"
+                : "hover:text-amber-500"
+                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
             >
-              7 IISERs
+              IISERs
             </button>
             <button
               onClick={() => handleTab("top")}
               type="button"
-              className={`${
-                active === "top"
-                  ? "bg-amber-500 text-white"
-                  : "hover:text-amber-500"
-              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
+              className={`${active === "top"
+                ? "bg-amber-500 text-white"
+                : "hover:text-amber-500"
+                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
             >
               TOP 100 NIRF-Ranked Institutes
             </button>
@@ -528,11 +552,10 @@ const Home = () => {
                      absolute bottom-full left-1/2 transform -translate-x-1/2
                     bg-white text-black text-sm px-3 py-1 rounded-md whitespace-nowrap shadow-md
                    transition-all duration-300
-                    ${
-                      activeIndex === index
-                        ? "opacity-100 pointer-events-auto"
-                        : "opacity-0 pointer-events-none"
-                    }
+                    ${activeIndex === index
+                          ? "opacity-100 pointer-events-auto"
+                          : "opacity-0 pointer-events-none"
+                        }
                     lg:group-hover:opacity-100 lg:pointer-events-auto
                   `}
                     >
@@ -667,7 +690,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </section>
   );
 };
 

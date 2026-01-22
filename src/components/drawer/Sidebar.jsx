@@ -10,8 +10,6 @@ export default function Sidebar() {
   const [open, setOpen] = React.useState(false);
   const [hostOpen, setHostOpen] = React.useState(false);
 
-  const location = useLocation();
-  const navigate = useNavigate();
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);

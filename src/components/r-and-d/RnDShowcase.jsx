@@ -3,7 +3,6 @@ import Layout from "../layout/Layout";
 
 const RnDShowcase = () => {
   return (
-    <Layout>
       <div
         className="h-96 bg-cover bg-center bg-no-repeat flex justify-center items-center bg-black/30 opacity-90"
         style={{
@@ -14,7 +13,6 @@ const RnDShowcase = () => {
           <p className="text-white text-2xl sm:text-5xl">R&D Showcase</p>
         </div>
         </div>
-    </Layout>
   );
 };
 

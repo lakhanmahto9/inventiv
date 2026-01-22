@@ -1,24 +1,35 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import {
-  Facebook,
-  LinkedIn,
-  MenuIcon,
-  MoonIcon,
-  SunIcon,
-  Twitter,
-} from "../../icons/Icons";
 import Sidebar from "../drawer/Sidebar";
-import { Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setDark } from "../../store/darkSlice";
 
 const Header = () => {
-  // const dark = useSelector((state) => state.dark.dark);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const [active, setActive] = useState("home");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.6, // 60% visible
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,7 +65,7 @@ const Header = () => {
     document.body.removeChild(link);
   };
 
-   const handleFlyerDownload = (e) => {
+  const handleFlyerDownload = (e) => {
     e.preventDefault();
     const link = document.createElement("a");
     link.href = "/flyer.pdf";
@@ -64,14 +75,52 @@ const Header = () => {
     document.body.removeChild(link);
   };
 
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-40% 0px -40% 0px", // 👈 KEY FIX
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    const headerOffset = 90; // height of your sticky header
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  };
+
+
+
+
   return (
     <div
       className={`sticky top-0 z-50 w-full transition-all duration-500 
-    ${
-      isScrolled
-        ? "bg-[#f0ddab] opacity-100 dark:bg-[#18254f] dark:border-b-gray-500   border-b border-b-amber-50"
-        : "bg-[#f0ddab] dark:bg-[#18254f] "
-    }
+    ${isScrolled
+          ? "bg-[#f0ddab] opacity-100 dark:bg-[#18254f] dark:border-b-gray-500   border-b border-b-amber-50"
+          : "bg-[#f0ddab] dark:bg-[#18254f] "
+        }
   `}
     >
       <div className="flex items-center justify-between w-full px-4">
@@ -81,72 +130,74 @@ const Header = () => {
 
         <div className="text-white hidden lg:flex gap-8 font-semibold items-center">
           <div className="cursor-pointer" onClick={() => dispatch(setDark())}>
-            {/* {dark ? <MoonIcon color={"#000000"} width={18} height={18} /> : <SunIcon color={"#000000"} width={18} height={18} />} */}
           </div>
-          <Link className="text-black dark:text-white" to={"/"}>
-            Home
-          </Link>
-          <Link className="text-black dark:text-white" to={"/showcase"}>
-            R&D Showcase
-          </Link>
-          <div className="relative inline-block text-left">
-            <button
-              className="text-black dark:text-white cursor-pointer"
-              onClick={() => setOpen(!open)}
-            >
-              Hosts
-            </button>
-
-            {open && (
-              <div className="absolute right-0 mt-2 w-60 bg-[#f5ce6d] dark:bg-[#09153f] shadow-lg rounded-lg p-2 z-50">
-                <ul className="space-y-2">
-                  <li
-                    onClick={() => navigate("/hosts/kharagpur/1")}
-                    className="hover:bg-gray-100 dark:hover:bg-[#18254f] text-black dark:text-white px-2 py-1 rounded cursor-pointer"
-                  >
-                    IIT KHARAGPUR
-                  </li>
-                  <li
-                    onClick={() => navigate("/hosts/varanasi/2")}
-                    className="hover:bg-gray-100 dark:hover:bg-[#18254f] text-black dark:text-white px-2 py-1 rounded cursor-pointer"
-                  >
-                    IIT(BHU) VARANASI
-                  </li>
-                  <li
-                    onClick={() => navigate("/hosts/dhanbad/3")}
-                    className="hover:bg-gray-100 dark:hover:bg-[#18254f] text-black dark:text-white px-2 py-1 rounded cursor-pointer"
-                  >
-                    IIT(ISM) DHANBAD
-                  </li>
-                  <li
-                    onClick={() => navigate("/hosts/patna/4")}
-                    className="hover:bg-gray-100 dark:hover:bg-[#18254f] text-black dark:text-white px-2 py-1 rounded cursor-pointer"
-                  >
-                    IIT PATNA
-                  </li>
-                  <li
-                    onClick={() => navigate("/hosts/bhubaneswar/5")}
-                    className="hover:bg-gray-100 dark:hover:bg-[#18254f] text-black dark:text-white px-2 py-1 rounded cursor-pointer"
-                  >
-                    IIT BHUBANESWAR
-                  </li>
-                </ul>
-              </div>
-            )}
-          </div>
-          <Link className="text-black dark:text-white" to={"/contact"}>
-            Contact
-          </Link>
-          {/* <Link className="text-black dark:text-white" to={"/brochure"}>
-            Brochure
-          </Link> */}
-          <button
-            onClick={handleDownload}
-            className="text-black dark:text-white cursor-pointer"
+          {/* <div
+            onClick={() => scrollToSection("home")}
+            className={`cursor-pointer ${active === "home"
+              ? "text-[#1d1e5d] dark:text-[#ffa343] border-b-2 border-[#ffa343]"
+              : "text-black dark:text-white"
+              }`}
           >
-            Brochure
+            Home
+          </div>
+          <div
+            onClick={() => scrollToSection("innovation")}
+            className={`cursor-pointer ${active === "innovation"
+              ? "text-[#1d1e5d] dark:text-[#ffa343] border-b-2 border-[#ffa343]"
+              : "text-black dark:text-white"
+              }`}
+          >
+            Innovations
+          </div>
+
+
+          <div
+            onClick={() => scrollToSection("contact")}
+            className={`cursor-pointer ${active === "contact"
+              ? "text-[#1d1e5d] dark:text-[#ffa343] border-b-2 border-[#ffa343]"
+              : "text-black dark:text-white"
+              }`}
+          >
+            Contact
+          </div> */}
+
+          <button
+            type="button"
+            onClick={() => scrollToSection("home")}
+            className={`px-3 py-2 rounded-md transition-all duration-300 ${active === "home"
+                ? "bg-[#ffa343] text-[#1d1e5d] dark:bg-[#1d1e5d] dark:text-[#ffa343]"
+                : "bg-transparent text-black dark:text-white hover:bg-[#ffa343]/20 dark:hover:bg-white/10"
+              }`}
+          >
+            Home
           </button>
-           <button
+
+          <button
+            type="button"
+            onClick={() => scrollToSection("innovation")}
+            className={`px-3 py-2 rounded-md transition-all duration-300 ${active === "innovation"
+                ? "bg-[#ffa343] text-[#1d1e5d] dark:bg-[#1d1e5d] dark:text-[#ffa343]"
+                : "bg-transparent text-black dark:text-white hover:bg-[#ffa343]/20 dark:hover:bg-white/10"
+              }`}
+          >
+            Innovations
+          </button>
+
+          <button
+            type="button"
+            onClick={() => scrollToSection("contact")}
+            className={`px-3 py-2 rounded-md transition-all duration-300 ${active === "contact"
+                ? "bg-[#ffa343] text-[#1d1e5d] dark:bg-[#1d1e5d] dark:text-[#ffa343]"
+                : "bg-transparent text-black dark:text-white hover:bg-[#ffa343]/20 dark:hover:bg-white/10"
+              }`}
+          >
+            Contact
+          </button>
+
+
+
+
+          <button
             onClick={handleFlyerDownload}
             className="text-black dark:text-white cursor-pointer"
           >

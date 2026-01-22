@@ -40,6 +40,22 @@
   overflow: hidden !important;
 }
 
+.slick-dots li button:before {
+  color: #fff !important;
+  opacity: 0.6 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+section {
+  scroll-margin-top: 90px; /* height of header */
+}
+
+
+
 
 @page {
   size: A3 landscape;

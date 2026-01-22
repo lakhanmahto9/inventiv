@@ -4,7 +4,7 @@ import { EmailIcon, Facebook, HomeIcon, LinkedIn, PhoneIcon, Twitter } from '../
 
 const Contact = () => {
   return (
-    <Layout>
+    <section id='contact'>
       <div
         className="min-h-auto bg-cover bg-center bg-no-repeat flex justify-center items-center bg-black/30 opacity-90"
         style={{
@@ -31,7 +31,7 @@ const Contact = () => {
                     </div>
 
                     <div className='flex flex-col'>
-                      <div className='flex gap-2'> 
+                      <div className='flex gap-2'>
                         <div className='bg-white w-10 h-10 rounded-full flex items-center justify-center'>
                           <PhoneIcon color={"#000000"} width={20} height={20} />
 
@@ -70,7 +70,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </section>
   )
 }
 
