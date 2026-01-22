@@ -108,40 +108,6 @@ const Brochure = () => {
                 Organizing Institutes
               </h2>
             </div>
-            {/* <div className="w-full p-8">
-              <div className="bg-red-900 rounded-2xl p-4 flex flex-wrap justify-center gap-8">
-                <div className="">
-                  <div className="bg-white p-4 w-48 h-48 rounded-2xl">
-                    <img src="\imgi_19_IIT_Kharagpur_Logo.svg.png" className="h-full object-contain" />
-                  </div>
-                  <p className="text-white text-sm font-semibold text-center">IIT KHARAGPUR</p>
-                </div>
-                <div className="">
-                  <div className="bg-white p-4 w-48 h-48 rounded-2xl">
-                    <img src="\bhu.png" className="h-full object-contain" />
-                  </div>
-                  <p className="text-white text-sm font-semibold text-center">IIT(BHU) VARANASI</p>
-                </div>
-                <div>
-                  <div className="bg-white p-4 w-48 h-48 rounded-2xl">
-                    <img src="\iitism-logo.png" className="h-full object-contain" />
-                  </div>
-                  <p className="text-white text-sm font-semibold text-center">IIT(ISM) DHANBAD</p>
-                </div>
-                <div>
-                  <div className="bg-white p-4 w-48 h-48 rounded-2xl">
-                    <img src="/imgi_23_IIT-Patna.svg.png" className="h-full object-contain" />
-                  </div>
-                  <p className="text-white text-sm font-semibold text-center">IIT PATNA</p>
-                </div>
-                <div>
-                  <div className="bg-white p-4 w-48 h-48 rounded-2xl">
-                    <img src="\imgi_6_iitb_bhubaneswar_logo.png" className="h-full object-contain" />
-                  </div>
-                  <p className="text-white text-sm font-semibold text-center">IIT BHUBANESWAR</p>
-                </div>
-              </div>
-            </div> */}
 
             <div className="w-full p-8">
               <div className="bg-red-900 rounded-2xl p-6 grid grid-cols-2 gap-8 place-items-center">
@@ -212,13 +178,6 @@ const Brochure = () => {
               </div>
             </div>
 
-            {/* <div className="absolute bottom-0 left-0 w-full h-[250px] p-8">
-              <img
-                src="/i2h.jpg"
-                alt=""
-                className="w-full h-full object-fill rounded-xl"
-              />
-            </div> */}
             <div className="absolute bottom-0 left-0 w-full h-[250px] p-8">
               <div className="relative w-full h-full">
                 <img
@@ -245,7 +204,7 @@ const Brochure = () => {
               <div className="p-4 flex justify-center">
                 <img src="/logo.png" alt="logo" className="w-80" />
               </div>
-              <div class="flex justify-between bg-white p-4 rounded-2xl">
+              {/* <div class="flex justify-between bg-white p-4 rounded-2xl">
                 <div className="w-max-w-[80%]">
                   <p class="text-sm font-bold text-red-900 leading-tight text-justify">
                     "When science is scaled, innovation become inclusive and
@@ -261,7 +220,7 @@ const Brochure = () => {
                   </div>
                 </div>
                 <img src="/pm.png" alt="PM" class="h-28 object-contain" />
-              </div>
+              </div> */}
 
               <div className="bg-white text-center w-full rounded-2xl p-4">
                 <p className="font-bold">About IInvenTiv</p>
@@ -573,18 +532,6 @@ const Brochure = () => {
                 </div>
               </div>
             </div>
-
-            {/* <div className="p-4 bg-white rounded-2xl">
-              <ul className="list-disc ml-4 text-sm font-bold text-red-900">
-                <li>IIT KHARAGPUR (Health Care)</li>
-                <li>IIT(BHU) VARANASI (Materials Science)</li>
-                <li>IIT(ISM) DHANBAD (Earth Sciences)</li>
-                <li>IIT PATNA (Artificial Intelligence)</li>
-                <li>
-                  IIT BHUBANESWAR (Semiconductor Technology & Chip Design)
-                </li>
-              </ul>
-            </div> */}
           </div>
 
           <div

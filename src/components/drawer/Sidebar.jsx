@@ -21,13 +21,24 @@ export default function Sidebar() {
 
   const handleDownload = (e) => {
     e.preventDefault();
-    // const link = document.createElement("a");
-    // link.href = "/brochure_iinventiv.pdf";
-    // link.download = "IInvenTiv.pdf";
-    // document.body.appendChild(link);
-    // link.click();
-    // document.body.removeChild(link);
-    // setOpen(false);
+    const link = document.createElement("a");
+    link.href = "/brochure_iinventiv.pdf";
+    link.download = "IInvenTiv.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setOpen(false);
+  };
+
+  const handleFlyerDownload = (e) => {
+    e.preventDefault();
+    const link = document.createElement("a");
+    link.href = "/flyer.pdf";
+    link.download = "flyer.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setOpen(false);
   };
 
   const DrawerList = (
@@ -135,6 +146,16 @@ export default function Sidebar() {
           >
             <BrochureIcon color={isActive("/brochure") ? "#fff" : "#000"} width={24} height={24} />
             <p className="text-lg font-semibold">Brochure</p>
+          </div>
+
+          <div
+            onClick={handleFlyerDownload}
+            className={`flex gap-4 items-center p-4 rounded-2xl cursor-pointer
+              ${isActive("/brochure") ? "bg-amber-900 text-white" : "text-black"}
+            `}
+          >
+            <BrochureIcon color={isActive("/brochure") ? "#fff" : "#000"} width={24} height={24} />
+            <p className="text-lg font-semibold">Flyer</p>
           </div>
         </div>
       </List>

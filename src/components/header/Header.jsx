@@ -46,12 +46,22 @@ const Header = () => {
 
   const handleDownload = (e) => {
     e.preventDefault();
-    // const link = document.createElement("a");
-    // link.href = "/brochure_iinventiv.pdf";
-    // link.download = "IInvenTiv.pdf";
-    // document.body.appendChild(link);
-    // link.click();
-    // document.body.removeChild(link);
+    const link = document.createElement("a");
+    link.href = "/brochure_iinventiv.pdf";
+    link.download = "IInvenTiv.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+   const handleFlyerDownload = (e) => {
+    e.preventDefault();
+    const link = document.createElement("a");
+    link.href = "/flyer.pdf";
+    link.download = "flyer.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -135,6 +145,12 @@ const Header = () => {
             className="text-black dark:text-white cursor-pointer"
           >
             Brochure
+          </button>
+           <button
+            onClick={handleFlyerDownload}
+            className="text-black dark:text-white cursor-pointer"
+          >
+            Flyer
           </button>
         </div>
 
