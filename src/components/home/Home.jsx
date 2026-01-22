@@ -16,6 +16,7 @@ const Home = () => {
   const [active, setActive] = useState("iit");
   const [error, setError] = useState(null);
   const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const sliderRef = useRef(null);
 
   useEffect(() => {
     const goOnline = () => {
@@ -91,35 +92,37 @@ const Home = () => {
     }),
   };
 
-  const settings = {
-  infinite: true,
-  speed: 700,          // slide animation duration
-  slidesToShow: 3,     // show 3 cards
-  slidesToScroll: 1,   // move ONE card at a time
-  autoplay: true,
-  autoplaySpeed: 3000, // wait 3 seconds before sliding
-  cssEase: "ease-in-out",
-  arrows: false,
-  dots: false,
-  pauseOnHover: true,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 640,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
+  useEffect(() => {
+    // ✅ force slick recalculation on refresh
+    const timer = setTimeout(() => {
+      sliderRef.current?.slickGoTo(0, true);
+      window.dispatchEvent(new Event("resize"));
+    }, 200);
 
+    return () => clearTimeout(timer);
+  }, []);
+
+  const settings = {
+    infinite: true,
+    speed: 700,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: false,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
 
   return (
     <Layout>
@@ -169,11 +172,11 @@ const Home = () => {
           <div className="relative rounded-2xl p-px overflow-hidden">
             <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500"></div>
 
-            <div className="relative bg-[#1d1e5d] rounded-2xl p-6">
-              <Slider {...settings}>
+            <div className="relative bg-[#1d1e5d] rounded-2xl p-6 overflow-hidden">
+               <Slider ref={sliderRef} {...settings}>
                 {/* CARD 1 */}
                 <div className="px-3">
-                  <div className="bg-white rounded-2xl p-5 h-full flex gap-4">
+                  <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitdhanbad.jpg"
                       className="w-16 h-16 rounded-full"
@@ -201,7 +204,7 @@ const Home = () => {
 
                 {/* CARD 2 */}
                 <div className="px-3">
-                  <div className="bg-white rounded-2xl p-5 h-full flex gap-4">
+                  <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitkharagpur.png"
                       className="w-16 h-16 rounded-full"
@@ -235,7 +238,7 @@ const Home = () => {
 
                 {/* CARD 3 */}
                 <div className="px-3">
-                  <div className="bg-white rounded-2xl p-5 h-full flex gap-4">
+                  <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitbhu.jpeg"
                       className="w-16 h-16 rounded-full"
@@ -264,7 +267,7 @@ const Home = () => {
 
                 {/* CARD 4 */}
                 <div className="px-3">
-                  <div className="bg-white rounded-2xl p-5 h-full flex gap-4">
+                  <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/iit-patna-director.jpg"
                       className="w-16 h-16 rounded-full"
@@ -294,7 +297,7 @@ const Home = () => {
 
                 {/* CARD 5 */}
                 <div className="px-3">
-                  <div className="bg-white rounded-2xl p-5 h-full flex gap-4">
+                  <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitbhuneswar.jpg"
                       className="w-16 h-16 rounded-full"
