@@ -17,6 +17,7 @@ const Home = () => {
   const [error, setError] = useState(null);
   const [isOnline, setIsOnline] = useState(navigator.onLine);
   const sliderRef = useRef(null);
+   const [slides, setSlides] = useState(3);
 
   useEffect(() => {
     const goOnline = () => {
@@ -92,20 +93,34 @@ const Home = () => {
     }),
   };
 
+
   useEffect(() => {
-    // ✅ force slick recalculation on refresh
+    const handleResize = () => {
+      const w = window.innerWidth;
+
+      if (w < 768) setSlides(1);
+      else if (w < 1024) setSlides(2);
+      else setSlides(3);
+    };
+
+    handleResize(); // ✅ run on first load
+    window.addEventListener("resize", handleResize);
+
+    // ✅ force slick update after resize set
     const timer = setTimeout(() => {
       sliderRef.current?.slickGoTo(0, true);
-      window.dispatchEvent(new Event("resize"));
-    }, 200);
+    }, 100);
 
-    return () => clearTimeout(timer);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(timer);
+    };
   }, []);
 
   const settings = {
     infinite: true,
     speed: 700,
-    slidesToShow: 3,
+    slidesToShow: slides,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -173,9 +188,9 @@ const Home = () => {
             <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500"></div>
 
             <div className="relative bg-[#1d1e5d] rounded-2xl p-6 overflow-hidden">
-               <Slider ref={sliderRef} {...settings}>
+              <Slider ref={sliderRef} {...settings}>
                 {/* CARD 1 */}
-                <div className="px-3">
+                <div className="px-3 w-full">
                   <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitdhanbad.jpg"
