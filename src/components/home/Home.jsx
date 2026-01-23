@@ -183,7 +183,7 @@ const Home = () => {
             About IInvenTiv
           </motion.p>
           <div className="relative rounded-2xl p-px overflow-hidden">
-            <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500">h</div>
+            <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500"></div>
             <div className="relative bg-[#1d1e5d] rounded-2xl p-6 overflow-hidden">
               <p className="text-justify text-white">
                 IInvenTiv is a flagship annual R&D fair organized by the

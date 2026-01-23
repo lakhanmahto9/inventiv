@@ -72,7 +72,8 @@ const Footer = () => {
         <motion.div className="flex flex-col my-4" variants={footerItem}>
           <p className="text-2xl text-[#ffa343] font-semibold">Important Links</p>
           <div className="text-white text-sm lg:text-lg">Home</div>
-          <div className="text-white text-sm lg:text-lg">R&D Showcase</div>
+          <div className="text-white text-sm lg:text-lg">R&D Innovations</div>
+          <div className="text-white text-sm lg:text-lg">Contact</div>
         </motion.div>
 
         {/* Social Icons */}

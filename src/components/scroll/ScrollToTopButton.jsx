@@ -27,7 +27,7 @@ const ScrollToTopButton = () => {
       onClick={scrollToTop}
       className="fixed bottom-6 right-6 z-50 p-3 rounded-full
                  bg-[#ffa343] text-[#1d1e5d] shadow-lg
-                 hover:bg-[#ffb864] transition-all duration-300"
+                 hover:bg-[#ffb864] transition-all duration-300 cursor-pointer"
       aria-label="Scroll to top"
     >
       <UpArrowIcon color={"#fff"} width={28} height={28}/>

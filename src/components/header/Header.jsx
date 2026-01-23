@@ -206,9 +206,9 @@ const Header = () => {
         </div>
 
         {/* Sidebar for mobile */}
-        <div className="block lg:hidden">
+        {/* <div className="block lg:hidden">
           <Sidebar />
-        </div>
+        </div> */}
       </div>
     </div>
   );
