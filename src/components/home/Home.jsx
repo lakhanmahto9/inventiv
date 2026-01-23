@@ -98,8 +98,8 @@ const Home = () => {
       const w = window.innerWidth;
 
       if (w < 768) setSlides(1);
-      else if (w < 1024) setSlides(2);
-      else setSlides(3);
+      else if (w < 1024) setSlides(1);
+      else setSlides(1);
     };
 
     handleResize(); // ✅ run on first load
@@ -212,7 +212,7 @@ const Home = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            Message from organising Directors
+            Message from organizing Directors
           </motion.p>
 
           <div className="relative rounded-2xl p-px overflow-hidden">
@@ -228,8 +228,8 @@ const Home = () => {
                       className="w-16 h-16 rounded-full"
                     />
                     <div>
-                      <p className="font-bold text-sm">Prof. Sukumar Mishra</p>
-                      <p className="text-xs text-[#9B0225] text-justify mt-1">
+                      <p className="font-bold text-lg">Prof. Sukumar Mishra</p>
+                      <p className="text-lg text-[#9B0225] text-justify mt-1">
                         Earth Sciences play a vital role in resource
                         sustainability, climate resilience, and energy security.
                         As the host institute, IIT (ISM) Dhanbad is honoured to
@@ -238,7 +238,7 @@ const Home = () => {
                         environmental engineering that support responsible
                         development and national priorities.
                       </p>
-                      <p className="text-xs font-semibold text-right mt-2">
+                      <p className="text-sm font-semibold text-right mt-2">
                         Director, IIT (ISM) Dhanbad
                       </p>
                       <small className="text-[10px] font-semibold text-right block">
@@ -256,10 +256,10 @@ const Home = () => {
                       className="w-16 h-16 rounded-full"
                     />
                     <div>
-                      <p className="font-bold text-sm">
+                      <p className="font-bold text-xl">
                         Prof. Suman Chakraborty
                       </p>
-                      <p className="text-xs text-[#9B0225] text-justify mt-1">
+                      <p className="text-lg text-[#9B0225] text-justify mt-1">
                         Healthcare innovation is no longer optional, but rather
                         imperative for human dignity, resilience, and equity. At
                         IIT Kharagpur, we view healthcare as a grand convergence
@@ -272,7 +272,7 @@ const Home = () => {
                         globally relevant healthcare solutions that can redefine
                         access, outcomes, and quality of life for billions.
                       </p>
-                      <p className="text-xs font-semibold text-right mt-2">
+                      <p className="text-sm font-semibold text-right mt-2">
                         Director, IIT Kharagpur
                       </p>
                       <small className="text-[10px] font-semibold text-right block">
@@ -290,8 +290,8 @@ const Home = () => {
                       className="w-16 h-16 rounded-full"
                     />
                     <div>
-                      <p className="font-bold text-sm">Prof. Amit Patra</p>
-                      <p className="text-xs text-[#9B0225] text-justify mt-1">
+                      <p className="font-bold text-lg">Prof. Amit Patra</p>
+                      <p className="text-lg text-[#9B0225] text-justify mt-1">
                         Advanced materials form the backbone of modern
                         technology and sustainable development. IIT (BHU)
                         Varanasi is proud to lead the Materials Science theme at
@@ -301,7 +301,7 @@ const Home = () => {
                         academia and industry to translate fundamental research
                         into impactful real-world applications.
                       </p>
-                      <p className="text-xs font-semibold text-right mt-2">
+                      <p className="text-sm font-semibold text-right mt-2">
                         Director, IIT (BHU) Varanasi
                       </p>
                       <small className="text-[10px] font-semibold text-right block">
@@ -319,10 +319,10 @@ const Home = () => {
                       className="w-16 h-16 rounded-full"
                     />
                     <div>
-                      <p className="font-bold text-sm">
+                      <p className="font-bold text-xl">
                         Prof. Trilok Nath Singh
                       </p>
-                      <p className="text-xs text-[#9B0225] text-justify mt-1">
+                      <p className="text-lg text-[#9B0225] text-justify mt-1">
                         Artificial Intelligence is transforming industries,
                         governance, and society at large. IIT Patna is delighted
                         to anchor the Artificial Intelligence theme at IInvenTiv
@@ -331,7 +331,7 @@ const Home = () => {
                         global partners to demonstrate how AI-driven innovation
                         can address complex societal and industrial challenges.
                       </p>
-                      <p className="text-xs font-semibold text-right mt-2">
+                      <p className="text-sm font-semibold text-right mt-2">
                         Director, IIT Patna
                       </p>
                       <small className="text-[10px] font-semibold text-right block">
@@ -349,10 +349,10 @@ const Home = () => {
                       className="w-16 h-16 rounded-full"
                     />
                     <div>
-                      <p className="font-bold text-sm">
+                      <p className="font-bold text-xl">
                         Prof. Shreepad Karmalkar
                       </p>
-                      <p className="text-xs text-[#9B0225] text-justify mt-1">
+                      <p className="text-lg text-[#9B0225] text-justify mt-1">
                         Semiconductor technology is foundational to digital
                         sovereignty and technological leadership. IIT
                         Bhubaneswar is proud to lead the Semiconductor
@@ -362,7 +362,7 @@ const Home = () => {
                         and systems, strengthening India’s position in the
                         global semiconductor ecosystem.
                       </p>
-                      <p className="text-xs font-semibold text-right mt-2">
+                      <p className="text-sm font-semibold text-right mt-2">
                         Director, IIT Bhubaneswar
                       </p>
                       <small className="text-[10px] font-semibold text-right block">
@@ -639,7 +639,6 @@ const Home = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="
               flex flex-col items-center justify-center cursor-pointer
-
               /* 👇 center ONLY the 3rd logo on small screens */
               [&:nth-child(3)]:col-span-2
               [&:nth-child(3)]:justify-self-center
@@ -650,6 +649,7 @@ const Home = () => {
                   >
                     {/* LOGO CARD */}
                     <div
+                      onClick={() => window.open(`${item.link}`, "_blank")}
                       className="
                 bg-[#eeeeee] rounded-2xl shadow-md p-4
                 transition-transform duration-300 ease-in-out hover:scale-95
