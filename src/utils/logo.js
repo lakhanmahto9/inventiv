@@ -1,16 +1,16 @@
 export const logos = {
   iit: [
-    { id: 1, name: "IISc Bangalore", logo: "/IISc_Master_Seal.png" },
+    // { id: 1, name: "IISc Bangalore", logo: "/IISc_Master_Seal.png" },
     {
       id: 2,
       name: "IIT Kharagpur",
       logo: "/imgi_19_IIT_Kharagpur_Logo.svg.png",
     },
     { id: 3, name: "IIT Bombay", logo: "/imgi_7_IIT-Bombay_Logo.svg.png" },
-    { id: 4, name: "IIT Kanpur", logo: "/imgi_18_IIT_Kanpur_Logo.svg.png" },
+    // { id: 4, name: "IIT Kanpur", logo: "/imgi_18_IIT_Kanpur_Logo.svg.png" },
     { id: 5, name: "IIT Madras", logo: "/imgi_20_IIT_Madras_Logo.svg.png" },
     { id: 6, name: "IIT Delhi", logo: "/imgi_8_iit-delhi.png" },
-    { id: 7, name: "IIT Guwahati", logo: "/imgi_12_IIT_Guwahati_Logo.svg.png" },
+    // { id: 7, name: "IIT Guwahati", logo: "/imgi_12_IIT_Guwahati_Logo.svg.png" },
     { id: 8, name: "IIT Roorkee", logo: "/imgi_24_IIT-Roorkee_logo.png" },
     { id: 9, name: "IIT Jodhpur", logo: "/imgi_17_IIT-Jodhpur_Logo.svg.png" },
     { id: 10, name: "IIT Ropar", logo: "/imgi_25_IIT-Ropar_logo .png" },
@@ -41,7 +41,7 @@ export const logos = {
     { id: 19, name: "IIT Tirupati", logo: "/imgi_26_IIT-Tirupati_logo .jpg" },
     { id: 20, name: "IIT(ISM) Dhanbad", logo: "/iitism-logo.png" },
     { id: 21, name: "IIT Bhilai", logo: "/imgi_4_IIT_Bhilai_logo.png" },
-    { id: 22, name: "IIT Dharwad", logo: "/imgi_9_IITDh.png" },
+    // { id: 22, name: "IIT Dharwad", logo: "/imgi_9_IITDh.png" },
     { id: 23, name: "IIT Jammu", logo: "/imgi_16_IIT-Jammu.png" },
     { id: 24, name: "IIT Goa", logo: "/imgi_11_IIT-Goa_Logo.svg.png" },
   ],
@@ -70,45 +70,45 @@ export const logos = {
       name: "IIEST SHIBPUR",
       logo: "/Indian_Institute_of_Engineering_Science_and_Technology,_Shibpur_Logo.png",
     },
-    {
-      id: 1,
-      name: "NIT Agartala",
-      logo: "/imgi_27_National_Institute_of_Technology,_Agartala_Logo .png",
-    },
-    {
-      id: 2,
-      name: "NIT Allahabad",
-      logo: "/imgi_28_Motilal_Nehru_National_Institute_of_Technology_Allahabad_logo .png",
-    },
-    {
-      id: 3,
-      name: "NIT Andhra Pradesh",
-      logo: "/imgi_29_NIT_Andhra_Pradesh .png",
-    },
-    {
-      id: 4,
-      name: "NIT Arunachal Pradesh",
-      logo: "/imgi_30_National_Institute_of_Technology,_Arunachal_Pradesh_Logo.png",
-    },
+    // {
+    //   id: 1,
+    //   name: "NIT Agartala",
+    //   logo: "/imgi_27_National_Institute_of_Technology,_Agartala_Logo .png",
+    // },
+    // {
+    //   id: 2,
+    //   name: "NIT Allahabad",
+    //   logo: "/imgi_28_Motilal_Nehru_National_Institute_of_Technology_Allahabad_logo .png",
+    // },
+    // {
+    //   id: 3,
+    //   name: "NIT Andhra Pradesh",
+    //   logo: "/imgi_29_NIT_Andhra_Pradesh .png",
+    // },
+    // {
+    //   id: 4,
+    //   name: "NIT Arunachal Pradesh",
+    //   logo: "/imgi_30_National_Institute_of_Technology,_Arunachal_Pradesh_Logo.png",
+    // },
     {
       id: 5,
       name: "NIT Bhopal",
       logo: "/imgi_31_Maulana_Azad_National_Institute_of_Technology_Logo.png",
     },
-    { id: 6, name: "NIT Delhi", logo: "/imgi_33_NIT-Delhi_Logo.svg.png" },
+    // { id: 6, name: "NIT Delhi", logo: "/imgi_33_NIT-Delhi_Logo.svg.png" },
     { id: 7, name: "NIT Durgapur", logo: "/imgi_34_NIT_Durgapur_Logo.svg.png" },
-    { id: 8, name: "NIT Goa", logo: "/imgi_35_NIT_Goa_logo.png" },
-    {
-      id: 9,
-      name: "NIT Hamipur",
-      logo: "/imgi_36_National_Institute_of_Technology,_Hamirpur_Logo.png",
-    },
-    { id: 10, name: "NIT Jaipur", logo: "/imgi_37_Mnit_logo.png" },
-    {
-      id: 11,
-      name: "NIT Jalandhar",
-      logo: "/imgi_38_Logo_of_NIT_Jalandhar.png",
-    },
+    // { id: 8, name: "NIT Goa", logo: "/imgi_35_NIT_Goa_logo.png" },
+    // {
+    //   id: 9,
+    //   name: "NIT Hamipur",
+    //   logo: "/imgi_36_National_Institute_of_Technology,_Hamirpur_Logo.png",
+    // },
+    // { id: 10, name: "NIT Jaipur", logo: "/imgi_37_Mnit_logo.png" },
+    // {
+    //   id: 11,
+    //   name: "NIT Jalandhar",
+    //   logo: "/imgi_38_Logo_of_NIT_Jalandhar.png",
+    // },
     {
       id: 12,
       name: "NIT Jamshedpur",
@@ -119,79 +119,79 @@ export const logos = {
       name: "NIT Kalicut",
       logo: "/imgi_32_Correct_Logo_of_NIT_Calicut.svg.png",
     },
-    {
-      id: 14,
-      name: "NIT Kurukshretra",
-      logo: "/imgi_40_National_Institute_of_Technology,_kuru.png",
-    },
-    {
-      id: 15,
-      name: "NIT Manipur",
-      logo: "/imgi_41_National_Institute_of_Technology,_Manipur_logo.png",
-    },
-    {
-      id: 16,
-      name: "NIT Meghalaya",
-      logo: "/imgi_42_National_Institute_of_Technology,_Meghalaya_logo.png",
-    },
-    {
-      id: 17,
-      name: "NIT Mizoram",
-      logo: "/imgi_43_National_Institute_of_Technology_Mizoram_logo.png",
-    },
-    {
-      id: 18,
-      name: "NIT Nagaland",
-      logo: "/imgi_44_National_Institute_of_Technology,_Nagaland_Logo.png",
-    },
-    { id: 19, name: "NIT Nagpur", logo: "/imgi_45_VNIT_logo.jpg" },
-    {
-      id: 20,
-      name: "NIT Patna",
-      logo: "/imgi_46_National_Institute_of_Technology,_Patna_Logo.png",
-    },
-    {
-      id: 21,
-      name: "NIT Puducherry",
-      logo: "/imgi_47_NIT_Puducherry_Official_logo.png",
-    },
-    {
-      id: 22,
-      name: "NIT Raipur",
-      logo: "/imgi_48_National_Institute_of_Technology,_Raipur_Logo.png",
-    },
+    // {
+    //   id: 14,
+    //   name: "NIT Kurukshretra",
+    //   logo: "/imgi_40_National_Institute_of_Technology,_kuru.png",
+    // },
+    // {
+    //   id: 15,
+    //   name: "NIT Manipur",
+    //   logo: "/imgi_41_National_Institute_of_Technology,_Manipur_logo.png",
+    // },
+    // {
+    //   id: 16,
+    //   name: "NIT Meghalaya",
+    //   logo: "/imgi_42_National_Institute_of_Technology,_Meghalaya_logo.png",
+    // },
+    // {
+    //   id: 17,
+    //   name: "NIT Mizoram",
+    //   logo: "/imgi_43_National_Institute_of_Technology_Mizoram_logo.png",
+    // },
+    // {
+    //   id: 18,
+    //   name: "NIT Nagaland",
+    //   logo: "/imgi_44_National_Institute_of_Technology,_Nagaland_Logo.png",
+    // },
+    // { id: 19, name: "NIT Nagpur", logo: "/imgi_45_VNIT_logo.jpg" },
+    // {
+    //   id: 20,
+    //   name: "NIT Patna",
+    //   logo: "/imgi_46_National_Institute_of_Technology,_Patna_Logo.png",
+    // },
+    // {
+    //   id: 21,
+    //   name: "NIT Puducherry",
+    //   logo: "/imgi_47_NIT_Puducherry_Official_logo.png",
+    // },
+    // {
+    //   id: 22,
+    //   name: "NIT Raipur",
+    //   logo: "/imgi_48_National_Institute_of_Technology,_Raipur_Logo.png",
+    // },
     {
       id: 23,
       name: "NIT Rourkela",
       logo: "/imgi_49_NIT_Rourkela_Colour_Logo.svg.png",
     },
-    {
-      id: 24,
-      name: "NIT Sikkim",
-      logo: "/imgi_50_National_Institute_of_Technology_Sikkim.svg.png",
-    },
+    // {
+    //   id: 24,
+    //   name: "NIT Sikkim",
+    //   logo: "/imgi_50_National_Institute_of_Technology_Sikkim.svg.png",
+    // },
     {
       id: 25,
       name: "NIT Silchar",
       logo: "/imgi_51_National_Institute_Of_Technology_Silchar_Logo.svg.png",
     },
-    {
-      id: 26,
-      name: "NIT Srinagar",
-      logo: "/imgi_52_National_Institute_of_Technology,_Srinagar_Logo.png",
-    },
-    { id: 27, name: "NIT Surat", logo: "/imgi_53_NIT_Surat_Logo.svg.png" },
+    // {
+    //   id: 26,
+    //   name: "NIT Srinagar",
+    //   logo: "/imgi_52_National_Institute_of_Technology,_Srinagar_Logo.png",
+    // },
+    // { id: 27, name: "NIT Surat", logo: "/imgi_53_NIT_Surat_Logo.svg.png" },
     { id: 28, name: "NIT Surathakal", logo: "/NITK-Surathkal-logo.png" },
     {
       id: 29,
       name: "NIT Tiruchirappalli",
       logo: "/imgi_54_National_Institute_of_Technology_Trichy_Logo.png",
     },
-    {
-      id: 30,
-      name: "NIT Uttrakhand",
-      logo: "/imgi_55_NIT_Uttarakhand_Logo.png",
-    },
+    // {
+    //   id: 30,
+    //   name: "NIT Uttrakhand",
+    //   logo: "/imgi_55_NIT_Uttarakhand_Logo.png",
+    // },
     {
       id: 31,
       name: "NIT Warangal",
@@ -202,23 +202,23 @@ export const logos = {
   iiser: [
     { id: 1, name: "IISER Kolkata", logo: "/imgi_58_IISER-K_Logo.svg.png" },
     { id: 2, name: "IISER PUNE", logo: "/imgi_57_IISER,_PUNE_Logo.svg.png" },
-    { id: 3, name: "IISER Mohali", logo: "/imgi_59_IISER-Mohali_Logo.svg.png" },
-    { id: 4, name: "IISER Bhopal", logo: "/imgi_62_IISERB_logo (1).png" },
-    {
-      id: 5,
-      name: "IISER Tiruvanathapuram",
-      logo: "/imgi_60_IISER_Thiruvananthapuram_Logo.svg.png",
-    },
-    {
-      id: 6,
-      name: "IISER Tirupati",
-      logo: "/imgi_61_IISER_Tirupati_logo (1).png",
-    },
-    {
-      id: 7,
-      name: "IISER Berhampur",
-      logo: "/imgi_63_Indian_Institute_of_Science_Education_and_Research_Berhampur_Logo.svg.png",
-    },
+    // { id: 3, name: "IISER Mohali", logo: "/imgi_59_IISER-Mohali_Logo.svg.png" },
+    // { id: 4, name: "IISER Bhopal", logo: "/imgi_62_IISERB_logo (1).png" },
+    // {
+    //   id: 5,
+    //   name: "IISER Tiruvanathapuram",
+    //   logo: "/imgi_60_IISER_Thiruvananthapuram_Logo.svg.png",
+    // },
+    // {
+    //   id: 6,
+    //   name: "IISER Tirupati",
+    //   logo: "/imgi_61_IISER_Tirupati_logo (1).png",
+    // },
+    // {
+    //   id: 7,
+    //   name: "IISER Berhampur",
+    //   logo: "/imgi_63_Indian_Institute_of_Science_Education_and_Research_Berhampur_Logo.svg.png",
+    // },
   ],
 
   top: [
