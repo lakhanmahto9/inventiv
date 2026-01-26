@@ -218,14 +218,14 @@ const Home = () => {
           <div className="relative rounded-2xl p-px overflow-hidden">
             <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500 via-[#ffa343] to-red-500"></div>
 
-            <div className="relative bg-[#1d1e5d] rounded-2xl p-6 overflow-hidden">
+            <div className="relative bg-[#1d1e5d] rounded-2xl p-2 sm:p-6 overflow-hidden">
               <Slider ref={sliderRef} {...settings}>
                 {/* CARD 1 */}
                 <div className="px-3 w-full">
                   <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitdhanbad.jpg"
-                      className="w-16 h-16 rounded-full"
+                      className="w-24 h-24 rounded-full"
                     />
                     <div>
                       <p className="font-bold text-lg">Prof. Sukumar Mishra</p>
@@ -253,7 +253,7 @@ const Home = () => {
                   <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitkharagpur.png"
-                      className="w-16 h-16 rounded-full"
+                      className="w-24 h-24 rounded-full"
                     />
                     <div>
                       <p className="font-bold text-xl">
@@ -287,7 +287,7 @@ const Home = () => {
                   <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitbhu.jpeg"
-                      className="w-16 h-16 rounded-full"
+                      className="w-24 h-24 rounded-full"
                     />
                     <div>
                       <p className="font-bold text-lg">Prof. Amit Patra</p>
@@ -316,7 +316,7 @@ const Home = () => {
                   <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/iit-patna-director.jpg"
-                      className="w-16 h-16 rounded-full"
+                      className="w-24 h-24 rounded-full"
                     />
                     <div>
                       <p className="font-bold text-xl">
@@ -346,7 +346,7 @@ const Home = () => {
                   <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitbhuneswar.jpg"
-                      className="w-16 h-16 rounded-full"
+                      className="w-24 h-24 rounded-full"
                     />
                     <div>
                       <p className="font-bold text-xl">

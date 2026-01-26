@@ -1,8 +1,38 @@
-import React from "react";
 import { logos } from "../../utils/logo";
 import { motion } from "framer-motion";
+import React, { useMemo, useState } from "react";
 
 const Innovation = () => {
+ const [sortConfig, setSortConfig] = useState({
+  key: "total",         // ✅ default sorting column
+  direction: "desc",    // ✅ default order (high → low)
+});
+
+
+  const handleSort = (key) => {
+    setSortConfig((prev) => {
+      if (prev.key === key) {
+        return {
+          key,
+          direction: prev.direction === "asc" ? "desc" : "asc",
+        };
+      }
+      return { key, direction: "asc" };
+    });
+  };
+
+ const sortedData = useMemo(() => {
+  if (!sortConfig.key) return logos.tableData;
+
+  return [...logos.tableData].sort((a, b) => {
+    const valA = Number(a[sortConfig.key] || 0);
+    const valB = Number(b[sortConfig.key] || 0);
+
+    return sortConfig.direction === "asc" ? valA - valB : valB - valA;
+  });
+}, [logos.tableData, sortConfig]);
+
+
   return (
     <section id="innovation">
       <div className="min-h-screen bg-[#1d1e5d]">
@@ -25,86 +55,8 @@ const Innovation = () => {
             <div className="relative rounded-2xl bg-[#1d1e5d] p-4 lg:p-6">
               {/* ✅ Responsive Layout */}
               <div className="w-full flex flex-col lg:flex-row gap-6 lg:gap-8">
-                {/* ================= LEFT SIDE ================= */}
-                <div className="w-full lg:w-1/3 overflow-hidden text-white">
-                  <div className="w-full max-h-[600px] lg:max-h-[660px] overflow-y-auto overflow-x-auto custom-scrollbar min-w-max">
-                    <div className="rounded-lg overflow-hidden border border-white">
-                      <table className="w-full border-collapse text-center bg-[#1d1e5d]">
-                        <thead className="bg-[#1d1e5d] sticky top-0 z-10">
-                          <tr>
-                            <th
-                              colSpan={4}
-                              className="border border-white py-3 font-bold text-lg"
-                            >
-                              Thematic Areas
-                            </th>
-                          </tr>
-
-                          <tr className="font-semibold">
-                            <th className="border border-white px-4 py-2 w-[10%]">
-                              Sl. No.
-                            </th>
-                            <th className="border border-white px-4 py-2 w-[30%]">
-                              Institute Name
-                            </th>
-                            <th className="border border-white px-4 py-2 w-[40%]">
-                              Name of Innovation
-                            </th>
-                            <th className="border border-white px-4 py-2 w-[20%]">
-                              Video Link
-                            </th>
-                          </tr>
-                        </thead>
-
-                        <tbody>
-                          {logos.institutesData.map((inst) =>
-                            inst.innovations.map((inv, index) => (
-                              <tr key={`${inst.sl}-${index}`}>
-                                {index === 0 && (
-                                  <td
-                                    rowSpan={inst.innovations.length}
-                                    className="border border-white px-4 py-2 font-bold align-top"
-                                  >
-                                    {inst.sl}
-                                  </td>
-                                )}
-
-                                {index === 0 && (
-                                  <td
-                                    rowSpan={inst.innovations.length}
-                                    className="border border-white px-4 py-2 font-bold align-top"
-                                  >
-                                    {inst.institute}
-                                  </td>
-                                )}
-
-                                <td className="border border-white px-4 py-2 text-left">
-                                  {inv.name}
-                                </td>
-
-                                <td className="border border-white px-4 py-2">
-                                  <a
-                                    href={inv.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="text-blue-400 underline font-medium"
-                                  >
-                                    Link
-                                  </a>
-                                </td>
-                              </tr>
-                            ))
-                          )}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-
-               
-
                 {/* ================= RIGHT SIDE ================= */}
-                <div className="w-full lg:w-2/3 text-white">
+                <div className="w-full text-white">
                   <div className="rounded-lg overflow-hidden border border-white">
                     <div className="max-h-[600px] lg:max-h-[660px] overflow-y-auto overflow-x-auto custom-scrollbar">
                       <table className="w-full border-collapse bg-[#1d1e5d] text-white text-center">
@@ -139,9 +91,15 @@ const Innovation = () => {
                             </th>
                             <th
                               rowSpan="2"
-                              className="border border-white px-4 py-2 bg-[#1d1e5d]"
+                              onClick={() => handleSort("total")}
+                              className="border border-white px-4 py-2 bg-[#1d1e5d] cursor-pointer select-none hover:bg-[#2a2b75]"
                             >
-                              Total No. of Innovation Submitted
+                              Total no. of innovations
+                              {sortConfig.key === "total" && (
+                                <span className="ml-2">
+                                  {sortConfig.direction === "asc" ? "▲" : "▼"}
+                                </span>
+                              )}
                             </th>
                           </tr>
 
@@ -165,10 +123,10 @@ const Innovation = () => {
                         </thead>
 
                         <tbody>
-                          {logos.tableData.map((item) => (
-                            <tr key={item.sl}>
+                          {sortedData.map((item,index) => (
+                            <tr key={index}>
                               <td className="border border-white px-4 py-2">
-                                {item.sl}
+                                {index+1}
                               </td>
                               <td className="border border-white px-4 py-2">
                                 {item.institute}
