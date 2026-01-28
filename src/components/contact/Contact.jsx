@@ -86,7 +86,7 @@ const Contact = () => {
                       <Twitter color={"#000000"} width={20} height={20} />
                     </a>
                     <a
-                      href="https://www.facebook.com/share/1HAAqhXaZa/"
+                      href="https://www.facebook.com/people/IInvenTiv-2026/61586354344750/?sk=about"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-slate-50 rounded-full p-2 cursor-pointer hover:scale-110 transition"

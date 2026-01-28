@@ -125,7 +125,7 @@ const Footer = () => {
               className="flex items-center justify-center"
             >
               <a
-                href="https://www.facebook.com/share/1HAAqhXaZa/"
+                href="https://www.facebook.com/people/IInvenTiv-2026/61586354344750/?sk=about"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
