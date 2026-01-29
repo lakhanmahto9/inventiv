@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import {
   CalenderIcon,
   Facebook,
+  InstaIcon,
   LinkedIn,
   LocationIcon,
   Twitter,
@@ -166,6 +167,30 @@ const Footer = () => {
     "
               >
                 <LinkedIn color="#000000" width={20} height={20} />
+              </a>
+            </motion.div>
+            <motion.div
+              variants={iconHover}
+              whileHover="hover"
+              className="flex items-center justify-center"
+            >
+              <a
+                href="https://www.instagram.com/iinventiv2026/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+      w-10 h-10 sm:w-11 sm:h-11
+      flex items-center justify-center
+      bg-white rounded-full
+      shadow-md
+      border border-blue-200
+      cursor-pointer
+      transition-all duration-300
+      hover:shadow-lg hover:scale-110
+      active:scale-95
+    "
+              >
+                <InstaIcon color="#000000" width={20} height={20} />
               </a>
             </motion.div>
           </div>
