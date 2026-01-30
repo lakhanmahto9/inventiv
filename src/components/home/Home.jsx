@@ -205,7 +205,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="p-4 lg:p-16 bg-[#1d1e5d]">
+        <div className="p-4 lg:p-16 bg-[#1d1e5d] ">
           <motion.p
             className="text-2xl lg:text-5xl font-bold text-[#ffa343] mb-6"
             initial={{ y: 20, opacity: 0 }}
@@ -222,7 +222,7 @@ const Home = () => {
               <Slider ref={sliderRef} {...settings}>
                 {/* CARD 1 */}
                 <div className="px-3 w-full">
-                  <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
+                  <div className="bg-white dark:bg-[#eeeeee] p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitdhanbad.jpg"
                       className="w-24 h-24 rounded-full"
