@@ -43,7 +43,7 @@ const Innovation = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            Innovation
+            Innovations
           </motion.p>
 
           {/* ✅ Gradient Border Wrapper */}
