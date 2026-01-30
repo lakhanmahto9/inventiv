@@ -102,11 +102,11 @@ const Contact = () => {
                     >
                       <LinkedIn color={"#1A73E8"} width={20} height={20} />
                     </a>
-             <a
-  href="https://www.instagram.com/iinventiv2026/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="
+                    <a
+                      href="https://www.instagram.com/iinventiv2026/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
     bg-white
     rounded-full
     flex items-center justify-center
@@ -114,12 +114,9 @@ const Contact = () => {
     transition-transform
     hover:scale-110
   "
->
-  <InstaIcon width={36} height={24} />
-</a>
-
-
-
+                    >
+                      <InstaIcon width={36} height={24} />
+                    </a>
                   </div>
                 </div>
               </div>
