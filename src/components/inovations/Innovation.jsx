@@ -66,7 +66,7 @@ const Innovation = () => {
                               colSpan="8"
                               className="border border-white py-3 font-bold text-lg bg-[#1d1e5d]"
                             >
-                              Innovation Submission Data till 228 Innovation
+                              Innovation Submission Data till 228 Innovations
                             </th>
                           </tr>
 
