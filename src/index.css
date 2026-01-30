@@ -55,10 +55,16 @@ section {
 }
 
 /* ✅ Custom Scrollbar - Modern Thin */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+.custom-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 
 .custom-scrollbar::-webkit-scrollbar-track {
   background: #0f103f;
