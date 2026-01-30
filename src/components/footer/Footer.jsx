@@ -141,7 +141,7 @@ const Footer = () => {
       active:scale-95
     "
               >
-                <Facebook color="#000000" width={20} height={20} />
+                <Facebook color="#1A73E8" width={20} height={20} />
               </a>
             </motion.div>
 
@@ -166,7 +166,7 @@ const Footer = () => {
       active:scale-95
     "
               >
-                <LinkedIn color="#000000" width={20} height={20} />
+                <LinkedIn color="#1A73E8" width={20} height={20} />
               </a>
             </motion.div>
             <motion.div
@@ -190,7 +190,7 @@ const Footer = () => {
       active:scale-95
     "
               >
-                <InstaIcon color="#000000" width={20} height={20} />
+                <InstaIcon  width={36} height={24} />
               </a>
             </motion.div>
           </div>

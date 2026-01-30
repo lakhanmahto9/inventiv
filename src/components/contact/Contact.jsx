@@ -102,14 +102,24 @@ const Contact = () => {
                     >
                       <LinkedIn color={"#1A73E8"} width={20} height={20} />
                     </a>
-                    <a
-                      href="https://www.instagram.com/iinventiv2026/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-slate-50 rounded-full p-2 cursor-pointer hover:scale-110 transition"
-                    >
-                      <InstaIcon color={"#1A73E8"} width={20} height={20} />
-                    </a>
+             <a
+  href="https://www.instagram.com/iinventiv2026/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    bg-white
+    rounded-full
+    flex items-center justify-center
+    cursor-pointer
+    transition-transform
+    hover:scale-110
+  "
+>
+  <InstaIcon width={36} height={24} />
+</a>
+
+
+
                   </div>
                 </div>
               </div>
