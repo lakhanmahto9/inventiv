@@ -74,7 +74,7 @@ const Footer = () => {
           <motion.div className="flex gap-2 items-center">
             <CalenderIcon color="#9E0024" width="18" height="18" />
             <p className="text-[#9E0024] text-xl font-semibold">
-              February 21-22, 2026
+              To be announced soon
             </p>
           </motion.div>
         </motion.div>

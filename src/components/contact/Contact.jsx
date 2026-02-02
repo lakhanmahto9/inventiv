@@ -37,7 +37,7 @@ const Contact = () => {
                           Venue
                         </p>
                         <p className="lg:text-base text-sm">
-                          IIT(ISM) Dhanbad, February 21-22, 2026
+                          IIT(ISM) Dhanbad, To be announced soon
                         </p>
                       </div>
                     </div>
@@ -53,7 +53,7 @@ const Contact = () => {
                       </div>
                       <div className="ml-12">
                         <p className="lg:text-base text-sm">
-                          Prof. Parthasarathi Das (Dean R &D), Convenor,
+                          Prof. Parthasarathi Das (Dean R & D), Convenor,
                           IInvenTiv 2026
                         </p>
                         <p className="lg:text-base text-sm">
