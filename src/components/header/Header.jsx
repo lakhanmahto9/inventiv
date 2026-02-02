@@ -197,12 +197,12 @@ const Header = () => {
 
 
 
-          <button
+          {/* <button
             onClick={handleFlyerDownload}
             className="text-black dark:text-white cursor-pointer"
           >
             Flyer
-          </button>
+          </button> */}
         </div>
 
         {/* Sidebar for mobile */}
