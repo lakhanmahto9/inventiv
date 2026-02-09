@@ -92,7 +92,6 @@ const Home = () => {
     }),
   };
 
-
   useEffect(() => {
     const handleResize = () => {
       const w = window.innerWidth;
@@ -140,7 +139,7 @@ const Home = () => {
 
   return (
     <section id="home">
-      <div className="w-full flex flex-col bg-[#1d1e5d]">
+      <div className="w-full flex flex-col bg-[#1d1e5d] relative">
         <Carousel
           autoPlay
           infiniteLoop
@@ -162,13 +161,16 @@ const Home = () => {
           ].map((src, i) => (
             <div
               key={i}
-              className="h-auto lg:h-[890px] w-full flex items-center justify-center"
+              className="h-auto lg:h-[890px] w-full flex items-center justify-center relative"
             >
               <img
                 src={src}
                 alt="Banner"
                 className="h-full w-auto object-contain"
               />
+              <div className="absolute top-[35%] left-1/2 -translate-x-1/2 bg-[#f0ddab] w-full p-4 text-lg font-bold">
+                <marquee>Update:- IInvenTiv 2026 has been rescheduled and the new dates will be announced soon.</marquee>
+              </div>
             </div>
           ))}
         </Carousel>
@@ -188,18 +190,17 @@ const Home = () => {
               <p className="text-justify text-white">
                 IInvenTiv is a flagship annual R&D fair organized by the
                 Ministry of Education, Government of India, to showcase
-                indigenous innovations and strengthen the
-                research-to-technology ecosystem. Launched in 2022 at IIT
-                Delhi as part of Azadi ka Amrit Mahotsav, it initially brought
-                together all IITs and later expanded to include NITs, IISc,
-                and leading universities. The platform bridges academia and
-                industry by promoting technology transfer, commercialization,
-                and collaborative innovation across priority sectors such as
-                healthcare, energy, manufacturing, digital technologies,
-                mobility, and infrastructure. IInvenTiv supports national
-                initiatives like Make in India and Atmanirbhar Bharat,
-                advancing India’s vision of self-reliance and innovation-led
-                growth.
+                indigenous innovations and strengthen the research-to-technology
+                ecosystem. Launched in 2022 at IIT Delhi as part of Azadi ka
+                Amrit Mahotsav, it initially brought together all IITs and later
+                expanded to include NITs, IISc, and leading universities. The
+                platform bridges academia and industry by promoting technology
+                transfer, commercialization, and collaborative innovation across
+                priority sectors such as healthcare, energy, manufacturing,
+                digital technologies, mobility, and infrastructure. IInvenTiv
+                supports national initiatives like Make in India and Atmanirbhar
+                Bharat, advancing India’s vision of self-reliance and
+                innovation-led growth.
               </p>
             </div>
           </div>
@@ -479,10 +480,11 @@ const Home = () => {
             <button
               onClick={() => handleTab("iit")}
               type="button"
-              className={`${active === "iit"
-                ? "bg-amber-500 text-white"
-                : "hover:text-amber-500"
-                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
+              className={`${
+                active === "iit"
+                  ? "bg-amber-500 text-white"
+                  : "hover:text-amber-500"
+              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
             >
               IISc + IITs
             </button>
@@ -490,30 +492,33 @@ const Home = () => {
             <button
               onClick={() => handleTab("nit")}
               type="button"
-              className={`${active === "nit"
-                ? "bg-amber-500 text-white"
-                : "hover:text-amber-500"
-                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
+              className={`${
+                active === "nit"
+                  ? "bg-amber-500 text-white"
+                  : "hover:text-amber-500"
+              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
             >
               IIEST + NITs
             </button>
             <button
               onClick={() => handleTab("iiser")}
               type="button"
-              className={`${active === "iiser"
-                ? "bg-amber-500 text-white"
-                : "hover:text-amber-500"
-                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
+              className={`${
+                active === "iiser"
+                  ? "bg-amber-500 text-white"
+                  : "hover:text-amber-500"
+              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
             >
               IISERs
             </button>
             <button
               onClick={() => handleTab("top")}
               type="button"
-              className={`${active === "top"
-                ? "bg-amber-500 text-white"
-                : "hover:text-amber-500"
-                } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
+              className={`${
+                active === "top"
+                  ? "bg-amber-500 text-white"
+                  : "hover:text-amber-500"
+              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
             >
               TOP 100 NIRF-Ranked Institutes
             </button>
@@ -552,10 +557,11 @@ const Home = () => {
                      absolute bottom-full left-1/2 transform -translate-x-1/2
                     bg-white text-black text-sm px-3 py-1 rounded-md whitespace-nowrap shadow-md
                    transition-all duration-300
-                    ${activeIndex === index
-                          ? "opacity-100 pointer-events-auto"
-                          : "opacity-0 pointer-events-none"
-                        }
+                    ${
+                      activeIndex === index
+                        ? "opacity-100 pointer-events-auto"
+                        : "opacity-0 pointer-events-none"
+                    }
                     lg:group-hover:opacity-100 lg:pointer-events-auto
                   `}
                     >
