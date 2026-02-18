@@ -37,7 +37,7 @@ const Contact = () => {
                           Venue
                         </p>
                         <p className="lg:text-base text-sm">
-                          IIT(ISM) Dhanbad, To be announced soon
+                          IIT(ISM) Dhanbad, April 6-7th, 2026
                         </p>
                       </div>
                     </div>

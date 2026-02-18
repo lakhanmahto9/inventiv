@@ -168,7 +168,7 @@ const Home = () => {
                 alt="Banner"
                 className="h-full w-auto object-contain"
               />
-               <div className="absolute top-[35%] left-1/2 -translate-x-1/2 bg-[#f0ddab] w-[90%] md:w-1/2 p-2 md:p-3 text-sm md:text-lg font-semibold rounded-lg shadow-md border border-amber-400">
+               {/* <div className="absolute top-[35%] left-1/2 -translate-x-1/2 bg-[#f0ddab] w-[90%] md:w-1/2 p-2 md:p-3 text-sm md:text-lg font-semibold rounded-lg shadow-md border border-amber-400">
                 <marquee behavior="scroll" direction="left" scrollamount="6">
                   📢 <span className="font-bold text-amber-900">Update:</span>{" "}
                   <span className="text-gray-800">
@@ -176,7 +176,7 @@ const Home = () => {
                     announced soon.
                   </span>
                 </marquee>
-              </div>
+              </div> */}
             </div>
           ))}
         </Carousel>
