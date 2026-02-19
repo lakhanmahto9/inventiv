@@ -168,7 +168,7 @@ const Home = () => {
                 alt="Banner"
                 className="h-full w-auto object-contain"
               />
-               {/* <div className="absolute top-[35%] left-1/2 -translate-x-1/2 bg-[#f0ddab] w-[90%] md:w-1/2 p-2 md:p-3 text-sm md:text-lg font-semibold rounded-lg shadow-md border border-amber-400">
+              {/* <div className="absolute top-[35%] left-1/2 -translate-x-1/2 bg-[#f0ddab] w-[90%] md:w-1/2 p-2 md:p-3 text-sm md:text-lg font-semibold rounded-lg shadow-md border border-amber-400">
                 <marquee behavior="scroll" direction="left" scrollamount="6">
                   📢 <span className="font-bold text-amber-900">Update:</span>{" "}
                   <span className="text-gray-800">
@@ -212,6 +212,67 @@ const Home = () => {
           </div>
         </div>
 
+        <div className="p-4 lg:p-16 bg-[#1d1e5d]">
+          <motion.p
+            className="text-2xl lg:text-5xl font-bold text-[#ffa343] mb-6"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            Our Chief Guest
+          </motion.p>
+          <div className="relative rounded-2xl p-px overflow-hidden">
+            <div className="w-full flex justify-center items-center">
+              <section className="w-full bg-gradient-to-r from-indigo-50 via-white to-indigo-50 py-16 px-6">
+                <div className="max-w-6xl mx-auto">
+                  <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+                      Chief Guest
+                    </h2>
+                    <div className="w-24 h-1 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
+                  </div>
+
+                  <div className="bg-white shadow-xl rounded-2xl overflow-hidden md:flex items-center">
+                    <div className="md:w-1/3 w-full p-4">
+                      <img
+                        src="/d-pradhan.jpg"
+                        alt="Shree Dharmendra Pradhan Ji"
+                        className="w-full h-full rounded-2xl object-cover"
+                      />
+                    </div>
+                    <div className="md:w-2/3 w-full p-8 space-y-4">
+                      <h3 className="text-2xl md:text-3xl font-semibold text-indigo-700">
+                        Shri Dharmendra Pradhan
+                      </h3>
+
+                      <p className="text-gray-600 font-medium">
+                        Hon’ble Minister of Education
+                        <br />
+                        Government of India
+                      </p>
+
+                      <p className="text-gray-600 leading-relaxed">
+                        We are privileged to welcome Shri Dharmendra Pradhan Ji,
+                        Hon’ble Minister of Education, Government of India, as
+                        the Chief Guest for our esteemed event. His leadership
+                        and vision for advancing education, innovation, and
+                        skill development continue to inspire millions across
+                        the nation.
+                      </p>
+
+                      <div className="pt-4">
+                        <span className="inline-block bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">
+                          Chief Guest
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
         <div className="p-4 lg:p-16 bg-[#1d1e5d] ">
           <motion.p
             className="text-2xl lg:text-5xl font-bold text-[#ffa343] mb-6"
@@ -232,11 +293,11 @@ const Home = () => {
                   <div className="bg-white dark:bg-[#eeeeee] p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitdhanbad.jpg"
-                      className="w-24 h-24 rounded-full"
+                      className="w-40 h-40 rounded-full"
                     />
                     <div>
                       <p className="font-bold text-lg">Prof. Sukumar Mishra</p>
-                      <p className="text-lg text-[#9B0225] text-justify mt-1">
+                      <p className="text-md text-[#9B0225] text-justify mt-1">
                         Earth Sciences play a vital role in resource
                         sustainability, climate resilience, and energy security.
                         As the host institute, IIT (ISM) Dhanbad is honoured to
@@ -260,13 +321,13 @@ const Home = () => {
                   <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitkharagpur.png"
-                      className="w-24 h-24 rounded-full"
+                      className="w-40 h-40 rounded-full"
                     />
                     <div>
                       <p className="font-bold text-xl">
                         Prof. Suman Chakraborty
                       </p>
-                      <p className="text-lg text-[#9B0225] text-justify mt-1">
+                      <p className="text-md text-[#9B0225] text-justify mt-1">
                         Healthcare innovation is no longer optional, but rather
                         imperative for human dignity, resilience, and equity. At
                         IIT Kharagpur, we view healthcare as a grand convergence
@@ -294,11 +355,11 @@ const Home = () => {
                   <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitbhu.jpeg"
-                      className="w-24 h-24 rounded-full"
+                      className="w-40 h-40 rounded-full"
                     />
                     <div>
                       <p className="font-bold text-lg">Prof. Amit Patra</p>
-                      <p className="text-lg text-[#9B0225] text-justify mt-1">
+                      <p className="text-md text-[#9B0225] text-justify mt-1">
                         Advanced materials form the backbone of modern
                         technology and sustainable development. IIT (BHU)
                         Varanasi is proud to lead the Materials Science theme at
@@ -323,13 +384,13 @@ const Home = () => {
                   <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/iit-patna-director.jpg"
-                      className="w-24 h-24 rounded-full"
+                      className="w-40 h-40 rounded-full"
                     />
                     <div>
                       <p className="font-bold text-xl">
                         Prof. Trilok Nath Singh
                       </p>
-                      <p className="text-lg text-[#9B0225] text-justify mt-1">
+                      <p className="text-md text-[#9B0225] text-justify mt-1">
                         Artificial Intelligence is transforming industries,
                         governance, and society at large. IIT Patna is delighted
                         to anchor the Artificial Intelligence theme at IInvenTiv
@@ -353,13 +414,13 @@ const Home = () => {
                   <div className="bg-white p-4 rounded-2xl h-full flex flex-col sm:flex-row gap-4">
                     <img
                       src="/director_iitbhuneswar.jpg"
-                      className="w-24 h-24 rounded-full"
+                      className="w-40 h-40 rounded-full"
                     />
                     <div>
                       <p className="font-bold text-xl">
                         Prof. Shreepad Karmalkar
                       </p>
-                      <p className="text-lg text-[#9B0225] text-justify mt-1">
+                      <p className="text-md text-[#9B0225] text-justify mt-1">
                         Semiconductor technology is foundational to digital
                         sovereignty and technological leadership. IIT
                         Bhubaneswar is proud to lead the Semiconductor
