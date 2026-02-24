@@ -213,14 +213,14 @@ const Home = () => {
         </div>
 
         <div className="p-4 lg:p-16 bg-[#1d1e5d]">
-          <motion.p
+          {/* <motion.p
             className="text-2xl lg:text-5xl font-bold text-[#ffa343] mb-6"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
             Our Chief Guest
-          </motion.p>
+          </motion.p> */}
           <div className="relative rounded-2xl p-px overflow-hidden">
             <div className="w-full flex justify-center items-center">
               <section className="w-full bg-gradient-to-r from-indigo-50 via-white to-indigo-50 py-16 px-6">
@@ -242,13 +242,13 @@ const Home = () => {
                     </div> */}
                     <div className="md:w-2/3 w-full p-8 space-y-4">
                       <h3 className="text-2xl md:text-3xl font-semibold text-indigo-700">
-                        Shri Dharmendra Pradhan
+                        Shree Dharmendra Pradhan
                       </h3>
 
                       <p className="text-gray-600 font-medium">
-                        Hon’ble Minister of Education
+                        Chief Guest of the event: Shree Dharmendra Pradhan, Hon’ble Minister of Education.
                         <br />
-                        Government of India
+                        Guest of Honor: Dr. Ajay Kela, President and CEO, Wadhawani Foundation.
                       </p>
 
                       {/* <p className="text-gray-600 leading-relaxed">
@@ -260,11 +260,7 @@ const Home = () => {
                         the nation.
                       </p> */}
 
-                      <div className="pt-4">
-                        <span className="inline-block bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">
-                          Chief Guest
-                        </span>
-                      </div>
+                      
                     </div>
                   </div>
                 </div>
