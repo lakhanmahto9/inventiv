@@ -248,7 +248,7 @@ const Home = () => {
                       <p className="text-gray-600 font-medium">
                         Chief Guest of the event: Shree Dharmendra Pradhan, Hon’ble Minister of Education.
                         <br />
-                        Guest of Honor: Dr. Ajay Kela, President and CEO, Wadhawani Foundation.
+                        Guest of Honor: Dr. Ajay Kela, President and CEO, Wadhwani Foundation.
                       </p>
 
                       {/* <p className="text-gray-600 leading-relaxed">

@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Innovation from "./components/inovations/Innovation";
 import ScrollToTopButton from "./components/scroll/ScrollToTopButton";
+import AccommodationDetails from "./components/accommodation/AccommodationDetails";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header/>
       <Home/>
       <Innovation/>
+      <AccommodationDetails/>
       <Contact/>
       <Footer/>
       <ScrollToTopButton />
