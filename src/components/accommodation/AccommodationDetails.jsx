@@ -108,6 +108,31 @@ const hotelData = [
     checkout: "12:00 PM",
     remarks: "Early booking recommended",
   },
+  {
+    sl: 6,
+    hotel: "The Grand Mirage, Dhanbad (Radisson Individuals)",
+    contact: "Alok Choubey (+91 7281000333)",
+    base: "Deluxe Room",
+    basePrice:
+      "4000 AI (Single Breakfast) / 5000 AI (Double Breakfast) / 4500 AI (Single Breakfast + 1 Meal) / 6000 AI (Double Breakfast + 1 Meal)",
+    medium: "Executive Suite Room",
+    mediumPrice:
+      "6000 AI (Single Breakfast) / 7000 AI (Double Breakfast) / 6500 AI (Single Breakfast + 1 Meal) / 8000 AI (Double Breakfast + 1 Meal)",
+    premium: "Premium Suite Room",
+    premiumPrice:
+      "7000 AI (Single Breakfast) / 8000 AI (Double Breakfast) / 9500 AI (Single Breakfast + 1 Meal) / 11000 AI (Double Breakfast + 1 Meal)",
+    luxury: "NA",
+    luxuryPrice: "NA",
+    extraBed: "-",
+    extraPerson: "-",
+    transport: "Chargeable",
+    distance: "-",
+    breakfast: "Yes",
+    checkin: "-",
+    checkout: "-",
+    remarks:
+      "We regret to inform that complimentary pickup and drop facility is not available.",
+  },
 ];
 
 export default function AccommodationDetails() {

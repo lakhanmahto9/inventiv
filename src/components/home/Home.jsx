@@ -224,43 +224,39 @@ const Home = () => {
           <div className="relative rounded-2xl p-px overflow-hidden">
             <div className="w-full flex justify-center items-center">
               <section className="w-full bg-gradient-to-r from-indigo-50 via-white to-indigo-50 py-16 px-6">
-                <div className="max-w-6xl mx-auto">
-                  <div className="text-center mb-12">
+                <div className="max-w-5xl mx-auto">
+                  {/* Title */}
+                  <div className="text-center mb-10">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-                      Chief Guest
+                      Our Guests
                     </h2>
-                    <div className="w-24 h-1 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
+                    <div className="w-24 h-1 bg-indigo-600 mx-auto mt-3 rounded-full"></div>
                   </div>
 
-                  <div className="bg-white shadow-xl rounded-2xl overflow-hidden md:flex items-center">
-                    {/* <div className="md:w-1/3 w-full p-4">
-                      <img
-                        src="/d-pradhan.jpg"
-                        alt="Shree Dharmendra Pradhan Ji"
-                        className="w-full h-full rounded-2xl object-cover"
-                      />
-                    </div> */}
-                    <div className="md:w-2/3 w-full p-8 space-y-4">
-                      <h3 className="text-2xl md:text-3xl font-semibold text-indigo-700">
-                        Shree Dharmendra Pradhan
-                      </h3>
-
-                      <p className="text-gray-600 font-medium">
-                        Chief Guest of the event: Shree Dharmendra Pradhan, Hon’ble Minister of Education.
-                        <br />
-                        Guest of Honor: Dr. Ajay Kela, President and CEO, Wadhwani Foundation.
+                  {/* Card */}
+                  <div className="bg-gray-50 shadow-xl rounded-2xl py-10 px-6 text-center space-y-8">
+                    <div>
+                      <p className="text-indigo-600 font-semibold text-lg">
+                        Chief Guest
                       </p>
+                      <p className="text-2xl font-bold text-gray-800 mt-1">
+                        Shri Dharmendra Pradhan
+                      </p>
+                      <p className="text-gray-600">
+                        Hon’ble Minister of Education, Government of India
+                      </p>
+                    </div>
 
-                      {/* <p className="text-gray-600 leading-relaxed">
-                        We are privileged to welcome Shri Dharmendra Pradhan Ji,
-                        Hon’ble Minister of Education, Government of India, as
-                        the Chief Guest for our esteemed event. His leadership
-                        and vision for advancing education, innovation, and
-                        skill development continue to inspire millions across
-                        the nation.
-                      </p> */}
-
-                      
+                    <div>
+                      <p className="text-indigo-600 font-semibold text-lg">
+                        Guest of Honour
+                      </p>
+                      <p className="text-2xl font-bold text-gray-800 mt-1">
+                        Dr. Ajay Kela
+                      </p>
+                      <p className="text-gray-600">
+                        President & CEO, Wadhwani Foundation
+                      </p>
                     </div>
                   </div>
                 </div>
