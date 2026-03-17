@@ -78,8 +78,7 @@ const hotelData = [
     luxuryPrice: "7000    Excluding GST",
     extraBed: "800",
     extraPerson: "NA",
-    transport:
-      "Chargeable",
+    transport: "Chargeable",
     distance: "ISM: 1 KM:      Rly. Stn. 6 KM",
     breakfast: "Yes",
     checkin: "12:00 PM",
@@ -137,7 +136,8 @@ const hotelData = [
 
 export default function AccommodationDetails() {
   return (
-    <div className="bg-[#1c1f5c] min-h-screen p-4 md:p-16 text-white">
+   <section id="accommodation">
+     <div className="bg-[#1c1f5c] min-h-screen p-4 md:p-16 text-white">
       <h1 className="text-2xl md:text-5xl font-bold text-orange-400 mb-6">
         Accommodation Details
       </h1>
@@ -146,54 +146,124 @@ export default function AccommodationDetails() {
       <div className="bg-gradient-to-r from-blue-500 via-[#ffa343] to-red-500 p-[2px] rounded-xl">
         {/* Inner Container */}
         <div className="bg-[#1c1f5c] rounded-xl p-4">
-          <div className="border border-gray-300 rounded-lg overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead className="bg-[#262a6d]">
+          <div className="border border-gray-400/40 rounded-lg overflow-x-auto shadow-xl custom-scroll">
+            <table className="w-full text-sm border-collapse">
+              {/* HEADER */}
+              <thead className="bg-[#262a6d] sticky top-0 z-10">
                 <tr>
-                  <th className="border p-3">Sl No</th>
-                  <th className="border p-3">Hotel</th>
-                  <th className="border p-3">Contact</th>
-                  <th className="border p-3">Base</th>
-                  <th className="border p-3">Base Price</th>
-                  <th className="border p-3">Medium</th>
-                  <th className="border p-3">Medium Price</th>
-                  <th className="border p-3">Premium</th>
-                  <th className="border p-3">Premium Price</th>
-                  <th className="border p-3">Luxury</th>
-                  <th className="border p-3">Luxury Price</th>
-                  <th className="border p-3">Extra Bed</th>
-                  <th className="border p-3">Extra Person</th>
-                  <th className="border p-3">Transport</th>
-                  <th className="border p-3">Distance</th>
-                  <th className="border p-3">Breakfast</th>
-                  <th className="border p-3">Check-In</th>
-                  <th className="border p-3">Check-Out</th>
-                  <th className="border p-3">Remarks</th>
+                  {[
+                    "Sl No",
+                    "Hotel",
+                    "Contact",
+                    "Base",
+                    "Base Price",
+                    "Medium",
+                    "Medium Price",
+                    "Premium",
+                    "Premium Price",
+                    "Luxury",
+                    "Luxury Price",
+                    "Extra Bed",
+                    "Extra Person",
+                    "Transport",
+                    "Distance",
+                    "Breakfast",
+                    "Check-In",
+                    "Check-Out",
+                    "Remarks",
+                  ].map((head, i) => (
+                    <th
+                      key={i}
+                      className="border border-white/20 px-3 py-3 text-left whitespace-nowrap"
+                    >
+                      {head}
+                    </th>
+                  ))}
                 </tr>
               </thead>
 
+              {/* BODY */}
               <tbody>
-                {hotelData.map((row) => (
-                  <tr key={row.sl} className="hover:bg-[#2b2f7a]">
-                    <td className="border p-2 text-center">{row.sl}</td>
-                    <td className="border p-2">{row.hotel}</td>
-                    <td className="border p-2">{row.contact}</td>
-                    <td className="border p-2">{row.base}</td>
-                    <td className="border p-2">{row.basePrice}</td>
-                    <td className="border p-2">{row.medium}</td>
-                    <td className="border p-2">{row.mediumPrice}</td>
-                    <td className="border p-2">{row.premium}</td>
-                    <td className="border p-2">{row.premiumPrice}</td>
-                    <td className="border p-2">{row.luxury}</td>
-                    <td className="border p-2">{row.luxuryPrice}</td>
-                    <td className="border p-2">{row.extraBed}</td>
-                    <td className="border p-2">{row.extraPerson}</td>
-                    <td className="border p-2">{row.transport}</td>
-                    <td className="border p-2">{row.distance}</td>
-                    <td className="border p-2">{row.breakfast}</td>
-                    <td className="border p-2">{row.checkin}</td>
-                    <td className="border p-2">{row.checkout}</td>
-                    <td className="border p-2">{row.remarks}</td>
+                {hotelData.map((row, index) => (
+                  <tr
+                    key={row.sl}
+                    className={`transition duration-200 ${
+                      index % 2 === 0 ? "bg-[#232770]" : "bg-[#1c1f5c]"
+                    } hover:bg-[#3439a3]`}
+                  >
+                    <td className="border border-white/10 p-2 text-center">
+                      {row.sl}
+                    </td>
+
+                    <td className="border border-white/10 p-2 font-semibold text-orange-300">
+                      {row.hotel}
+                    </td>
+
+                    <td className="border border-white/10 p-2">
+                      {row.contact}
+                    </td>
+
+                    <td className="border border-white/10 p-2">{row.base}</td>
+
+                    <td className="border border-white/10 p-2  text-green-300 font-medium">
+                      {row.basePrice}
+                    </td>
+
+                    <td className="border border-white/10 p-2">{row.medium}</td>
+
+                    <td className="border border-white/10 p-2 text-green-300">
+                      {row.mediumPrice}
+                    </td>
+
+                    <td className="border border-white/10 p-2">
+                      {row.premium}
+                    </td>
+
+                    <td className="border border-white/10 p-2 text-green-300">
+                      {row.premiumPrice}
+                    </td>
+
+                    <td className="border border-white/10 p-2">{row.luxury}</td>
+
+                    <td className="border border-white/10 p-2 text-green-300">
+                      {row.luxuryPrice}
+                    </td>
+
+                    <td className="border border-white/10 p-2">
+                      {row.extraBed}
+                    </td>
+
+                    <td className="border border-white/10 p-2">
+                      {row.extraPerson}
+                    </td>
+
+                    <td className="border border-white/10 p-2">
+                      <span className="px-2 py-1 bg-indigo-500/20 rounded">
+                        {row.transport}
+                      </span>
+                    </td>
+
+                    <td className="border border-white/10 p-2">
+                      {row.distance}
+                    </td>
+
+                    <td className="border border-white/10 p-2">
+                      <span className="px-2 py-1 bg-green-500/20 rounded">
+                        {row.breakfast}
+                      </span>
+                    </td>
+
+                    <td className="border border-white/10 p-2">
+                      {row.checkin}
+                    </td>
+
+                    <td className="border border-white/10 p-2">
+                      {row.checkout}
+                    </td>
+
+                    <td className="border border-white/10 p-2 text-xs">
+                      {row.remarks}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -202,5 +272,6 @@ export default function AccommodationDetails() {
         </div>
       </div>
     </div>
+   </section>
   );
 }

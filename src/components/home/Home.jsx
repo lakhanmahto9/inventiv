@@ -667,16 +667,16 @@ const Home = () => {
             {/* CONTENT CONTAINER */}
             <div
               className="
-        relative w-full rounded-2xl bg-[#1d1e5d]
+            relative w-full rounded-2xl bg-[#1d1e5d]
 
-        p-4 md:p-6 lg:p-8
+            p-4 md:p-6 lg:p-8
 
-        /* Mobile & Tablet */
-        grid grid-cols-2 gap-6
+            /* Mobile & Tablet */
+            grid grid-cols-2 gap-6
 
-        /* Desktop & above */
-        xl:flex xl:flex-nowrap xl:justify-between xl:items-center
-      "
+            /* Desktop & above */
+            xl:flex xl:flex-nowrap xl:justify-between xl:items-center
+               "
             >
               {logos.organizer.map((item, index) => {
                 const animations = [
@@ -762,6 +762,154 @@ const Home = () => {
                   </motion.div>
                 );
               })}
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-[#1d1e5d] p-4 md:p-16 text-white">
+          {/* Title */}
+          <h2 className="text-2xl md:text-5xl font-bold text-orange-400 mb-12 text-center">
+            Committee Details
+          </h2>
+
+          <div className="max-w-6xl mx-auto space-y-10">
+            {/* Patron + Chair */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-[#262a6d] p-6 rounded-xl shadow-lg border border-white/20 hover:scale-[1.02] transition">
+                <h3 className="text-xl font-semibold text-orange-300 mb-3">
+                  Patron
+                </h3>
+                <p className="text-white text-lg">Chairperson, BoG</p>
+                <p className="text-gray-400 text-sm">IIT(ISM) Dhanbad</p>
+              </div>
+
+              <div className="bg-[#262a6d] p-6 rounded-xl shadow-lg border border-white/20 hover:scale-[1.02] transition">
+                <h3 className="text-xl font-semibold text-orange-300 mb-3">
+                  Chair
+                </h3>
+                <p className="text-white text-lg">Director</p>
+                <p className="text-gray-400 text-sm">IIT(ISM) Dhanbad</p>
+              </div>
+            </div>
+
+            {/* Co-Chairs */}
+            <div>
+              <h3 className="text-xl font-semibold text-orange-300 mb-4 text-center">
+                Co-Chairs
+              </h3>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  "Director, IIT Kharagpur",
+                  "Director, IIT(BHU), Varanasi",
+                  "Director, IIT Bhubaneswar",
+                  "Director, IIT Patna",
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="bg-gradient-to-br from-[#262a6d] to-[#2f3385] p-4 rounded-lg border border-white/10 shadow hover:scale-[1.02] transition"
+                  >
+                    <p className="text-white text-center">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Organizing Committee */}
+            <div className="bg-gradient-to-br from-[#262a6d] to-[#2f3385] p-6 rounded-2xl shadow-xl border border-white/10">
+              <h3 className="text-2xl font-semibold text-orange-300 mb-8 text-center">
+                Organizing Committee
+              </h3>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* LEFT */}
+                <div className="space-y-6">
+                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
+                    <p className="text-orange-300 font-semibold">Advisor</p>
+                    <p className="text-white text-lg">Prof. Dheeraj Kumar</p>
+                    <p className="text-gray-400 text-sm">
+                      Deputy Director, IIT(ISM) Dhanbad
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
+                    <p className="text-orange-300 font-semibold">Co-convener</p>
+                    <p className="text-white text-lg">Prof. Surjya Kanta Pal</p>
+                    <p className="text-gray-400 text-sm">
+                      Dean R&amp;D, IIT Kharagpur
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
+                    <p className="text-orange-300 font-semibold">Co-convener</p>
+                    <p className="text-white text-lg">
+                      Prof. Vijay Shankar Pasupureddi
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      HoD Electronics, IIT Bhubaneswar
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
+                    <p className="text-orange-300 font-semibold">Co-convener</p>
+                    <p className="text-white text-lg">Prof. S. R. Samadder</p>
+                    <p className="text-gray-400 text-sm">
+                      Associate Dean R&amp;D, IIT(ISM) Dhanbad
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
+                    <p className="text-orange-300 font-semibold">
+                      Organizing Secretary
+                    </p>
+                    <p className="text-white text-lg">Prof. Ejaz Ahmad</p>
+                    <p className="text-gray-400 text-sm">
+                      PIC SRIC, IIT(ISM) Dhanbad
+                    </p>
+                  </div>
+                </div>
+
+                {/* RIGHT */}
+                <div className="space-y-6">
+                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
+                    <p className="text-orange-300 font-semibold">Convener</p>
+                    <p className="text-white text-lg">
+                      Prof. Parthasarathi Das
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      Dean R&amp;D, IIT(ISM) Dhanbad
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
+                    <p className="text-orange-300 font-semibold">Co-convener</p>
+                    <p className="text-white text-lg">Prof. Rajesh Kumar</p>
+                    <p className="text-gray-400 text-sm">
+                      Dean R&amp;D, IIT(BHU) Varanasi
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
+                    <p className="text-orange-300 font-semibold">Co-convener</p>
+                    <p className="text-white text-lg">
+                      Prof. Anup Kumar Keshri
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      Associate Dean R&amp;D, IIT Patna
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
+                    <p className="text-orange-300 font-semibold">
+                      Local Organizing Committee Chairman
+                    </p>
+                    <p className="text-white text-lg">Prof. Sagar Pal</p>
+                    <p className="text-gray-400 text-sm">
+                      Dept. of CCB, IIT(ISM) Dhanbad
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

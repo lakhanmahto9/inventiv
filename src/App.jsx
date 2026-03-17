@@ -13,7 +13,7 @@ function App() {
     <>
       <Header/>
       <Home/>
-      <Innovation/>
+      {/* <Innovation/> */}
       <SelectedInnovationTable/>
       <AccommodationDetails/>
       <Contact/>
