@@ -571,6 +571,17 @@ const Home = () => {
               IISERs
             </button>
             <button
+              onClick={() => handleTab("iims")}
+              type="button"
+              className={`${
+                active === "iims"
+                  ? "bg-amber-500 text-white"
+                  : "hover:text-amber-500"
+              } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg`}
+            >
+              IIMs
+            </button>
+            <button
               onClick={() => handleTab("top")}
               type="button"
               className={`${

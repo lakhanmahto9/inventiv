@@ -99,8 +99,8 @@ const Header = () => {
   const handleFlyerDownload = (e) => {
     e.preventDefault();
     const link = document.createElement("a");
-    link.href = "/flyer.pdf";
-    link.download = "flyer.pdf";
+    link.href = "/IInventive Flyer _20-2-26.pdf";
+    link.download = "IInventive Flyer _20-2-26.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -159,7 +159,7 @@ const Header = () => {
 
           <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-black dark:text-white flex-wrap justify-center">
             <span className="text-[#1d1e5d] dark:text-[#ffa343] md:text-lg">
-             Starts In
+              Starts In
             </span>
 
             <div className="flex gap-1 sm:gap-2">
@@ -251,18 +251,18 @@ const Header = () => {
               Contact
             </button>
 
-            {/* <button
-            onClick={handleFlyerDownload}
-            className="text-black dark:text-white cursor-pointer"
-          >
-            Flyer
-          </button> */}
+            <button
+              onClick={handleFlyerDownload}
+              className="text-black dark:text-white cursor-pointer"
+            >
+              Flyer
+            </button>
           </div>
 
           {/* Sidebar for mobile */}
-          {/* <div className="block lg:hidden">
-          <Sidebar />
-        </div> */}
+          <div className="block lg:hidden">
+            <Sidebar />
+          </div>
         </div>
       </div>
     </>

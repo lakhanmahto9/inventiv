@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import Innovation from "./components/inovations/Innovation";
 import ScrollToTopButton from "./components/scroll/ScrollToTopButton";
 import AccommodationDetails from "./components/accommodation/AccommodationDetails";
+import SelectedInnovationTable from "./components/inovations/SelectedInnovation";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header/>
       <Home/>
       <Innovation/>
+      <SelectedInnovationTable/>
       <AccommodationDetails/>
       <Contact/>
       <Footer/>

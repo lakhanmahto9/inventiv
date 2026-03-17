@@ -235,6 +235,7 @@ export const logos = {
     //   logo: "/imgi_63_Indian_Institute_of_Science_Education_and_Research_Berhampur_Logo.svg.png",
     // },
   ],
+  iims:[],
 
   top: [
     // {

@@ -31,8 +31,8 @@ export default function Sidebar() {
   const handleFlyerDownload = (e) => {
     e.preventDefault();
     const link = document.createElement("a");
-    link.href = "/flyer.pdf";
-    link.download = "flyer.pdf";
+    link.href = "/IInventive Flyer _20-2-26.pdf";
+    link.download = "IInventive Flyer _20-2-26.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -52,7 +52,7 @@ export default function Sidebar() {
             <HomeIcon color={isActive("/") ? "#fff" : "#000"} width={24} height={24} />
             <p className="text-lg font-semibold">Home</p>
           </div>
-          <div
+          {/* <div
             onClick={() => navigate("/showcase")}
             className={`flex gap-4 items-center p-4 rounded-2xl cursor-pointer
               ${isActive("/showcase") ? "bg-amber-900 text-white" : "text-black"}
@@ -60,8 +60,8 @@ export default function Sidebar() {
           >
             <HomeIcon color={isActive("/showcase") ? "#fff" : "#000"} width={24} height={24} />
             <p className="text-lg font-semibold">R&D Showcase</p>
-          </div>
-          <div
+          </div> */}
+          {/* <div
             className={`flex justify-between items-center p-4 rounded-2xl cursor-pointer
             ${location.pathname.includes("/hosts") ? "bg-amber-900 text-white" : "text-black"}
            `}
@@ -124,9 +124,9 @@ export default function Sidebar() {
                 IIT Bhubaneswar
               </p>
             </div>
-          )}
+          )} */}
 
-          <div
+          {/* <div
             onClick={() => navigate("/contact")}
             className={`flex gap-4 items-center p-4 rounded-2xl cursor-pointer
               ${isActive("/contact") ? "bg-amber-900 text-white" : "text-black"}
@@ -134,9 +134,9 @@ export default function Sidebar() {
           >
             <PhoneIcon color={isActive("/contact") ? "#fff" : "#000"} width={24} height={24} />
             <p className="text-lg font-semibold">Contact</p>
-          </div>
+          </div> */}
 
-          <div
+          {/* <div
             onClick={handleDownload}
             className={`flex gap-4 items-center p-4 rounded-2xl cursor-pointer
               ${isActive("/brochure") ? "bg-amber-900 text-white" : "text-black"}
@@ -144,7 +144,7 @@ export default function Sidebar() {
           >
             <BrochureIcon color={isActive("/brochure") ? "#fff" : "#000"} width={24} height={24} />
             <p className="text-lg font-semibold">Brochure</p>
-          </div>
+          </div> */}
 
           <div
             onClick={handleFlyerDownload}
