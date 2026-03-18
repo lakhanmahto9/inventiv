@@ -7,7 +7,7 @@ const Registration = ({
 }) => {
   return (
     <section id="registration">
-     <div className="p-16 bg-[#1d1e5d]">
+     <div className="p-4 md:p-16 bg-[#1d1e5d]">
          <div className="p-[2px] bg-gradient-to-r from-blue-500 via-[#ffa343] to-red-500 min-h-[600px] rounded-2xl">
         {/* Inner Section */}
         <div className="bg-[#1d1e5d] py-12 px-4 md:px-16 text-center min-h-[600px] flex justify-center items-center rounded-2xl">
