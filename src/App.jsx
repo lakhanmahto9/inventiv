@@ -7,6 +7,8 @@ import Innovation from "./components/inovations/Innovation";
 import ScrollToTopButton from "./components/scroll/ScrollToTopButton";
 import AccommodationDetails from "./components/accommodation/AccommodationDetails";
 import SelectedInnovationTable from "./components/inovations/SelectedInnovation";
+import Registration from "./components/reg/Registration";
+import TravelInfo from "./components/TravelInfo";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       {/* <Innovation/> */}
       <SelectedInnovationTable/>
       <AccommodationDetails/>
+      <Registration/>
+      <TravelInfo/>
       <Contact/>
       <Footer/>
       <ScrollToTopButton />
