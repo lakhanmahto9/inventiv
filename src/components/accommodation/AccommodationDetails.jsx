@@ -45,7 +45,7 @@ const hotelData = [
   },
   {
     sl: 3,
-    hotel: "Hotel Lexus Inn, Dhanbad",
+    hotel: "LUXUS INN Hotel, Dhanbad",
     contact: "Mr. Basant Kumar (8877922226/3/5)",
     base: "Delux",
     basePrice: "2889 (Single)/ 3144 (Double)",
@@ -67,7 +67,7 @@ const hotelData = [
   {
     sl: 4,
     hotel: "Clarks Inn Suites, Dhanbad",
-    contact: "Mr. Indranil Roy (9296798350)",
+    contact: "Mr. Indranil Roy (9296798350 / 9296798360 / 9296798361)",
     base: "Premium (Total Rooms: 72) ",
     basePrice: "3800 (Single)/ 4200 (Double)",
     medium: "CLUB (Total Rooms: 15",

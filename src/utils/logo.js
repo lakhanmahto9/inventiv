@@ -212,11 +212,21 @@ export const logos = {
       name: "NIT Warangal",
       logo: "/imgi_56_National_Institute_of_Technology,_Warangal_logo.png",
     },
+     {
+      id: 56,
+      name: "VNIT Nagpur",
+      logo: "/VNIT nagpur.jpeg",
+    },
+     {
+      id: 57,
+      name: "MNIT Jaipur",
+      logo: "/mnit jaipur.png",
+    },
   ],
 
   iiser: [
     { id: 1, name: "IISER Kolkata", logo: "/imgi_58_IISER-K_Logo.svg.png" },
-    { id: 2, name: "IISER PUNE", logo: "/imgi_57_IISER,_PUNE_Logo.svg.png" },
+    // { id: 2, name: "IISER PUNE", logo: "/imgi_57_IISER,_PUNE_Logo.svg.png" },
     // { id: 3, name: "IISER Mohali", logo: "/imgi_59_IISER-Mohali_Logo.svg.png" },
     // { id: 4, name: "IISER Bhopal", logo: "/imgi_62_IISERB_logo (1).png" },
     // {
@@ -248,11 +258,11 @@ export const logos = {
       name: "S.R.M. Institute of Science and Technology, Tamil Nadu",
       logo: "/CLG_66eff16d46661.png",
     },
-    {
-      id: 3,
-      name: "Vellore Institute of Technology, Tamil Nadu",
-      logo: "/Vellore_Institute_of_Technology_seal_2017.svg.png",
-    },
+    // {
+    //   id: 3,
+    //   name: "Vellore Institute of Technology, Tamil Nadu",
+    //   logo: "/Vellore_Institute_of_Technology_seal_2017.svg.png",
+    // },
     // {
     //   id: 4,
     //   name: "Jadavpur University, West Bengal",
@@ -481,21 +491,21 @@ export const logos = {
     //   name: "Sri Krishna College of Engineering and Technology, Tamil Nadu",
     //   logo: "/sri_krishna_college_of_engineering_and_technology_official_logo.jpg",
     // },
-    {
-      id: 56,
-      name: "VNIT Nagpur",
-      logo: "/VNIT nagpur.jpeg",
-    },
-     {
-      id: 57,
-      name: "MNIT Jaipur",
-      logo: "/mnit jaipur.png",
-    },
-     {
-      id: 58,
-      name: "NITTTR Bhopal",
-      logo: "/nitttr bhopal.jpg",
-    },
+    // {
+    //   id: 56,
+    //   name: "VNIT Nagpur",
+    //   logo: "/VNIT nagpur.jpeg",
+    // },
+    //  {
+    //   id: 57,
+    //   name: "MNIT Jaipur",
+    //   logo: "/mnit jaipur.png",
+    // },
+    //  {
+    //   id: 58,
+    //   name: "NITTTR Bhopal",
+    //   logo: "/nitttr bhopal.jpg",
+    // },
   ],
   theme: [
     {

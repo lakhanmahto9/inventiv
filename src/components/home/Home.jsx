@@ -545,7 +545,7 @@ const Home = () => {
                   : "hover:text-amber-500"
               } px-4 py-3 shrink-0 cursor-pointer rounded-2xl font-semibold text-sm lg:text-lg `}
             >
-              IISc + IITs
+              IITs
             </button>
 
             <button
@@ -768,33 +768,31 @@ const Home = () => {
 
         <div className="bg-[#1d1e5d] p-4 md:p-16 text-white">
           {/* Title */}
-          <h2 className="text-2xl md:text-5xl font-bold text-orange-400 mb-12 text-center">
+          <h2 className="text-2xl md:text-5xl font-bold text-orange-400 mb-14 text-center tracking-wide">
             Committee Details
           </h2>
 
-          <div className="max-w-6xl mx-auto space-y-10">
-            {/* Patron + Chair */}
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-[#262a6d] p-6 rounded-xl shadow-lg border border-white/20 hover:scale-[1.02] transition">
-                <h3 className="text-xl font-semibold text-orange-300 mb-3">
-                  Patron
-                </h3>
-                <p className="text-white text-lg">Chairperson, BoG</p>
+          <div className="max-w-6xl mx-auto space-y-14">
+            {/* ================= TOP SECTION ================= */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Patron */}
+              <div className="bg-gradient-to-br from-[#262a6d] to-[#2f3385] p-7 rounded-2xl shadow-xl border border-white/10 hover:scale-[1.02] transition">
+                <p className="text-orange-300 font-semibold mb-2">Patron</p>
+                <p className="text-xl font-semibold">Chairperson, BoG</p>
                 <p className="text-gray-400 text-sm">IIT(ISM) Dhanbad</p>
               </div>
 
-              <div className="bg-[#262a6d] p-6 rounded-xl shadow-lg border border-white/20 hover:scale-[1.02] transition">
-                <h3 className="text-xl font-semibold text-orange-300 mb-3">
-                  Chair
-                </h3>
-                <p className="text-white text-lg">Director</p>
+              {/* Chair */}
+              <div className="bg-gradient-to-br from-[#262a6d] to-[#2f3385] p-7 rounded-2xl shadow-xl border border-white/10 hover:scale-[1.02] transition">
+                <p className="text-orange-300 font-semibold mb-2">Chair</p>
+                <p className="text-xl font-semibold">Director</p>
                 <p className="text-gray-400 text-sm">IIT(ISM) Dhanbad</p>
               </div>
             </div>
 
-            {/* Co-Chairs */}
+            {/* ================= CO-CHAIRS ================= */}
             <div>
-              <h3 className="text-xl font-semibold text-orange-300 mb-4 text-center">
+              <h3 className="text-2xl font-semibold text-orange-300 mb-6 text-center">
                 Co-Chairs
               </h3>
 
@@ -807,103 +805,105 @@ const Home = () => {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="bg-gradient-to-br from-[#262a6d] to-[#2f3385] p-4 rounded-lg border border-white/10 shadow hover:scale-[1.02] transition"
+                    className="bg-[#262a6d]/80 backdrop-blur-sm p-5 rounded-xl border border-white/10 shadow-md hover:bg-[#2a2b75] transition text-center"
                   >
-                    <p className="text-white text-center">{item}</p>
+                    <p className="text-white font-medium">{item}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Organizing Committee */}
-            <div className="bg-gradient-to-br from-[#262a6d] to-[#2f3385] p-6 rounded-2xl shadow-xl border border-white/10">
-              <h3 className="text-2xl font-semibold text-orange-300 mb-8 text-center">
-                Organizing Committee
-              </h3>
+            {/* ================= ORGANIZING COMMITTEE ================= */}
+            <div className="p-[2px] rounded-2xl bg-gradient-to-r from-blue-500 via-[#ffa343] to-red-500">
+              <div className="bg-[#262a6d] rounded-2xl p-8 md:p-10 shadow-2xl">
+                {/* Title */}
+                <h3 className="text-2xl md:text-3xl font-bold text-orange-400 mb-12 text-center">
+                  Organizing Committee
+                </h3>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* LEFT */}
-                <div className="space-y-6">
-                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
-                    <p className="text-orange-300 font-semibold">Advisor</p>
-                    <p className="text-white text-lg">Prof. Dheeraj Kumar</p>
-                    <p className="text-gray-400 text-sm">
-                      Deputy Director, IIT(ISM) Dhanbad
-                    </p>
-                  </div>
-
-                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
-                    <p className="text-orange-300 font-semibold">Co-convener</p>
-                    <p className="text-white text-lg">Prof. Surjya Kanta Pal</p>
-                    <p className="text-gray-400 text-sm">
-                      Dean R&amp;D, IIT Kharagpur
-                    </p>
-                  </div>
-
-                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
-                    <p className="text-orange-300 font-semibold">Co-convener</p>
-                    <p className="text-white text-lg">
-                      Prof. Vijay Shankar Pasupureddi
-                    </p>
-                    <p className="text-gray-400 text-sm">
-                      HoD Electronics, IIT Bhubaneswar
-                    </p>
-                  </div>
-
-                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
-                    <p className="text-orange-300 font-semibold">Co-convener</p>
-                    <p className="text-white text-lg">Prof. S. R. Samadder</p>
-                    <p className="text-gray-400 text-sm">
-                      Associate Dean R&amp;D, IIT(ISM) Dhanbad
-                    </p>
-                  </div>
-
-                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
-                    <p className="text-orange-300 font-semibold">
-                      Organizing Secretary
-                    </p>
-                    <p className="text-white text-lg">Prof. Ejaz Ahmad</p>
-                    <p className="text-gray-400 text-sm">
-                      PIC SRIC, IIT(ISM) Dhanbad
-                    </p>
-                  </div>
+                {/* Top Roles */}
+                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                  {[
+                    {
+                      role: "Advisor",
+                      name: "Prof. Dheeraj Kumar",
+                      desc: "Deputy Director, IIT(ISM) Dhanbad",
+                    },
+                    {
+                      role: "Convener",
+                      name: "Prof. Parthasarathi Das",
+                      desc: "Dean R&D, IIT(ISM) Dhanbad",
+                    },
+                    {
+                      role: "Organizing Secretary",
+                      name: "Prof. Ejaz Ahmad",
+                      desc: "PIC SRIC, IIT(ISM) Dhanbad",
+                    },
+                  ].map((item, i) => (
+                    <div
+                      key={i}
+                      className="bg-[#1f2160] p-6 rounded-xl border border-white/10 hover:bg-[#2a2b75] transition shadow"
+                    >
+                      <p className="text-orange-300 font-semibold">
+                        {item.role}
+                      </p>
+                      <p className="text-lg font-medium">{item.name}</p>
+                      <p className="text-gray-400 text-sm">{item.desc}</p>
+                    </div>
+                  ))}
                 </div>
 
-                {/* RIGHT */}
-                <div className="space-y-6">
-                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
-                    <p className="text-orange-300 font-semibold">Convener</p>
-                    <p className="text-white text-lg">
-                      Prof. Parthasarathi Das
-                    </p>
-                    <p className="text-gray-400 text-sm">
-                      Dean R&amp;D, IIT(ISM) Dhanbad
-                    </p>
-                  </div>
+                {/* Divider */}
+                <div className="border-t border-white/10 mb-10"></div>
 
-                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
-                    <p className="text-orange-300 font-semibold">Co-convener</p>
-                    <p className="text-white text-lg">Prof. Rajesh Kumar</p>
-                    <p className="text-gray-400 text-sm">
-                      Dean R&amp;D, IIT(BHU) Varanasi
-                    </p>
-                  </div>
+                {/* Co-conveners */}
+                <h4 className="text-xl font-semibold text-orange-300 mb-6 text-center">
+                  Co-conveners
+                </h4>
 
-                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
-                    <p className="text-orange-300 font-semibold">Co-convener</p>
-                    <p className="text-white text-lg">
-                      Prof. Anup Kumar Keshri
-                    </p>
-                    <p className="text-gray-400 text-sm">
-                      Associate Dean R&amp;D, IIT Patna
-                    </p>
-                  </div>
+                <div className="grid md:grid-cols-2 gap-6 mb-12">
+                  {[
+                    {
+                      name: "Prof. Surjya Kanta Pal",
+                      desc: "Dean R&D, IIT Kharagpur",
+                    },
+                    {
+                      name: "Prof. Rajesh Kumar",
+                      desc: "Dean R&D, IIT(BHU) Varanasi",
+                    },
+                    {
+                      name: "Prof. Vijay Shankar Pasupureddi",
+                      desc: "HoD Electronics, IIT Bhubaneswar",
+                    },
+                    {
+                      name: "Prof. Anup Kumar Keshri",
+                      desc: "Associate Dean R&D, IIT Patna",
+                    },
+                    {
+                      name: "Prof. S. R. Samadder",
+                      desc: "Associate Dean R&D, IIT(ISM) Dhanbad",
+                    },
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className="bg-[#1f2160] p-6 rounded-xl border border-white/10 hover:bg-[#2a2b75] transition shadow"
+                    >
+                      <p className="text-lg font-medium">{item.name}</p>
+                      <p className="text-gray-400 text-sm">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
 
-                  <div className="p-4 rounded-lg bg-[#1f2160]/60 border border-white/10 hover:bg-[#2a2b75] transition">
-                    <p className="text-orange-300 font-semibold">
+                {/* Divider */}
+                <div className="border-t border-white/10 mb-10"></div>
+
+                {/* Chairman */}
+                <div className="flex justify-center">
+                  <div className="bg-[#1f2160] p-7 rounded-xl border border-white/10 w-full md:w-[60%] text-center hover:bg-[#2a2b75] transition shadow-lg">
+                    <p className="text-orange-300 font-semibold mb-1">
                       Local Organizing Committee Chairman
                     </p>
-                    <p className="text-white text-lg">Prof. Sagar Pal</p>
+                    <p className="text-xl font-medium">Prof. Sagar Pal</p>
                     <p className="text-gray-400 text-sm">
                       Dept. of CCB, IIT(ISM) Dhanbad
                     </p>
@@ -913,8 +913,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-        
       </div>
     </section>
   );

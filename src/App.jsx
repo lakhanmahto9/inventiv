@@ -17,8 +17,8 @@ function App() {
       <Home/>
       {/* <Innovation/> */}
       <SelectedInnovationTable/>
+       <Registration/>
       <AccommodationDetails/>
-      <Registration/>
       <TravelInfo/>
       <Contact/>
       <Footer/>

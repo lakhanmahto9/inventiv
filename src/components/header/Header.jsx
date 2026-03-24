@@ -239,6 +239,18 @@ const Header = () => {
               Innovations
             </button>
 
+             <button
+              type="button"
+              onClick={() => scrollToSection("registration")}
+              className={`px-3 py-2 rounded-md transition-all duration-300 ${
+                active === "registration"
+                  ? "bg-[#ffa343] text-[#1d1e5d] dark:bg-[#1d1e5d] dark:text-[#ffa343]"
+                  : "bg-transparent text-black dark:text-white hover:bg-[#ffa343]/20 dark:hover:bg-white/10"
+              }`}
+            >
+              Industry Reg.
+            </button>
+
             <button
               type="button"
               onClick={() => scrollToSection("accommodation")}
@@ -249,18 +261,6 @@ const Header = () => {
               }`}
             >
               Accommodation
-            </button>
-
-            <button
-              type="button"
-              onClick={() => scrollToSection("registration")}
-              className={`px-3 py-2 rounded-md transition-all duration-300 ${
-                active === "registration"
-                  ? "bg-[#ffa343] text-[#1d1e5d] dark:bg-[#1d1e5d] dark:text-[#ffa343]"
-                  : "bg-transparent text-black dark:text-white hover:bg-[#ffa343]/20 dark:hover:bg-white/10"
-              }`}
-            >
-              Industry Reg.
             </button>
 
             <button

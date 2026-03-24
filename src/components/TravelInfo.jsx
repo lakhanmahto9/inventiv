@@ -5,9 +5,13 @@ const TravelInfo = () => {
     <section id="travelinfo">
       <div className="bg-[#1d1e5d] p-6 md:p-12 text-white">
         {/* Heading */}
-        <h2 className="text-2xl md:text-4xl font-bold text-orange-400 mb-10 text-center">
+        <h2 className="text-2xl md:text-4xl font-bold text-orange-400 text-center">
           Travel Information
         </h2>
+
+        <p className="text-center mb-4 text-xl">
+          (on chargeable basis)
+        </p>
 
         <div className="max-w-6xl mx-auto space-y-10">
           {/* ================= Travel Agents ================= */}
