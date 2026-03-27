@@ -3,13 +3,22 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import { BrochureIcon, DownIcon, HomeIcon, HostIcon, MenuIcon, PhoneIcon, UpIcon } from "../../icons/Icons";
+import {
+  BrochureIcon,
+  DownIcon,
+  HomeIcon,
+  HostIcon,
+  MenuIcon,
+  PhoneIcon,
+  ProgramIcon,
+  UpIcon,
+} from "../../icons/Icons";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
   const [open, setOpen] = React.useState(false);
   const [hostOpen, setHostOpen] = React.useState(false);
-
+  const [programOpen, setProgramOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -39,6 +48,20 @@ export default function Sidebar() {
     setOpen(false);
   };
 
+  const handleProgramDownload = (e) => {
+    e.preventDefault();
+
+    const link = document.createElement("a");
+    link.href = "/program_schedule.pdf"; // 👈 your file in public folder
+    link.download = "Program_Schedule.pdf";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    setOpen(false); // 👉 close sidebar after click
+  };
+
   const DrawerList = (
     <Box sx={{ width: 250, p: 2 }} role="presentation">
       <List>
@@ -49,9 +72,122 @@ export default function Sidebar() {
               ${isActive("/") ? "bg-amber-900 text-white" : "text-black"}
             `}
           >
-            <HomeIcon color={isActive("/") ? "#fff" : "#000"} width={24} height={24} />
+            <HomeIcon
+              color={isActive("/") ? "#fff" : "#000"}
+              width={24}
+              height={24}
+            />
             <p className="text-lg font-semibold">Home</p>
           </div>
+
+          {/* Program Details Menu */}
+          <div
+            className="flex justify-between items-center p-4 rounded-2xl cursor-pointer text-black"
+            onClick={() => setProgramOpen(!programOpen)}
+          >
+            <div className="flex gap-4 items-center">
+              <ProgramIcon color={"#000"} width={24} height={24} />
+              <p className=" font-semibold">Program Details</p>
+            </div>
+
+            {programOpen ? (
+              <UpIcon color={"#000"} width={20} height={20} />
+            ) : (
+              <DownIcon color={"#000"} width={20} height={20} />
+            )}
+          </div>
+
+          {programOpen && (
+            <div className="ml-8 flex flex-col gap-2 mt-2">
+              <p
+                onClick={handleProgramDownload}
+                className="cursor-pointer text-black hover:text-amber-700"
+              >
+                Program Schedule Download
+              </p>
+              <p
+                onClick={() => {
+                  document
+                    .getElementById("schedule")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  setOpen(false);
+                }}
+                className="cursor-pointer text-black hover:text-amber-700"
+              >
+                B2B match making
+              </p>
+
+              <p
+                onClick={() => {
+                  document
+                    .getElementById("speakers")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  setOpen(false);
+                }}
+                className="cursor-pointer text-black hover:text-amber-700"
+              >
+                Startup Pitching Session
+              </p>
+
+              <p
+                onClick={() => {
+                  document
+                    .getElementById("sessions")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  setOpen(false);
+                }}
+                className="cursor-pointer text-black hover:text-amber-700"
+              >
+                Technology Demonstration Zones
+              </p>
+
+              <p
+                onClick={() => {
+                  document
+                    .getElementById("sessions")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  setOpen(false);
+                }}
+                className="cursor-pointer text-black hover:text-amber-700"
+              >
+                Panel Discussions
+              </p>
+
+              <p
+                onClick={() => {
+                  document
+                    .getElementById("sessions")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  setOpen(false);
+                }}
+                className="cursor-pointer text-black hover:text-amber-700"
+              >
+                Hon'ble Education Minister's interaction with the VCs
+              </p>
+              <p
+                onClick={() => {
+                  document
+                    .getElementById("sessions")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  setOpen(false);
+                }}
+                className="cursor-pointer text-black hover:text-amber-700"
+              >
+                MoU Signing
+              </p>
+              <p
+                onClick={() => {
+                  document
+                    .getElementById("sessions")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  setOpen(false);
+                }}
+                className="cursor-pointer text-black hover:text-amber-700"
+              >
+                On the spot funding to the Startups
+              </p>
+            </div>
+          )}
           {/* <div
             onClick={() => navigate("/showcase")}
             className={`flex gap-4 items-center p-4 rounded-2xl cursor-pointer
@@ -152,7 +288,11 @@ export default function Sidebar() {
               ${isActive("/brochure") ? "bg-amber-900 text-white" : "text-black"}
             `}
           >
-            <BrochureIcon color={isActive("/brochure") ? "#fff" : "#000"} width={24} height={24} />
+            <BrochureIcon
+              color={isActive("/brochure") ? "#fff" : "#000"}
+              width={24}
+              height={24}
+            />
             <p className="text-lg font-semibold">Flyer</p>
           </div>
         </div>
@@ -178,5 +318,3 @@ export default function Sidebar() {
     </div>
   );
 }
-
-

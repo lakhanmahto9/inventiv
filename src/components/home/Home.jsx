@@ -252,10 +252,22 @@ const Home = () => {
                         Guest of Honour
                       </p>
                       <p className="text-2xl font-bold text-gray-800 mt-1">
-                        Dr. Ajay Kela
+                        Mr. Athar Sahab
                       </p>
                       <p className="text-gray-600">
-                        President & CEO, Wadhwani Foundation
+                        MD, Zuari Industries Ltd.
+                      </p>
+                      <p className="text-2xl font-bold text-gray-800 mt-1">
+                        Ms. Vaishali Nigam Sinha 
+                      </p>
+                      <p className="text-gray-600">
+                        Co-Founder, ReNew Foundation
+                      </p>
+                      <p className="text-2xl font-bold text-gray-800 mt-1">
+                        Mr. Sandeep Kumar 
+                      </p>
+                      <p className="text-gray-600">
+                       VP, TATA Steel
                       </p>
                     </div>
                   </div>

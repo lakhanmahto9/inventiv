@@ -7,6 +7,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [showProgramMenu, setShowProgramMenu] = useState(false);
 
   const [active, setActive] = useState("home");
   const [timeLeft, setTimeLeft] = useState({
@@ -141,6 +142,18 @@ const Header = () => {
     });
   };
 
+  const handleProgramDownload = (e) => {
+    e.preventDefault();
+
+    const link = document.createElement("a");
+    link.href = "/program_schedule.pdf"; // 👈 your PDF path
+    link.download = "Program_Schedule.pdf";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <div
@@ -226,6 +239,72 @@ const Header = () => {
             >
               Home
             </button>
+            <div
+              className="relative"
+              onMouseEnter={() => setShowProgramMenu(true)}
+              onMouseLeave={() => setShowProgramMenu(false)}
+            >
+              <button className="px-3 py-2 text-[#1d1e5d] dark:text-white rounded-md">
+                Program Details
+              </button>
+
+              {showProgramMenu && (
+                <div className="absolute top-full left-0 w-56 pt-2 z-50">
+                  <div className="bg-[#1f2a4d] shadow-lg rounded-md overflow-hidden">
+                    <div
+                      onClick={handleProgramDownload}
+                      className="px-4 py-2 cursor-pointer hover:bg-[#ffa343]/20"
+                    >
+                      Program Schedule Download
+                    </div>
+                    <div
+                      onClick={() => scrollToSection("schedule")}
+                      className="px-4 py-2 cursor-pointer hover:bg-[#ffa343]/20"
+                    >
+                      B2B match making
+                    </div>
+
+                    <div
+                      onClick={() => scrollToSection("speakers")}
+                      className="px-4 py-2 cursor-pointer hover:bg-[#ffa343]/20"
+                    >
+                      Startup Pitching Session
+                    </div>
+
+                    <div
+                      onClick={() => scrollToSection("sessions")}
+                      className="px-4 py-2 cursor-pointer hover:bg-[#ffa343]/20"
+                    >
+                      Technology Demonstration Zones
+                    </div>
+                    <div
+                      onClick={() => scrollToSection("sessions")}
+                      className="px-4 py-2 cursor-pointer hover:bg-[#ffa343]/20"
+                    >
+                      Panel Discussions
+                    </div>
+                    <div
+                      onClick={() => scrollToSection("sessions")}
+                      className="px-4 py-2 cursor-pointer hover:bg-[#ffa343]/20"
+                    >
+                      Hon'ble Education Minister's interaction with the VCs
+                    </div>
+                    <div
+                      onClick={() => scrollToSection("sessions")}
+                      className="px-4 py-2 cursor-pointer hover:bg-[#ffa343]/20"
+                    >
+                      MoU Signing
+                    </div>
+                    <div
+                      onClick={() => scrollToSection("sessions")}
+                      className="px-4 py-2 cursor-pointer hover:bg-[#ffa343]/20"
+                    >
+                      On the spot funding to the Startups
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <button
               type="button"
@@ -239,7 +318,7 @@ const Header = () => {
               Innovations
             </button>
 
-             <button
+            <button
               type="button"
               onClick={() => scrollToSection("registration")}
               className={`px-3 py-2 rounded-md transition-all duration-300 ${

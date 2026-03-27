@@ -170,7 +170,7 @@ export const BrochureIcon = ({ color, width, height }) => (
     width={width}
     height={height}
     fill={color}
-    class="bi bi-file-earmark-richtext"
+    className="bi bi-file-earmark-richtext"
     viewBox="0 0 16 16"
   >
     <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z" />
@@ -264,3 +264,15 @@ export const InstaIcon = ({ width ,height }) => {
     </svg>
   );
 };
+
+export const ProgramIcon = ({ color = "#000", width = 24, height = 24 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    fill={color}
+    viewBox="0 0 24 24"
+  >
+    <path d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10zM7 14h5v2H7v-2z" />
+  </svg>
+);

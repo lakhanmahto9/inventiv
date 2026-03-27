@@ -163,7 +163,7 @@ const Contact = () => {
           </div>
 
           {/* Content Wrapper */}
-          <div className="max-w-7xl mx-auto px-4 text-white w-full mt-10 sm:mt-16">
+          <div className="max-w-7xl mx-auto px-2 md:px-4 text-white w-full mt-10 sm:mt-16">
             <div className="w-full flex flex-col lg:flex-row p-4 justify-between gap-8">
               {/* LEFT SECTION */}
               <div className="w-full lg:w-1/2 border border-blue-600 flex items-center justify-center rounded-4xl p-4">
